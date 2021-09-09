@@ -1,7 +1,7 @@
-package com.nateshao.day02_Arrays.demo06_Generic_Data_Structures;
+package com.nateshao.day02_Arrays.demo09_Amortized_Time_Complexity;
 
 /**
- * @date Created by 邵桐杰 on 2021/9/6 21:31
+ * @date Created by 邵桐杰 on 2021/9/9 9:59
  * @微信公众号 千羽的编程时光
  * @个人网站 www.nateshao.cn
  * @博客 https://nateshao.gitee.io
@@ -10,6 +10,7 @@ package com.nateshao.day02_Arrays.demo06_Generic_Data_Structures;
  * Description:
  */
 public class Array<E> {
+
     private E[] data;
     private int size;
 
@@ -29,16 +30,8 @@ public class Array<E> {
         return data.length;
     }
 
-    public int getCat() {
-        return data.length;
-    }
-
     // 获取数组中的元素个数
     public int getSize() {
-        return size;
-    }
-
-    public int getSizes() {
         return size;
     }
 
@@ -47,18 +40,14 @@ public class Array<E> {
         return size == 0;
     }
 
-    public boolean isEn() {
-        return size == 0;
-    }
-
     // 在index索引的位置插入一个新元素e
     public void add(int index, E e) {
 
-        if (size == data.length)
-            throw new IllegalArgumentException("Add failed. Array is full.");
-
         if (index < 0 || index > size)
             throw new IllegalArgumentException("Add failed. Require index >= 0 and index <= size.");
+
+        if (size == data.length)
+            resize(2 * data.length);
 
         for (int i = size - 1; i >= index; i--)
             data[i + 1] = data[i];
@@ -120,6 +109,9 @@ public class Array<E> {
             data[i - 1] = data[i];
         size--;
         data[size] = null; // loitering objects != memory leak
+
+        if (size == data.length / 4 && data.length / 2 != 0)
+            resize(data.length / 2);
         return ret;
     }
 
@@ -153,5 +145,14 @@ public class Array<E> {
         }
         res.append(']');
         return res.toString();
+    }
+
+    // 将数组空间的容量变成newCapacity大小
+    private void resize(int newCapacity) {
+
+        E[] newData = (E[]) new Object[newCapacity];
+        for (int i = 0; i < size; i++)
+            newData[i] = data[i];
+        data = newData;
     }
 }
