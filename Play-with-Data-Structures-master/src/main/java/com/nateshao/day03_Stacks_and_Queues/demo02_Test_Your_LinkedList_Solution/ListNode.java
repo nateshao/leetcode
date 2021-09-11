@@ -1,7 +1,5 @@
 package com.nateshao.day03_Stacks_and_Queues.demo02_Test_Your_LinkedList_Solution;
 
-import java.util.LinkedHashMap;
-
 /**
  * @date Created by 邵桐杰 on 2021/9/9 18:22
  * @微信公众号 千羽的编程时光
