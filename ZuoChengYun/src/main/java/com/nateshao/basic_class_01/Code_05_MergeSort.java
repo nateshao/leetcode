@@ -2,8 +2,15 @@ package com.nateshao.basic_class_01;
 
 import java.util.Arrays;
 
+/**
+ * 归并排序
+ */
 public class Code_05_MergeSort {
 
+	/**
+	 * 如果数组的长度为空，或者是数组的长度为1。直接返回，不需要比较
+	 * @param arr
+	 */
 	public static void mergeSort(int[] arr) {
 		if (arr == null || arr.length < 2) {
 			return;
@@ -11,11 +18,17 @@ public class Code_05_MergeSort {
 		mergeSort(arr, 0, arr.length - 1);
 	}
 
+	/**
+	 * 这个范围上只有一个数，直接返回
+	 * @param arr
+	 * @param l
+	 * @param r
+	 */
 	public static void mergeSort(int[] arr, int l, int r) {
 		if (l == r) {
 			return;
 		}
-		int mid = l + ((r - l) >> 1);
+		int mid = l + ((r - l) >> 1); // L和R中点的位置 （L + R）/ 2
 		mergeSort(arr, l, mid);
 		mergeSort(arr, mid + 1, r);
 		merge(arr, l, mid, r);
