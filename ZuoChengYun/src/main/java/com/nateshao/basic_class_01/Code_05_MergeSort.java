@@ -29,19 +29,23 @@ public class Code_05_MergeSort {
 			return;
 		}
 		int mid = l + ((r - l) >> 1); // L和R中点的位置 （L + R）/ 2
-		mergeSort(arr, l, mid);
-		mergeSort(arr, mid + 1, r);
-		merge(arr, l, mid, r);
+		mergeSort(arr, l, mid); // 左部分排序  T(n/2)
+		mergeSort(arr, mid + 1, r); // 右部分排序 T(n/2)
+		merge(arr, l, mid, r); // 左部分和右部分合并 O(n)
+		// 总的时间复杂度：T(N) = 2T(n/2) + O(N)
 	}
 
 	public static void merge(int[] arr, int l, int m, int r) {
 		int[] help = new int[r - l + 1];
 		int i = 0;
-		int p1 = l;
-		int p2 = m + 1;
-		while (p1 <= m && p2 <= r) {
+		int p1 = l;// 数组l,左侧第一的最小值。
+		int p2 = m + 1;// 右侧第一的最小值。
+		while (p1 <= m && p2 <= r) { // p1 or p2 谁小取谁，放在新的数组，重新排序数组
 			help[i++] = arr[p1] < arr[p2] ? arr[p1++] : arr[p2++];
 		}
+		/**
+		 * p1,p2两个数，必有一个数越界
+		 */
 		while (p1 <= m) {
 			help[i++] = arr[p1++];
 		}
@@ -49,7 +53,7 @@ public class Code_05_MergeSort {
 			help[i++] = arr[p2++];
 		}
 		for (i = 0; i < help.length; i++) {
-			arr[l + i] = help[i];
+			arr[l + i] = help[i]; // 最后将数组拷贝到arr[i]
 		}
 	}
 
