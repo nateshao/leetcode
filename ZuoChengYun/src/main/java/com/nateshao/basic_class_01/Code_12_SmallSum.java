@@ -1,5 +1,8 @@
 package com.nateshao.basic_class_01;
 
+/**
+ * 小和问题和逆序对问题
+ */
 public class Code_12_SmallSum {
 
 	public static int smallSum(int[] arr) {
@@ -14,6 +17,7 @@ public class Code_12_SmallSum {
 			return 0;
 		}
 		int mid = l + ((r - l) >> 1);
+		// 左边部分的小和 + 中间部分合并的小和 + 合并部分的数组
 		return mergeSort(arr, l, mid) + mergeSort(arr, mid + 1, r) + merge(arr, l, mid, r);
 	}
 
