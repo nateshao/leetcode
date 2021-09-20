@@ -26,7 +26,7 @@ public class QuickSortTest {
      * @param indexRight// 待排序终点位置
      */
     private static void quickSort(int[] arr, int indexLeft, int indexRight) {
-        if (indexLeft > indexRight) {
+        if (indexLeft > indexRight || arr == null || arr.length < 2) {
             return;
         }
         int left = indexLeft;

@@ -11,7 +11,7 @@ import java.util.Arrays;
  * @Gitee https://gitee.com/nateshao
  * Description:
  */
-public class Code_00_BubbleSortTest {
+public class Code_00_BubbleSortGetMaxTest {
 
     @Test
     public void bubbleSortTest() {

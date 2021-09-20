@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
  * @Gitee https://gitee.com/nateshao
  * Description: 选择排序，比较次数，哪个数字小，就放在前面
  */
-public class Code_01_InsertionSortTest {
+public class Code_01_InsertionSortGetMaxTest {
 
     @Test
     public void selectionSortTest() {

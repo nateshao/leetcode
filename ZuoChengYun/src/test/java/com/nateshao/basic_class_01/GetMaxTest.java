@@ -9,7 +9,7 @@ package com.nateshao.basic_class_01;
  * @Gitee https://gitee.com/nateshao
  * Description: 递归获取最大数
  */
-public class Test {
+public class GetMaxTest {
     /**
      * 利用递归。获取最大数字
      * 1，递归获取左边的最大数
