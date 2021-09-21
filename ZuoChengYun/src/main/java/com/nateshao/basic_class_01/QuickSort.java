@@ -7,7 +7,7 @@ package com.nateshao.basic_class_01;
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
  * @Gitee https://gitee.com/nateshao
- * Description:
+ * Description: 自己写的快排
  */
 public class QuickSort {
     public static void main(String[] args) {

@@ -50,12 +50,12 @@ public class Code_04_QuickSort {
 		arr[j] = tmp;
 	}
 
-	// for test
+	// 数组排序
 	public static void comparator(int[] arr) {
 		Arrays.sort(arr);
 	}
 
-	// for test
+	// 随机生成数组
 	public static int[] generateRandomArray(int maxSize, int maxValue) {
 		int[] arr = new int[(int) ((maxSize + 1) * Math.random())];
 		for (int i = 0; i < arr.length; i++) {
@@ -64,7 +64,7 @@ public class Code_04_QuickSort {
 		return arr;
 	}
 
-	// for test
+	// 复制数组
 	public static int[] copyArray(int[] arr) {
 		if (arr == null) {
 			return null;
@@ -76,7 +76,7 @@ public class Code_04_QuickSort {
 		return res;
 	}
 
-	// for test
+	// 判断两数组是否相等
 	public static boolean isEqual(int[] arr1, int[] arr2) {
 		if ((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null)) {
 			return false;
@@ -95,7 +95,7 @@ public class Code_04_QuickSort {
 		return true;
 	}
 
-	// for test
+	// 打印数组
 	public static void printArray(int[] arr) {
 		if (arr == null) {
 			return;
