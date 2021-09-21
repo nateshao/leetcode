@@ -8,17 +8,23 @@ public class Code_03_HeapSort {
 		if (arr == null || arr.length < 2) {
 			return;
 		}
+		// 建立大根堆
 		for (int i = 0; i < arr.length; i++) {
 			heapInsert(arr, i);
 		}
 		int size = arr.length;
-		swap(arr, 0, --size);
+		swap(arr, 0, --size); // 最后一位数，与第一位数交换。 堆大小减1
 		while (size > 0) {
-			heapify(arr, 0, size);
-			swap(arr, 0, --size);
+			heapify(arr, 0, size); // 继续调整大根堆
+			swap(arr, 0, --size);      // 继续。最后一位数，与第一位数交换。 堆大小减1
 		}
 	}
 
+	/**
+	 * 建立大根堆
+	 * @param arr
+	 * @param index
+	 */
 	public static void heapInsert(int[] arr, int index) {
 		while (arr[index] > arr[(index - 1) / 2]) {
 			swap(arr, index, (index - 1) / 2);
