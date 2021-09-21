@@ -27,14 +27,17 @@ public class Code_03_HeapSort {
 	}
 
 	public static void heapify(int[] arr, int index, int size) {
-		int left = index * 2 + 1;
-		while (left < size) {
+		int left = index * 2 + 1; // 左孩子。i*2+1		右孩子：left + 1
+		while (left < size) { // 堆大小
+			// 左孩子有孩子比较，谁的值大就取谁
 			int largest = left + 1 < size && arr[left + 1] > arr[left] ? left + 1 : left;
+			// 节点与左右孩子比较，谁大取谁下标
 			largest = arr[largest] > arr[index] ? largest : index;
+			// 是我自己，就不用往下执行
 			if (largest == index) {
 				break;
 			}
-			swap(arr, largest, index);
+			swap(arr, largest, index); // largest != index
 			index = largest;
 			left = index * 2 + 1;
 		}
