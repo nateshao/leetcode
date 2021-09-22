@@ -1,8 +1,6 @@
 package com.nateshao.basic_class_01;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.PriorityQueue;
+import java.util.*;
 
 /**
  * 比较器
@@ -117,6 +115,16 @@ public class Code_09_Comparator {
 			System.out.println("Name : " + student.name + ", Id : " + student.id + ", Age : " + student.age);
 		}
 
+		System.out.println("---------------- PriorityQueue ---------------");
+		TreeSet<Student> treeSet = new TreeSet<>(new IdAscendingComparator());
+		treeSet.add(student1);
+		treeSet.add(student2);
+		treeSet.add(student3);
+		while (!treeSet.isEmpty()){
+			for (Student student : treeSet) {
+				System.out.println(student);
+			}
+		}
 	}
 
 }
