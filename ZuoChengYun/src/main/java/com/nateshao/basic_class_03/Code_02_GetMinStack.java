@@ -1,7 +1,22 @@
 package com.nateshao.basic_class_03;
 
 import java.util.Stack;
-
+/**
+ * @date Created by 邵桐杰 on 2021/9/24 10:06
+ * @微信公众号 千羽的编程时光
+ * @个人网站 www.nateshao.cn
+ * @博客 https://nateshao.gitee.io
+ * @GitHub https://github.com/nateshao
+ * @Gitee https://gitee.com/nateshao
+ * Description:
+ * 实现一个特殊的栈，在实现栈的基本功能的基础上，再实现返 回栈中最小元素的操作。
+ * 【要求】
+ * 1. pop、push、getMin操作的时间复杂度都是 $O(1)$。
+ * 2. 设计的栈类型可以使用现成的栈结构。
+ *
+ * 方法：1. 初始化两个栈。当data压入4时，min也跟着压入4。当data压入5时，min压入4。
+ * （min只能比data小或者相等。如果data比min大，压入min上一个的值。）
+ */
 public class Code_02_GetMinStack {
 	public static class MyStack1 {
 		private Stack<Integer> stackData;

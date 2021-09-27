@@ -6,6 +6,9 @@ import java.util.Stack;
 
 public class Code_03_StackAndQueueConvert {
 
+	/**
+	 * 两个栈实现队列
+	 */
 	public static class TwoStacksQueue {
 		private Stack<Integer> stackPush;
 		private Stack<Integer> stackPop;
@@ -42,6 +45,9 @@ public class Code_03_StackAndQueueConvert {
 		}
 	}
 
+	/**
+	 * 两个队列实现栈
+	 */
 	public static class TwoQueuesStack {
 		private Queue<Integer> queue;
 		private Queue<Integer> help;
