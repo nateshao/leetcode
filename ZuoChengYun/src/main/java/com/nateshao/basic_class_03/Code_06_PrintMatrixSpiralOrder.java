@@ -54,11 +54,11 @@ public class Code_06_PrintMatrixSpiralOrder {
 	public static void printEdge(int[][] m, int tR, int tC, int dR, int dC) {
 		// 左上角的行 = 右下角的行  （在同一行）
 		if (tR == dR) {
-			for (int i = tC; i <= dC; i++) {
+			for (int i = tC; i <= dC; i++) { // 从左上角的行 到 右下角的行 一直加加 输出打印
 				System.out.print(m[tR][i] + " ");
 			}
 		// 左上角的列 = 右下角的列  （在同一列）
-		} else if (tC == dC) {
+		} else if (tC == dC) {				//  从左上角的列 到 右下角的列 一直加加 输出打印
 			for (int i = tR; i <= dR; i++) {
 				System.out.print(m[i][tC] + " ");
 			}
