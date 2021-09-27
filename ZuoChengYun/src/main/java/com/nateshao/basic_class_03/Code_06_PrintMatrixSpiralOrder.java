@@ -57,6 +57,7 @@ public class Code_06_PrintMatrixSpiralOrder {
 			for (int i = tC; i <= dC; i++) {
 				System.out.print(m[tR][i] + " ");
 			}
+		// 左上角的列 = 右下角的列  （在同一列）
 		} else if (tC == dC) {
 			for (int i = tR; i <= dR; i++) {
 				System.out.print(m[i][tC] + " ");
