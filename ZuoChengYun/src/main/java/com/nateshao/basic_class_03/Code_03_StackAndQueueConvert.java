@@ -3,7 +3,18 @@ package com.nateshao.basic_class_03;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
-
+/**
+ * @date Created by 邵桐杰 on 2021/10/8 10:06
+ * @微信公众号 千羽的编程时光
+ * @个人网站 www.nateshao.cn
+ * @博客 https://nateshao.gitee.io
+ * @GitHub https://github.com/nateshao
+ * @Gitee https://gitee.com/nateshao
+ * Description:
+ * 如何仅用队列结构实现栈结构?
+ * 如何仅用栈结构实现队列结构?
+ * 两个栈实现队列
+ */
 public class Code_03_StackAndQueueConvert {
 
 	/**

@@ -2,7 +2,22 @@ package com.nateshao.basic_class_03;
 
 import java.util.LinkedList;
 import java.util.Queue;
-
+/**
+ * @date Created by 邵桐杰 on 2021/10/8 10:06
+ * @微信公众号 千羽的编程时光
+ * @个人网站 www.nateshao.cn
+ * @博客 https://nateshao.gitee.io
+ * @GitHub https://github.com/nateshao
+ * @Gitee https://gitee.com/nateshao
+ * Description:
+ * 实现一种狗猫队列的结构，要求如”下:用户可以调用add方法将cat类或dog类的实例放入队列中;
+ * 用户可以调用polIAII方法，将队列中所有的实例按照进队列的先后顺序依次弹出;
+ * 用户可以调用polIDog方法，将队列中dog类的实例按照进队列的先后顺序依次弹出;
+ * 用户可以调用polICat方法，将队列中cat类的实例按照进队列的先后顺序依次弹出;
+ * 用户可以调用isEmpty方法，检查队列中是否还有dog或cat的实例;
+ * 用户可以调用i sDogEmpty方法，检查队列中是否有dog类的实例;
+ * 用户可以调用i sCatEmpty方法，检查队列中是否有cat类的实例。
+ */
 public class Code_04_DogCatQueue {
 
 	public static class Pet {

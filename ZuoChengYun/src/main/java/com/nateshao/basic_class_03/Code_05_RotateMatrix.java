@@ -8,8 +8,7 @@ package com.nateshao.basic_class_03;
  * @GitHub https://github.com/nateshao
  * @Gitee https://gitee.com/nateshao
  * Description:旋转正方形矩阵
- * 【题目】 给定一个整型正方形矩阵matrix，请把该矩阵调整成
- * 顺时针旋转90度的样子。
+ * 【题目】 给定一个整型正方形矩阵matrix，请把该矩阵调整成顺时针旋转90度的样子。
  */
 public class Code_05_RotateMatrix {
     public static void main(String[] args) {
