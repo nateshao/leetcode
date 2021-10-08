@@ -1,5 +1,16 @@
 package com.nateshao.basic_class_03;
 
+/**
+ * @date Created by 邵桐杰 on 2021/9/18 20:03
+ * @微信公众号 千羽的编程时光
+ * @个人网站 www.nateshao.cn
+ * @博客 https://nateshao.gitee.io
+ * @GitHub https://github.com/nateshao
+ * @Gitee https://gitee.com/nateshao
+ * Description:
+ *  题目十 打印两个有序链表的公共部分
+ * 【题目】 给定两个有序链表的头指针head1和head2，打印两个 链表的公共部分。
+ */
 public class Code_10_PrintCommonPart {
 
 	public static class Node {
