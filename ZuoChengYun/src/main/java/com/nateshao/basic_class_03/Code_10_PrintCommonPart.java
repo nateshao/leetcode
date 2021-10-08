@@ -31,7 +31,7 @@ public class Code_10_PrintCommonPart {
 
     public static void printCommonPart(Node head1, Node head2) {
         System.out.print("Common Part: ");
-        if (head1 == null && head2 == null) return;
+        if (head1 == null || head2 == null) return;
         while (head1 != null && head2 != null) {
             // head1 = (head1.value < head2.value) ? head2.next : head1.next;
 
