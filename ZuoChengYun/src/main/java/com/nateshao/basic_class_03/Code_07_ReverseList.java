@@ -1,7 +1,25 @@
 package com.nateshao.basic_class_03;
 
 public class Code_07_ReverseList {
+	public static void main(String[] args) {
+		Node head1 = new Node(1);
+		head1.next = new Node(2);
+		head1.next.next = new Node(3);
+		printLinkedList(head1);
+		head1 = reverseList(head1);
+		printLinkedList(head1);
 
+		DoubleNode head2 = new DoubleNode(1);
+		head2.next = new DoubleNode(2);
+		head2.next.last = head2;
+		head2.next.next = new DoubleNode(3);
+		head2.next.next.last = head2.next;
+		head2.next.next.next = new DoubleNode(4);
+		head2.next.next.next.last = head2.next.next;
+		printDoubleLinkedList(head2);
+		printDoubleLinkedList(reverseList(head2));
+
+	}
 	public static class Node {
 		public int value;
 		public Node next;
@@ -71,24 +89,6 @@ public class Code_07_ReverseList {
 		System.out.println();
 	}
 
-	public static void main(String[] args) {
-		Node head1 = new Node(1);
-		head1.next = new Node(2);
-		head1.next.next = new Node(3);
-		printLinkedList(head1);
-		head1 = reverseList(head1);
-		printLinkedList(head1);
 
-		DoubleNode head2 = new DoubleNode(1);
-		head2.next = new DoubleNode(2);
-		head2.next.last = head2;
-		head2.next.next = new DoubleNode(3);
-		head2.next.next.last = head2.next;
-		head2.next.next.next = new DoubleNode(4);
-		head2.next.next.next.last = head2.next.next;
-		printDoubleLinkedList(head2);
-		printDoubleLinkedList(reverseList(head2));
-
-	}
 
 }
