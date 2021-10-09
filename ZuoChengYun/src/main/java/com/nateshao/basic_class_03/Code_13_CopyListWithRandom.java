@@ -7,13 +7,15 @@ import java.util.HashMap;
  * [题目]一 种特殊的链表节点类描述如下:
  * public class Node { public int value; public Node next; public Node rand;
  * public Node(int data){ this. value = data; }
- * Node类中的value是节点值，next指针和正常单链表中next指针的意义
- * 一样，都指向下一个节点，rand指针是Node类中新增的指针，这个指
- * 针可能指向链表中的任意一个节点，也可能指向null。给定- -个由
- * Node节点类型组成的无环单链表的头节点head,请实现一个函数完成
- * 这个链表中所有结构的复制，并返回复制的新链表的头节点。进阶 :
- * 不使用额外的数据结构，只用有限几个变量，且在时间复杂度为0(N)
- * 内完成原问题要实现的函数。
+ * Node类中的value是节点值，next指针和正常单链表中next指针的意义一样，都指向下一个节点，
+ * rand指针是Node类中新增的指针，这个指针可能指向链表中的任意一个节点，也可能指向null。
+ *
+ * 给定一个由Node节点类型组成的无环单链表的头节点head,请实现一个函数完成
+ * 这个链表中所有结构的复制，并返回复制的新链表的头节点。
+ *
+ * 进阶 :不使用额外的数据结构，只用有限几个变量，且在时间复杂度为0(N)内完成原问题要实现的函数。
+ *
+ * 思路：哈希表
  */
 public class Code_13_CopyListWithRandom {
 	public static void main(String[] args) {
@@ -62,6 +64,11 @@ public class Code_13_CopyListWithRandom {
 		}
 	}
 
+	/**
+	 * 法一：哈希表的思路
+	 * @param head
+	 * @return
+	 */
 	public static Node copyListWithRand1(Node head) {
 		HashMap<Node, Node> map = new HashMap<Node, Node>();
 		Node cur = head;
@@ -78,6 +85,11 @@ public class Code_13_CopyListWithRandom {
 		return map.get(head);
 	}
 
+	/**
+	 * 法二：
+	 * @param head
+	 * @return
+	 */
 	public static Node copyListWithRand2(Node head) {
 		if (head == null) {
 			return null;
