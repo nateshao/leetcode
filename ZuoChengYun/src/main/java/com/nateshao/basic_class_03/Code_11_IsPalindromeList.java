@@ -13,6 +13,11 @@ import java.util.Stack;
  * 【题目】 给定一个链表的头节点head，请判断该链表是否为回 文结构。
  * 例如： 1->2->1，返回true。 1->2->2->1，返回true。 15->6->15，返回true。 1->2->3，返回false。
  * 进阶： 如果链表长度为N，时间复杂度达到O(N)，额外空间复杂 度达到O(1)
+ * 思路1：栈。2：找到中点，对折。3：快指针走两步，慢指针走一步，
+ * 1，找到中点，将中点后半部分逆序。
+ * 2，指针A从前往后移动，指针B从后往前移动。
+ * 3，移到中点，如果AB两边都相等，则返回true，else返回false。
+ * 4，最后将B遍的结构逆转回来
  */
 public class Code_11_IsPalindromeList {
 
@@ -25,16 +30,20 @@ public class Code_11_IsPalindromeList {
 		}
 	}
 
-	// need n extra space
+	/** 思路1：栈
+	 * need n extra space  ：需要n的额外空间
+	 * @param head
+	 * @return
+	 */
 	public static boolean isPalindrome1(Node head) {
 		Stack<Node> stack = new Stack<Node>();
 		Node cur = head;
 		while (cur != null) {
-			stack.push(cur);
+			stack.push(cur); // 压栈
 			cur = cur.next;
 		}
 		while (head != null) {
-			if (head.value != stack.pop().value) {
+			if (head.value != stack.pop().value) { // 比对压栈和出栈的结果比较，不等return false
 				return false;
 			}
 			head = head.next;
@@ -67,13 +76,17 @@ public class Code_11_IsPalindromeList {
 		return true;
 	}
 
-	// need O(1) extra space
+	/**
+	 * need O(1) extra space
+	 * @param head
+	 * @return
+	 */
 	public static boolean isPalindrome3(Node head) {
 		if (head == null || head.next == null) {
 			return true;
 		}
-		Node n1 = head;
-		Node n2 = head;
+		Node n1 = head; // 慢指针
+		Node n2 = head; // 快指针
 		while (n2.next != null && n2.next.next != null) { // find mid node
 			n1 = n1.next; // n1 -> mid
 			n2 = n2.next.next; // n2 -> end
@@ -81,6 +94,9 @@ public class Code_11_IsPalindromeList {
 		n2 = n1.next; // n2 -> right part first node
 		n1.next = null; // mid.next -> null
 		Node n3 = null;
+		/**
+		 * 后半部分逆序
+		 */
 		while (n2 != null) { // right part convert
 			n3 = n2.next; // n3 -> save next node
 			n2.next = n1; // next of right node convert
@@ -100,6 +116,9 @@ public class Code_11_IsPalindromeList {
 		}
 		n1 = n3.next;
 		n3.next = null;
+		/**
+		 * 逆序回来
+		 */
 		while (n1 != null) { // recover list
 			n2 = n1.next;
 			n1.next = n3;

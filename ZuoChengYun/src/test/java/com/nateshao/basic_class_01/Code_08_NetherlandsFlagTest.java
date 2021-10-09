@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
  * @Gitee https://gitee.com/nateshao
- * Description:
+ * Description: 荷兰国旗问题
  */
 public class Code_08_NetherlandsFlagTest {
 
@@ -64,7 +64,5 @@ public class Code_08_NetherlandsFlagTest {
         printArray(res);
         System.out.println(res[0]);
         System.out.println(res[1]);
-
-
     }
 }
