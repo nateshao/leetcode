@@ -1,5 +1,38 @@
-# leetcode-cn
+# leetcode
+
 leetcode 代码成长记录
+
+学习数据结构与算法的代码示例，目前提供 Java、Go 三种语言支持。编程是一门实践的手艺，多多练习，多多思考，把这里列举的所有算法，数据结构，以及对应的常见 leetcode 习题都自己手敲几遍，增强自己的编码基本功，写出高性能和高质量的代码！
+
+
+
+## 排序和搜索
+
+### 1. 排序
+
+* 冒泡排序【Java、Go】
+
+* 选择排序【Java、Go】
+
+* 插入排序【Java、Go】
+
+* 希尔排序【Java、Go】
+
+* 归并排序【Java、Go】
+
+* 快速排序【Java、Go】
+
+* 堆排序【Java、Go】
+
+* 桶排序【Java、Go】
+
+* 计数排序【Java、Go】
+
+* 基数排序【Java、Go】
+
+  
+
+
 
 ## 关于作者
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -11,7 +44,6 @@ leetcode 代码成长记录
     <td align="center"><img align="center" src="https://ae01.alicdn.com/kf/U44e6216b2f5448cfa65fce1b163753fba.jpg" width="200"/></td>
      <td align="center"><img align="center" src="https://s4.ax1x.com/2021/03/19/6ftYuR.jpg" width="200"/></td>
   </tr>
-  
 </table>
 
 
