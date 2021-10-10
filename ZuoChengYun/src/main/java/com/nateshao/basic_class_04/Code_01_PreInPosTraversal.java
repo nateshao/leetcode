@@ -2,6 +2,15 @@ package com.nateshao.basic_class_04;
 
 import java.util.Stack;
 
+/**
+ * @date Created by 邵桐杰 on 2021/9/11 16:35
+ * @微信公众号 程序员千羽
+ * @个人网站 www.nateshao.cn
+ * @博客 https://nateshao.gitee.io
+ * @GitHub https://github.com/nateshao
+ * @Gitee https://gitee.com/nateshao
+ * Description: 实现二叉树的先序、中序、后序遍历，包括递归方式和非递归方式
+ */
 public class Code_01_PreInPosTraversal {
 
 	public static class Node {

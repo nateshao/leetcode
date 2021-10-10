@@ -8,6 +8,19 @@ package com.nateshao.basic_class_03;
  * 如果不相交，返回null 即可。
  *
  * 要求：如果链表1的长度为N，链表2的长度为M，时间复杂度请达到 O(N+M)，额外空间复杂度请达到O(1)。
+ *
+ * 思路1：
+ * 哈希表。如果单链表有环，返回第一个入环的节点；如果单链表无环，返回空。
+ * 		12345 ，将12345一次放入hashmap，如果有环，则返回第一个节点。如果nextxia下一个节点都为空了，则返回null
+ *
+ * 	思路2：
+ * 	定义两个指针，快指针和慢指针，快指针走两步，慢指针走一步
+ * 	如果快指针走到最后为空，则无环，
+ * 	如果快指针和满指针相遇，则有环。
+ *
+ * 	两个链表无环，相交
+ * 	一个有环，一个无环，不可能相交
+ *
  */
 public class Code_14_FindFirstIntersectNode {
 
@@ -26,11 +39,11 @@ public class Code_14_FindFirstIntersectNode {
 		}
 		Node loop1 = getLoopNode(head1);
 		Node loop2 = getLoopNode(head2);
-		if (loop1 == null && loop2 == null) {
+		if (loop1 == null && loop2 == null) { // 两个无环链表的相交问题
 			return noLoop(head1, head2);
 		}
 		if (loop1 != null && loop2 != null) {
-			return bothLoop(head1, loop1, head2, loop2);
+			return bothLoop(head1, loop1, head2, loop2); // 两个有环链表的相交问题
 		}
 		return null;
 	}
@@ -39,8 +52,8 @@ public class Code_14_FindFirstIntersectNode {
 		if (head == null || head.next == null || head.next.next == null) {
 			return null;
 		}
-		Node n1 = head.next; // n1 -> slow
-		Node n2 = head.next.next; // n2 -> fast
+		Node n1 = head.next; // n1 -> slow 慢指针
+		Node n2 = head.next.next; // n2 -> fast 快指针
 		while (n1 != n2) {
 			if (n2.next == null || n2.next.next == null) {
 				return null;
@@ -48,12 +61,12 @@ public class Code_14_FindFirstIntersectNode {
 			n2 = n2.next.next;
 			n1 = n1.next;
 		}
-		n2 = head; // n2 -> walk again from head
+		n2 = head; // n2 -> walk again from head // 快指针回到开头
 		while (n1 != n2) {
 			n1 = n1.next;
 			n2 = n2.next;
 		}
-		return n1;
+		return n1; // 返回第一个入环的节点
 	}
 
 	public static Node noLoop(Node head1, Node head2) {
