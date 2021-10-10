@@ -3,7 +3,7 @@ package com.nateshao.basic_class_04;
 import java.util.Stack;
 
 /**
- * @date Created by 邵桐杰 on 2021/9/11 16:35
+ * @date Created by 邵桐杰 on 2021/10/10 16:35
  * @微信公众号 程序员千羽
  * @个人网站 www.nateshao.cn
  * @博客 https://nateshao.gitee.io
@@ -15,14 +15,18 @@ public class Code_01_PreInPosTraversal {
 
 	public static class Node {
 		public int value;
-		public Node left;
-		public Node right;
+		public Node left; // 左孩子
+		public Node right; // 右孩子
 
 		public Node(int data) {
 			this.value = data;
 		}
 	}
-
+	/****************************************** 递归版 ****************************************/
+	/**
+	 * 先序遍历
+	 * @param head
+	 */
 	public static void preOrderRecur(Node head) {
 		if (head == null) {
 			return;
@@ -32,6 +36,10 @@ public class Code_01_PreInPosTraversal {
 		preOrderRecur(head.right);
 	}
 
+	/**
+	 * 中序遍历
+	 * @param head
+	 */
 	public static void inOrderRecur(Node head) {
 		if (head == null) {
 			return;
@@ -41,6 +49,10 @@ public class Code_01_PreInPosTraversal {
 		inOrderRecur(head.right);
 	}
 
+	/**
+	 * 后续遍历
+	 * @param head
+	 */
 	public static void posOrderRecur(Node head) {
 		if (head == null) {
 			return;
@@ -50,6 +62,12 @@ public class Code_01_PreInPosTraversal {
 		System.out.print(head.value + " ");
 	}
 
+	/****************************************** 非递归版：栈思想 *********************************************/
+
+	/**
+	 * 先序遍历：栈
+	 * @param head
+	 */
 	public static void preOrderUnRecur(Node head) {
 		System.out.print("pre-order: ");
 		if (head != null) {
@@ -57,11 +75,11 @@ public class Code_01_PreInPosTraversal {
 			stack.add(head);
 			while (!stack.isEmpty()) {
 				head = stack.pop();
-				System.out.print(head.value + " ");
-				if (head.right != null) {
+				System.out.print(head.value + " "); //打印头节点
+				if (head.right != null) { // 有右节点，先压入右节点
 					stack.push(head.right);
 				}
-				if (head.left != null) {
+				if (head.left != null) { // 最后压入左节点
 					stack.push(head.left);
 				}
 			}
