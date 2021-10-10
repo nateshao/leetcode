@@ -87,18 +87,23 @@ public class Code_01_PreInPosTraversal {
 		System.out.println();
 	}
 
+	/**
+	 * 中序遍历    左根右
+	 *
+	 * @param head
+	 */
 	public static void inOrderUnRecur(Node head) {
 		System.out.print("in-order: ");
 		if (head != null) {
 			Stack<Node> stack = new Stack<Node>();
 			while (!stack.isEmpty() || head != null) {
 				if (head != null) {
-					stack.push(head);
-					head = head.left;
+					stack.push(head);  // 当前节点不为空，先压头
+					head = head.left;  // 向左移动
 				} else {
-					head = stack.pop();
+					head = stack.pop();  // 当前节点为空，从栈中拿出一个打印，向右
 					System.out.print(head.value + " ");
-					head = head.right;
+					head = head.right;   // 当前向右
 				}
 			}
 		}
