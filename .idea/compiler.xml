@@ -12,8 +12,6 @@
         <module name="zuochengyun" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="leetcode (1) (com.nateshao.leetcode)" target="1.5" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>

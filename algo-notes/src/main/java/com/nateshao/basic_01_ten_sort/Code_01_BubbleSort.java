@@ -142,6 +142,12 @@ public class Code_01_BubbleSort {
         arr[i] = arr[i] ^ arr[j];
     }
 
+//    public static void swap(int[] arr, int i, int j) {
+//        int temp = arr[i];
+//        arr[i] = arr[j];
+//        arr[j] = temp;
+//    }
+
     public static void comparator(int[] arr) {
         Arrays.sort(arr);
     }

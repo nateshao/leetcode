@@ -14,19 +14,21 @@ public class Code_01_BubbleSortTest {
         int[] arr = {3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48};
         bubbleSort(arr);
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]+" ");
+            System.out.print(arr[i] + " ");
         }
 
     }
-
     public static void bubbleSort(int[] arr) {
+        if (arr == null && arr.length < 2) {
+            return;
+        }
         boolean isSwap;
         // 外层循环控制比较的轮数
         for (int i = 0; i < arr.length - 1; i++) {
             isSwap = false;
             // 内层循环进行相邻元素比较
             for (int j = 0; j < arr.length - 1 - i; j++) {
-                if (arr[j] > arr[j + 1]) { // 后面的数比前面的数小则交换
+                if (arr[j] > arr[j + 1]) { // 前面的数比后面的数大则交换
                     swap(arr, j, j + 1);
                     isSwap = true;
                 }
