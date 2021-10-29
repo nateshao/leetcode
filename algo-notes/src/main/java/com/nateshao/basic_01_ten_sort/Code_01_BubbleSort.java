@@ -1,5 +1,7 @@
 package com.nateshao.basic_01_ten_sort;
 
+import java.util.Arrays;
+
 /**
  * @date Created by 邵桐杰 on 2021/10/29 9:46
  * @微信公众号 程序员千羽
@@ -13,11 +15,41 @@ public class Code_01_BubbleSort {
 
     public static void main(String[] args) {
         int testTime = 500000;
-        int maxSize = 500000;
-        int maxValue = 500000;
+        int maxSize = 20;
+        int maxValue = 100;
         boolean succeed = true;
         for (int i = 0; i < testTime; i++) {
+            int[] arr1 = generateRandomArray(maxSize, maxValue);
+            int[] arr2 = copyArray(arr1);
+            bubbleSort(arr1);
+            comparator(arr2);
+            if (!isEqual(arr1, arr2)) {
+                succeed = false;
+                break;
+            }
+        }
+        System.out.println(succeed ? "Nice" : "error");
+        int[] arr = generateRandomArray(maxSize, maxValue);
+        printArray(arr);
+        bubbleSort(arr);
+        printArray(arr);
+    }
 
+    /**
+     * 冒泡排序
+     *
+     * @param arr
+     */
+    public static void bubbleSort(int[] arr) {
+        if (arr == null || arr.length < 2) {
+            return;
+        }
+        for (int e = arr.length - 1; e > 0; e--) {
+            for (int i = 0; i < e; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    swap(arr, i, i + 1);
+                }
+            }
         }
     }
 
@@ -84,6 +116,7 @@ public class Code_01_BubbleSort {
 
     /**
      * 打印数组
+     *
      * @param arr
      */
     public static void printArray(int[] arr) {
@@ -96,5 +129,21 @@ public class Code_01_BubbleSort {
         System.out.println();
     }
 
+    /**
+     * 两数交换 不用第三个数
+     *
+     * @param arr
+     * @param i
+     * @param j
+     */
+    public static void swap(int[] arr, int i, int j) {
+        arr[i] = arr[i] ^ arr[j];
+        arr[j] = arr[i] ^ arr[j];
+        arr[i] = arr[i] ^ arr[j];
+    }
+
+    public static void comparator(int[] arr) {
+        Arrays.sort(arr);
+    }
 
 }
