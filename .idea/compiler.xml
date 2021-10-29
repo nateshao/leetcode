@@ -6,10 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Play-With-Data-Structures-Master" />
-        <module name="leetcode" />
+        <module name="algo-notes" />
         <module name="ZuoChengYun" />
+        <module name="Play-With-Data-Structures-Master" />
+        <module name="zuochengyun" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="leetcode (1) (com.nateshao.leetcode)" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

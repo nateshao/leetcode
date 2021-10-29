@@ -9,8 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.nateshao.leetcode</groupId>
-    <artifactId>leetcode</artifactId>
+    <groupId>com.nateshao.algonotes</groupId>
+    <artifactId>algo-notes</artifactId>
 
 
 </project>
