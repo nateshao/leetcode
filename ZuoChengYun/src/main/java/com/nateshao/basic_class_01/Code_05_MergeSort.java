@@ -12,6 +12,31 @@ import java.util.Arrays;
  */
 public class Code_05_MergeSort {
 
+	public static void main(String[] args) {
+		int testTime = 500000;
+		int maxSize = 20;
+		int maxValue = 100;
+		boolean succeed = true;
+		for (int i = 0; i < testTime; i++) {
+			int[] arr1 = generateRandomArray(maxSize, maxValue);
+			int[] arr2 = copyArray(arr1);
+			mergeSort(arr1);
+			comparator(arr2);
+			if (!isEqual(arr1, arr2)) {
+				succeed = false;
+				printArray(arr1);
+				printArray(arr2);
+				break;
+			}
+		}
+		System.out.println(succeed ? "Nice!" : "Fucking fucked!");
+
+		int[] arr = generateRandomArray(maxSize, maxValue);
+		printArray(arr);
+		mergeSort(arr);
+		printArray(arr);
+
+	}
 	/**
 	 * 如果数组的长度为空，或者是数组的长度为1。直接返回，不需要比较
 	 * @param arr
@@ -62,12 +87,20 @@ public class Code_05_MergeSort {
 		}
 	}
 
-	// for test
+	/**
+	 * 比较器
+	 * @param arr
+	 */
 	public static void comparator(int[] arr) {
 		Arrays.sort(arr);
 	}
 
-	// for test
+	/**
+	 * 生成任意数组
+	 * @param maxSize
+	 * @param maxValue
+	 * @return
+	 */
 	public static int[] generateRandomArray(int maxSize, int maxValue) {
 		int[] arr = new int[(int) ((maxSize + 1) * Math.random())];
 		for (int i = 0; i < arr.length; i++) {
@@ -76,7 +109,11 @@ public class Code_05_MergeSort {
 		return arr;
 	}
 
-	// for test
+	/**
+	 * 复制数组
+	 * @param arr
+	 * @return
+	 */
 	public static int[] copyArray(int[] arr) {
 		if (arr == null) {
 			return null;
@@ -88,7 +125,12 @@ public class Code_05_MergeSort {
 		return res;
 	}
 
-	// for test
+	/**
+	 * 两数组是否相等
+	 * @param arr1
+	 * @param arr2
+	 * @return
+	 */
 	public static boolean isEqual(int[] arr1, int[] arr2) {
 		if ((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null)) {
 			return false;
@@ -107,7 +149,10 @@ public class Code_05_MergeSort {
 		return true;
 	}
 
-	// for test
+	/**
+	 * 打印数组
+	 * @param arr
+	 */
 	public static void printArray(int[] arr) {
 		if (arr == null) {
 			return;
@@ -117,32 +162,4 @@ public class Code_05_MergeSort {
 		}
 		System.out.println();
 	}
-
-	// for test
-	public static void main(String[] args) {
-		int testTime = 500000;
-		int maxSize = 100;
-		int maxValue = 100;
-		boolean succeed = true;
-		for (int i = 0; i < testTime; i++) {
-			int[] arr1 = generateRandomArray(maxSize, maxValue);
-			int[] arr2 = copyArray(arr1);
-			mergeSort(arr1);
-			comparator(arr2);
-			if (!isEqual(arr1, arr2)) {
-				succeed = false;
-				printArray(arr1);
-				printArray(arr2);
-				break;
-			}
-		}
-		System.out.println(succeed ? "Nice!" : "Fucking fucked!");
-
-		int[] arr = generateRandomArray(maxSize, maxValue);
-		printArray(arr);
-		mergeSort(arr);
-		printArray(arr);
-
-	}
-
 }

@@ -10,12 +10,22 @@ import java.util.Random;
  * @description 桶排序测试
  */
 public class BucketSort {
+    public static void main(String[] args) {
+        Random random = new Random();
+        int[] data = new int[10000];
+        for (int i = 0; i < data.length; i++) {
+            data[i] = random.nextInt(100000);
+        }
+        BucketSort.bucketSort(data);
+        System.out.println(Arrays.toString(data));
+    }
 
     /**
      * 测试场景：数组中有10000个数据，范围在(0-100000)
      * 使用100个桶，每个桶存放的数据范围为：0-999, 1000-1999, 2000-2999，依次类推
+     * @param data
      */
-    public static void bucketSort(int[] data){
+    public static void bucketSort(int[] data) {
         //新建100个桶
         int bucketSize = 100;
         ArrayList<ArrayList<Integer>> buckets = new ArrayList<>(bucketSize);
@@ -39,14 +49,5 @@ public class BucketSort {
         }
     }
 
-    public static void main(String[] args) {
-        Random random = new Random();
-        int[] data = new int[10000];
-        for (int i = 0; i < data.length; i++) {
-            data[i] = random.nextInt(100000);
-        }
-        BucketSort.bucketSort(data);
-        System.out.println(Arrays.toString(data));
-    }
 
 }

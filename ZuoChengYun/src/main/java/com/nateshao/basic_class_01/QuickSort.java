@@ -1,5 +1,7 @@
 package com.nateshao.basic_class_01;
 
+import java.util.Arrays;
+
 /**
  * @date Created by 邵桐杰 on 2021/9/20 10:02
  * @微信公众号 程序员千羽
@@ -14,10 +16,7 @@ public class QuickSort {
         int[] arr = {5, 1, 7, 3, 1, 6, 9, 4};
 
         quickSort(arr, 0, arr.length - 1);
-
-        for (int i : arr) {
-            System.out.print(i + "\t");
-        }
+        System.out.println(Arrays.toString(arr));
     }
 
     /**

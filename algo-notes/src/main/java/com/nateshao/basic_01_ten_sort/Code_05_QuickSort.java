@@ -18,29 +18,47 @@ public class Code_05_QuickSort {
         System.out.println(Arrays.toString(arr));
     }
 
-    private static void quickSort(int[] arr, int indexLeft, int indexRight) {
-        if (indexLeft >= indexRight) {
+    /**
+     * @param arr        待排序列
+     * @param leftIndex  待排序列起始位置
+     * @param rightIndex 待排序列结束位置
+     */
+    private static void quickSort(int[] arr, int leftIndex, int rightIndex) {
+        /**
+         * 如果左边大于右边，直接返回
+         */
+        if (leftIndex >= rightIndex) {
             return;
         }
-        int left = indexLeft;
-        int right = indexRight;
+
+        int left = leftIndex;
+        int right = rightIndex;
+        //待排序的第一个元素作为基准值
         int key = arr[left];
+
+        //从左右两边交替扫描，直到left = right
         while (left < right) {
-            // 右边
-            while (right > left && arr[right] > key) {
+            while (right > left && arr[right] >= key) {
+                //从右往左扫描，找到第一个比基准值小的元素
                 right--;
             }
+
+            //找到这种元素将arr[right]放入arr[left]中
             arr[left] = arr[right];
-            // 左边
+
             while (left < right && arr[left] <= key) {
+                //从左往右扫描，找到第一个比基准值大的元素
                 left++;
             }
+
+            //找到这种元素将arr[left]放入arr[right]中
             arr[right] = arr[left];
         }
-
-        // 基准归位
+        //基准值归位
         arr[left] = key;
-        quickSort(arr, indexLeft, left - 1);
-        quickSort(arr, right + 1, indexRight);
+        //对基准值左边的元素进行递归排序
+        quickSort(arr, leftIndex, left - 1);
+        //对基准值右边的元素进行递归排序。
+        quickSort(arr, right + 1, rightIndex);
     }
 }

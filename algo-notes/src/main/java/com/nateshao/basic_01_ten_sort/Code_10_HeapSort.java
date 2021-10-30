@@ -3,15 +3,16 @@ package com.nateshao.basic_01_ten_sort;
 import java.util.Arrays;
 
 /**
- * @date Created by 邵桐杰 on 2021/10/30 12:15
+ * @date Created by 邵桐杰 on 2021/10/30 16:05
  * @微信公众号 程序员千羽
  * @个人网站 www.nateshao.cn
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
  * @Gitee https://gitee.com/nateshao
- * Description: 归并排序
+ * Description: 堆排序
  */
-public class Code_06_MergeSort {
+public class Code_10_HeapSort {
+
     public static void main(String[] args) {
         int testTime = 500000;
         int maxSize = 20;
@@ -20,12 +21,10 @@ public class Code_06_MergeSort {
         for (int i = 0; i < testTime; i++) {
             int[] arr1 = generateRandomArray(maxSize, maxValue);
             int[] arr2 = copyArray(arr1);
-            mergeSort(arr1);
+            heapSort(arr1);
             comparator(arr2);
             if (!isEqual(arr1, arr2)) {
                 succeed = false;
-                printArray(arr1);
-                printArray(arr2);
                 break;
             }
         }
@@ -33,74 +32,70 @@ public class Code_06_MergeSort {
 
         int[] arr = generateRandomArray(maxSize, maxValue);
         printArray(arr);
-        mergeSort(arr);
+        heapSort(arr);
         printArray(arr);
-
     }
+
     /**
-     * 如果数组的长度为空，或者是数组的长度为1。直接返回，不需要比较
+     * 堆排序
      * @param arr
      */
-    public static void mergeSort(int[] arr) {
+    public static void heapSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
         }
-        mergeSort(arr, 0, arr.length - 1);
-    }
-
-    /**
-     * 这个范围上只有一个数，直接返回
-     * @param arr
-     * @param l
-     * @param r
-     */
-    public static void mergeSort(int[] arr, int l, int r) {
-        if (l == r) {
-            return;
+        // 建立大根堆
+        for (int i = 0; i < arr.length; i++) {
+            heapInsert(arr, i);
         }
-        int mid = l + ((r - l) >> 1); // L和R中点的位置 （L + R）/ 2
-        mergeSort(arr, l, mid); // 左部分排序  T(n/2)
-        mergeSort(arr, mid + 1, r); // 右部分排序 T(n/2)
-        merge(arr, l, mid, r); // 左部分和右部分合并 O(n)
-        // 总的时间复杂度：T(N) = 2T(n/2) + O(N)
-    }
-
-    public static void merge(int[] arr, int l, int m, int r) {
-        int[] help = new int[r - l + 1];
-        int i = 0;
-        int p1 = l;// 数组l,左侧第一的最小值。
-        int p2 = m + 1;// 右侧第一的最小值。
-        while (p1 <= m && p2 <= r) { // p1 or p2 谁小取谁，放在新的数组，重新排序数组
-            help[i++] = arr[p1] < arr[p2] ? arr[p1++] : arr[p2++];
-        }
-        /**
-         * p1,p2两个数，必有一个数越界
-         */
-        while (p1 <= m) {
-            help[i++] = arr[p1++];
-        }
-        while (p2 <= r) {
-            help[i++] = arr[p2++];
-        }
-        for (i = 0; i < help.length; i++) {
-            arr[l + i] = help[i]; // 最后将数组拷贝到arr[i]
+        int size = arr.length;
+        swap(arr, 0, --size); // 最后一位数，与第一位数交换。 堆大小减1
+        while (size > 0) {
+            heapify(arr, 0, size); // 继续调整大根堆
+            swap(arr, 0, --size);      // 继续。最后一位数，与第一位数交换。 堆大小减1
         }
     }
 
     /**
-     * 比较器
+     * 建立大根堆
+     *
      * @param arr
+     * @param index
      */
+    public static void heapInsert(int[] arr, int index) {
+        while (arr[index] > arr[(index - 1) / 2]) {
+            swap(arr, index, (index - 1) / 2);
+            index = (index - 1) / 2;
+        }
+    }
+
+    public static void heapify(int[] arr, int index, int size) {
+        int left = index * 2 + 1; // 左孩子。i*2+1		右孩子：left + 1
+        while (left < size) { // 堆大小
+            // 左孩子有孩子比较，谁的值大就取谁
+            int largest = left + 1 < size && arr[left + 1] > arr[left] ? left + 1 : left;
+            // 节点与左右孩子比较，谁大取谁下标
+            largest = arr[largest] > arr[index] ? largest : index;
+            // 是我自己，就不用往下执行
+            if (largest == index) {
+                break;
+            }
+            swap(arr, largest, index); // largest != index
+            index = largest;
+            left = index * 2 + 1;
+        }
+    }
+
+    public static void swap(int[] arr, int i, int j) {
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+    }
+
     public static void comparator(int[] arr) {
         Arrays.sort(arr);
     }
 
-    /**
-     * 生成任意数组
-     * @param maxSize
-     * @param maxValue
-     * @return
-     */
     public static int[] generateRandomArray(int maxSize, int maxValue) {
         int[] arr = new int[(int) ((maxSize + 1) * Math.random())];
         for (int i = 0; i < arr.length; i++) {
@@ -109,11 +104,6 @@ public class Code_06_MergeSort {
         return arr;
     }
 
-    /**
-     * 复制数组
-     * @param arr
-     * @return
-     */
     public static int[] copyArray(int[] arr) {
         if (arr == null) {
             return null;
@@ -125,12 +115,6 @@ public class Code_06_MergeSort {
         return res;
     }
 
-    /**
-     * 两数组是否相等
-     * @param arr1
-     * @param arr2
-     * @return
-     */
     public static boolean isEqual(int[] arr1, int[] arr2) {
         if ((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null)) {
             return false;
@@ -149,10 +133,6 @@ public class Code_06_MergeSort {
         return true;
     }
 
-    /**
-     * 打印数组
-     * @param arr
-     */
     public static void printArray(int[] arr) {
         if (arr == null) {
             return;
