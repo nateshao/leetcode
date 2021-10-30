@@ -1,5 +1,7 @@
 package com.nateshao.basic_01_ten_sort;
 
+import java.util.Arrays;
+
 /**
  * @date Created by 邵桐杰 on 2021/10/29 16:52
  * @微信公众号 程序员千羽
@@ -13,11 +15,9 @@ public class Code_01_BubbleSortTest {
     public static void main(String[] args) {
         int[] arr = {3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48};
         bubbleSort(arr);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-
+        System.out.println(Arrays.toString(arr));
     }
+
     public static void bubbleSort(int[] arr) {
         if (arr == null && arr.length < 2) {
             return;

@@ -1,22 +1,19 @@
-package com.nateshao.basic_class_01;
+package com.nateshao.basic_01_ten_sort;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
-
 /**
- * @date Created by 邵桐杰 on 2021/9/20 10:06
+ * @date Created by 邵桐杰 on 2021/10/30 12:09
  * @微信公众号 程序员千羽
  * @个人网站 www.nateshao.cn
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
  * @Gitee https://gitee.com/nateshao
- * Description:
+ * Description: 快速排序
  */
-public class QuickSortTest {
-
+public class Code_05_QuickSort {
     public static void main(String[] args) {
-        int[] arr = {2, 1, 4, 9, 6, 87, 3, 21, 54, 23, 76, 99};
+        int[] arr = {3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48};
         quickSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
@@ -28,7 +25,6 @@ public class QuickSortTest {
         int left = indexLeft;
         int right = indexRight;
         int key = arr[left];
-
         while (left < right) {
             // 右边
             while (right > left && arr[right] > key) {
@@ -47,6 +43,4 @@ public class QuickSortTest {
         quickSort(arr, indexLeft, left - 1);
         quickSort(arr, right + 1, indexRight);
     }
-
-
 }

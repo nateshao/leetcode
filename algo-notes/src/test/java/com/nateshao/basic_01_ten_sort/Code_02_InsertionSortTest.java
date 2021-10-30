@@ -7,7 +7,7 @@ package com.nateshao.basic_01_ten_sort;
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
  * @Gitee https://gitee.com/nateshao
- * Description:
+ * Description: 插入排序
  */
 public class Code_02_InsertionSortTest {
     public static void main(String[] args) {
