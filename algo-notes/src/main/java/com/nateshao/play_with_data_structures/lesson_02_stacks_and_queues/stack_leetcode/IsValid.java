@@ -12,65 +12,61 @@ import java.util.Stack;
  * Description: https://leetcode-cn.com/problems/valid-parentheses/
  * 20. 有效的括号
  * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串 s ，判断字符串是否有效。
- *
+ * <p>
  * 有效字符串需满足：
- *
+ * <p>
  * 左括号必须用相同类型的右括号闭合。
  * 左括号必须以正确的顺序闭合。
- *
- *
+ * <p>
+ * <p>
  * 示例 1：
- *
  * 输入：s = "()"
  * 输出：true
+ * <p>
  * 示例 2：
- *
  * 输入：s = "()[]{}"
  * 输出：true
+ * <p>
  * 示例 3：
- *
  * 输入：s = "(]"
  * 输出：false
+ * <p>
  * 示例 4：
- *
  * 输入：s = "([)]"
  * 输出：false
+ * <p>
  * 示例 5：
- *
  * 输入：s = "{[]}"
  * 输出：true
- *
- *
  * 提示：
- *
  * 1 <= s.length <= 104
  * s 仅由括号 '()[]{}' 组成
  */
 public class IsValid {
     public static void main(String[] args) {
 
-        System.out.println(isValid("()[]{}"));
-        System.out.println(isValid("([)]"));
+        System.out.println(isValid("[({})]"));
+        System.out.println(isValid("[})}{})]"));
     }
-    public static boolean isValid(String s) {
 
+    public static boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i); // charAt() 方法用于返回指定索引处的字符。索引范围为从 0 到 length() - 1。
-            if (c == '(' || c == '[' || c == '{')
+            char c = s.charAt(i);
+            if (c == '(' || c == '{' || c == '[') {
                 stack.push(c);
-            else {
-                if (stack.isEmpty())
-                    return false;
-
+            } else if (stack.isEmpty()) {
+                return false;
+            } else {
                 char topChar = stack.pop();
-                if (c == ')' && topChar != '(')
+                if (c == '}' && topChar != '{')
                     return false;
                 if (c == ']' && topChar != '[')
                     return false;
-                if (c == '}' && topChar != '{')
+                if (c == ')' && topChar != '(')
                     return false;
             }
+
         }
         return stack.isEmpty();
     }
