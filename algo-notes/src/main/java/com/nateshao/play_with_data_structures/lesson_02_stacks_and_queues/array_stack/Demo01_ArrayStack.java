@@ -2,6 +2,8 @@ package com.nateshao.play_with_data_structures.lesson_02_stacks_and_queues.array
 
 import com.nateshao.play_with_data_structures.lesson_02_stacks_and_queues.array_stack.ArrayStack;
 
+import java.util.Stack;
+
 /**
  * @date Created by 邵桐杰 on 2021/11/1 23:41
  * @微信公众号 程序员千羽
@@ -24,5 +26,14 @@ public class Demo01_ArrayStack {
 
         stack.pop();
         System.out.println(stack);
+
+        System.out.println("--------------------------");
+        Stack<Integer> stack1 = new Stack<>();
+        for (int i = 0; i < 10; i++) {
+            stack1.push(i);
+        }
+        System.out.println(stack1);
+        stack1.pop();
+        System.out.println(stack1);
     }
 }
