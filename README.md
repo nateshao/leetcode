@@ -1,23 +1,52 @@
+[TOC]
+
+
+
 # leetcode
 
 leetcode 代码成长记录
 
 学习数据结构与算法的代码示例，目前提供 Java语言支持。编程是一门实践的手艺，多多练习，多多思考，把这里列举的所有算法，数据结构，以及对应的常见 leetcode 习题都自己手敲几遍，增强自己的编码基本功，写出高性能和高质量的代码！
 
-## 数组
+## 十大经典排序算法
 
+文章介绍看这里 [十大经典排序算法](https://mp.weixin.qq.com/s?__biz=MzIyNjE0MDI1NQ==&mid=2247485793&idx=1&sn=426347202b22e700b2aab172de0aca98&chksm=e8744051df03c9476d218cf9ea685cb71611b9bdce5562a26c898a7023b25034346768875ff6&token=2138841491&lang=zh_CN#rd)
+
+| 序号 | 排序名称 |                           代码实现                           |
+| :--: | :------: | :----------------------------------------------------------: |
+|  1   | 冒泡排序 | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_01_BubbleSort.java) |
+|  2   | 插入排序 | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_02_InsertionSort.java) |
+|  3   | 希尔排序 | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_03_ShellSort.java) |
+|  4   | 选择排序 | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_04_SelectionSort.java) |
+|  5   | 快速排序 | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_05_QuickSort.java) |
+|  6   | 归并排序 | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_06_MergeSort.java) |
+|  7   | 计数排序 | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_07_CountSort.java) |
+|  8   | 基数排序 | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_08_RadixSort.java) |
+|  9   |  桶排序  | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_09_BucketSort.java) |
+|  0   |  堆排序  | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_10_HeapSort.java) |
+
+## 数组
 - 常见的leetcode习题：
 
-| 题号 |                           题目名称                           | 解题代码 | 难度 |
-| :--: | :----------------------------------------------------------: | :------: | :--: |
-|  20  | [有效的括号](https://leetcode-cn.com/problems/valid-parentheses/) |          | 简单 |
-|      |                                                              |          |      |
-|      |                                                              |          |      |
+| 题号 | 题目名称 | 解题代码 | 难度 |
+| :--: | :------: | :------: | :--: |
+|      |          |          |      |
+|      |          |          |      |
+|      |          |          |      |
 
 
 
 
 
+
+## 栈
+- 常见的leetcode习题：
+
+| 题号 |                           题目名称                           |                           解题代码                           | 难度 |
+| :--: | :----------------------------------------------------------: | :----------------------------------------------------------: | :--: |
+|  20  | [有效的括号](https://leetcode-cn.com/problems/valid-parentheses/) | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/play_with_data_structures/lesson_02_stacks_and_queues/stack_leetcode/IsValid.java) | 简单 |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
 
 
 
