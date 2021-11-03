@@ -1,5 +1,6 @@
 package com.nateshao.leetcode.Arrays;
 
+import javax.naming.PartialResultException;
 import java.util.Arrays;
 
 /**
@@ -21,18 +22,20 @@ public class Remove_Repeat_Array_26 {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4, 3, 2, 3, 4, 5, 76, 89, 22};
         removeDuplicates(nums);
+//        for (int num : nums) {
+//            System.out.print(num + " ");
+//        }
         System.out.println(Arrays.toString(nums));
     }
 
     public static int removeDuplicates(int[] nums) {
-        if (nums.length == 0) return 0;
-        int i = 0;
-        for (int j = 1; j < nums.length; j++) {
-            if (nums[j] != nums[i]) {
-                i++;
-                nums[i] = nums[j];
+        int left = 0, right = 1;
+        while (right < nums.length) {
+            if (nums[left] != nums[right]) {
+                nums[++left] = nums[right];
             }
+            right++;
         }
-        return i + 1;
+        return left + 1;
     }
 }
