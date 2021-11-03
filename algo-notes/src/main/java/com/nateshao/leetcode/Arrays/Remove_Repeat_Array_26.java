@@ -28,6 +28,15 @@ public class Remove_Repeat_Array_26 {
         System.out.println(Arrays.toString(nums));
     }
 
+    /**
+     * 分析
+     * 快慢指针的妙用，利用两个指针i, j,初始化值为0和1，当两个指针对应的值相等时，指针j+1，继续执行循环；
+     * 而当两个指针对应的值不相等时，将指针i+1，并将指针j对用的值赋值给指针i，然后指针j+1，继续向下执行循环，直到循环结束。
+     *
+     * 细节需要注意：最后慢指针是最后一个数据的索引，题目要求是返回数组的长度，所以需要 +1返回；
+     * @param nums
+     * @return
+     */
     public static int removeDuplicates(int[] nums) {
         int left = 0, right = 1;
         while (right < nums.length) {
