@@ -1,4 +1,4 @@
-package com.nateshao.play_with_data_structures.lesson_02_stacks_and_queues.array_queue;
+package com.nateshao.play_with_data_structures.lesson_02_stacks_and_queues.loop_queue;
 
 import javafx.util.Pair;
 
