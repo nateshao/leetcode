@@ -11,7 +11,7 @@ import java.util.Set;
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
  * @Gitee https://gitee.com/nateshao
- * Description: 删除有序数组的重复项
+ * Description: 删除有序数组的重复项  26
  * https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/x2gy9m/
  * <p>
  * 思路：

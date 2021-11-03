@@ -28,11 +28,11 @@ leetcode 代码成长记录
 ## 数组
 - 常见的leetcode习题：
 
-| 题号 | 题目名称 | 解题代码 | 难度 |
-| :--: | :------: | :------: | :--: |
-|      |          |          |      |
-|      |          |          |      |
-|      |          |          |      |
+| 题号 |       题目名称       |                           解题代码                           | 难度 |
+| :--: | :------------------: | :----------------------------------------------------------: | :--: |
+|  26  | 删除有序数组的重复项 | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/Arrays/MaxProfit_122.java) | 简单 |
+| 122  |  买卖股票的最佳时机  | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/Arrays/Remove_Repeat_Array_26.java) | 中等 |
+|      |                      |                                                              |      |
 
 
 
