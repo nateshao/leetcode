@@ -1,4 +1,4 @@
-package com.nateshao.play_with_data_structures.lesson_02_stacks_and_queues.loop_queue;
+package com.nateshao.play_with_data_structures.lesson_02_stacks_and_queues.queues_comparison;
 
 /**
  * @date Created by 邵桐杰 on 2021/11/3 23:19
