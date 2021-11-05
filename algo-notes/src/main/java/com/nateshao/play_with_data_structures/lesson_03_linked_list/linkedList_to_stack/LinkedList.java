@@ -1,9 +1,7 @@
-package com.nateshao.play_with_data_structures.lesson_03_linked_list.remove_element_linkedList;
-
-import java.util.HashMap;
+package com.nateshao.play_with_data_structures.lesson_03_linked_list.linkedList_to_stack;
 
 /**
- * @date Created by 邵桐杰 on 2021/11/5 21:45
+ * @date Created by 邵桐杰 on 2021/11/5 22:54
  * @微信公众号 程序员千羽
  * @个人网站 www.nateshao.cn
  * @博客 https://nateshao.gitee.io
@@ -106,7 +104,7 @@ public class LinkedList<E> {
     // 在链表中不是一个常用的操作，练习用：）
     public void set(int index, E e) {
         if (index < 0 || index >= size)
-            throw new IllegalArgumentException("Set failed. Illegal index.");
+            throw new IllegalArgumentException("Update failed. Illegal index.");
 
         Node cur = dummyHead.next;
         for (int i = 0; i < index; i++)
@@ -130,6 +128,8 @@ public class LinkedList<E> {
     public E remove(int index) {
         if (index < 0 || index >= size)
             throw new IllegalArgumentException("Remove failed. Index is illegal.");
+
+        // E ret = findNode(index).e; // 两次遍历
 
         Node prev = dummyHead;
         for (int i = 0; i < index; i++)
