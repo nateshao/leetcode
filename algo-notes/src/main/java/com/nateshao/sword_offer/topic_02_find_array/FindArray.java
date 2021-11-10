@@ -7,7 +7,7 @@ package com.nateshao.sword_offer.topic_02_find_array;
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
  * @Gitee https://gitee.com/nateshao
- * Description:
+ * Description: 面试题3: 二维数组中的查找
  * 题目描述：在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列
  * 都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
  * 思路：从右上角或左下角开始找，逐行排除，或者用二分法查找

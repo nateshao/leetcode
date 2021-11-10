@@ -7,7 +7,8 @@ package com.nateshao.sword_offer.topic_01_Singleton;
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
  * @Gitee https://gitee.com/nateshao
- * Description: 单例设计模式：思路：非线程安全与线程安全
+ * Description: 面试题2：实现Singleton模式
+ * 单例设计模式：思路：非线程安全与线程安全
  * 代码实现：线程安全的懒汉式：静态内部类
  */
 public class Singleton {
