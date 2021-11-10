@@ -25,7 +25,18 @@ leetcode 代码成长记录
 |  9   |  桶排序  | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_09_BucketSort.java) |
 |  0   |  堆排序  | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_10_HeapSort.java) |
 
+## 《剑指offer》
+
+| 序号 | 题目                       |                           代码实现                           |
+| :--- | :------------------------- | :----------------------------------------------------------: |
+| 13   | 面试题1：赋值运算符函数    |                                                              |
+| 31   | 面试题2：实现Singleton模式 | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_01_Singleton/Singleton.java) |
+|      |                            |                                                              |
+
+
+
 ## 数组
+
 - 常见的leetcode习题：
 
 | 题号 |       题目名称       |                           解题代码                           | 难度 |
