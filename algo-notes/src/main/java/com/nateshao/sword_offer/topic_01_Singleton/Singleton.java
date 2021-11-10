@@ -11,10 +11,12 @@ package com.nateshao.sword_offer.topic_01_Singleton;
  * 代码实现：线程安全的懒汉式：静态内部类
  */
 public class Singleton {
-    public Singleton(){}
-    public static class SingletonHodler{
+    private Singleton(){}
+    private static class SingletonHodler{
         private static Singleton outInstance =  new Singleton();
     }
-
+    public static Singleton getInstance(){
+        return SingletonHodler.outInstance;
+    }
 
 }
