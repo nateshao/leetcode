@@ -31,7 +31,7 @@ leetcode 代码成长记录
 | :--- | :------------------------- | :----------------------------------------------------------: |
 | 13   | 面试题1：赋值运算符函数    |                                                              |
 | 31   | 面试题2：实现Singleton模式 | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_01_Singleton/Singleton.java) |
-| 55   | 面试题3: 二维数组中的查找  |                                                              |
+| 55   | 面试题3: 二维数组中的查找  | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_02_find_array/FindArray.java) |
 
 
 
