@@ -20,7 +20,10 @@ public class Code_05_QuickSortTest {
     public void testQuickSort() {
         int[] arr = {3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48};
         quickSort(arr, 0, arr.length - 1);
-        System.out.println(Arrays.toString(arr));
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+        }
+//        System.out.println(Arrays.toString(arr));
     }
 
     /**

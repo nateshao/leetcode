@@ -25,13 +25,70 @@ leetcode 代码成长记录
 |  9   |  桶排序  | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_09_BucketSort.java) |
 |  0   |  堆排序  | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_10_HeapSort.java) |
 
-## 《剑指offer》
+## 《剑指offer》题目
 
-| 序号 | 题目                       |                           代码实现                           |
-| :--- | :------------------------- | :----------------------------------------------------------: |
-| 13   | 面试题1：赋值运算符函数    |                                                              |
-| 31   | 面试题2：实现Singleton模式 | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_01_Singleton/Singleton.java) |
-| 55   | 面试题3: 二维数组中的查找  | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_02_find_array/FindArray.java) |
+| 书页码 | 题目                                                         | 代码实现                                                     | 难度 |
+| ------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| 13     | 面试题1：赋值运算符函数                                      |                                                              |      |
+| 31     | 面试题2：实现Singleton模式                                   | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_01_Singleton/Singleton.java) |      |
+|        | [剑指 Offer 03. 数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/) |                                                              | 简单 |
+| 55     | [剑指 Offer 04. 二维数组中的查找](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/) | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_02_find_array/FindArray.java) | 中等 |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
+|        |                                                              |                                                              |      |
 
 
 
