@@ -13,11 +13,11 @@ package com.nateshao.sword_offer.topic_01_Singleton;
  */
 public class Singleton {
     private Singleton(){}
-    private static class SingletonHodler{
+    private static class SingletonHandler{
         private static Singleton outInstance =  new Singleton();
     }
     public static Singleton getInstance(){
-        return SingletonHodler.outInstance;
+        return SingletonHandler.outInstance;
     }
 
 }
