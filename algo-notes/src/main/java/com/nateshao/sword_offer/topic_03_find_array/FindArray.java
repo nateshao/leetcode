@@ -1,4 +1,4 @@
-package com.nateshao.sword_offer.topic_02_find_array;
+package com.nateshao.sword_offer.topic_03_find_array;
 
 import org.junit.Test;
 
