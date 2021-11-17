@@ -23,7 +23,7 @@ leetcode 代码成长记录
 |  7   | 计数排序 | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_07_CountSort.java) |
 |  8   | 基数排序 | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_08_RadixSort.java) |
 |  9   |  桶排序  | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_09_BucketSort.java) |
-|  0   |  堆排序  | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_10_HeapSort.java) |
+|  10  |  堆排序  | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/basic_01_ten_sort/Code_10_HeapSort.java) |
 
 ## 《剑指offer》题目
 
