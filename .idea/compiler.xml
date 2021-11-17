@@ -9,10 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="algo-notes" />
         <module name="ZuoChengYun" />
-        <module name="Play-With-Data-Structures-Master" />
         <module name="zuochengyun" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="Play-With-Data-Structures-Master" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
