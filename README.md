@@ -27,68 +27,68 @@ leetcode 代码成长记录
 
 ## 《剑指offer》题目
 
-| 书页码 | 题目                                                         | 代码实现                                                     | 难度 |
-| ------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| 13     | 面试题1：赋值运算符函数                                      |                                                              |      |
-| 31     | 面试题2：实现Singleton模式                                   | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_01_Singleton/Singleton.java) |      |
-|        | [剑指 Offer 03. 替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof) | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_04_replaceSpace/Solution.java) | 简单 |
-| 55     | [剑指 Offer 04. 二维数组中的查找](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/) | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_02_find_array/FindArray.java) | 中等 |
-|        | [剑指 Offer 05. 从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/) | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_05_reversePrint/Solution.java) | 简单 |
-|        | [剑指 Offer 06. 重建二叉树](https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof) | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_06_buildTree/Solution.java) | 中等 |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
-|        |                                                              |                                                              |      |
+| 序号 | 题目                                                         | 代码实现                                                     | 难度 |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| 1    | 面试题1：赋值运算符函数                                      |                                                              |      |
+| 2    | 面试题2：实现Singleton模式                                   | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_01_Singleton/Singleton.java) |      |
+| 3    | [剑指 Offer 03. 替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof) | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_04_replaceSpace/Solution.java) | 简单 |
+| 4    | [剑指 Offer 04. 二维数组中的查找](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/) | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_02_find_array/FindArray.java) | 中等 |
+| 5    | [剑指 Offer 05. 从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/) | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_05_reversePrint/Solution.java) | 简单 |
+| 6    | [剑指 Offer 06. 重建二叉树](https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof) | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_06_buildTree/Solution.java) | 中等 |
+| 7    |                                                              |                                                              |      |
+| 8    |                                                              |                                                              |      |
+| 9    |                                                              |                                                              |      |
+| 10   |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
+|      |                                                              |                                                              |      |
 
 
 
