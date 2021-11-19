@@ -20,6 +20,11 @@ public class Solution {
         System.out.println("fib2 = " + fib2);
     }
 
+    /**
+     * 递归实现
+     * @param n
+     * @return
+     */
     public static int fib(int n) {
         if (n == 0 || n == 1) {
             return n;
