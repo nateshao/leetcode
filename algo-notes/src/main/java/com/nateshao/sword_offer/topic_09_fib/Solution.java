@@ -14,7 +14,10 @@ public class Solution {
 
     public static void main(String[] args) {
         int fib = fib(10);
-        System.out.println(fib);
+        System.out.println("fib = " + fib);
+
+        int fib2 = fib2(10);
+        System.out.println("fib2 = " + fib2);
     }
 
     public static int fib(int n) {
@@ -28,6 +31,24 @@ public class Solution {
             sum = (a + b) % 1000000007;
         }
         return sum;
+    }
+
+    /**
+     * 动态规划
+     *
+     * @param n
+     * @return
+     */
+    public static int fib2(int n) {
+        if (n == 0) return 0;
+        int[] dp = new int[n + 1];
+        dp[0] = 0;
+        dp[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
+            dp[i] %= 1000000007;
+        }
+        return dp[n];
     }
 
 }
