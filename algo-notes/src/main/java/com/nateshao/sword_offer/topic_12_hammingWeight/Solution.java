@@ -7,7 +7,32 @@ package com.nateshao.sword_offer.topic_12_hammingWeight;
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
  * @Gitee https://gitee.com/nateshao
- * Description:
+ * Description: 二进制中1的个数
  */
 public class Solution {
+
+    public static void main(String[] args) {
+        int hammingWeight = hammingWeight(11);
+        System.out.println("hammingWeight = " + hammingWeight);
+        int hammingWeight2 = hammingWeight2(11);
+        System.out.println("hammingWeight2 = " + hammingWeight2);
+    }
+
+    public static int hammingWeight(int n) {
+        int res = 0;
+        while (n != 0) {
+            res += n & 1;
+            n >>>= 1;
+        }
+        return res;
+    }
+
+    public static int hammingWeight2(int n) {
+        int res = 0;
+        while (n != 0) {
+            res++;
+            n &= n - 1;
+        }
+        return res;
+    }
 }
