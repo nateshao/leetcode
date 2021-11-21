@@ -35,14 +35,14 @@ leetcode 代码成长记录
 | 4    | [剑指 Offer 04. 二维数组中的查找](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/) | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_02_find_array/FindArray.java) | 中等 |
 | 5    | [剑指 Offer 05. 从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/) | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_05_reversePrint/Solution.java) | 简单 |
 | 6    | [剑指 Offer 06. 重建二叉树](https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof) | [java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/sword_offer/topic_06_buildTree/Solution.java) | 中等 |
-| 7    |                                                              |                                                              |      |
-| 8    |                                                              |                                                              |      |
-| 9    |                                                              |                                                              |      |
+| 7    | [剑指 Offer 07. 用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/) |                                                              | 简单 |
+| 8    | [剑指 Offer 08. 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/) |                                                              | 简单 |
+| 9    | [剑指 Offer 09. 斐波那契数列](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/) |                                                              | 简单 |
 | 10   |                                                              |                                                              |      |
-|      |                                                              |                                                              |      |
-|      |                                                              |                                                              |      |
-|      |                                                              |                                                              |      |
-|      |                                                              |                                                              |      |
+| 11   |                                                              |                                                              |      |
+| 12   |                                                              |                                                              |      |
+| 13   |                                                              |                                                              |      |
+| 14   |                                                              |                                                              |      |
 |      |                                                              |                                                              |      |
 |      |                                                              |                                                              |      |
 |      |                                                              |                                                              |      |
