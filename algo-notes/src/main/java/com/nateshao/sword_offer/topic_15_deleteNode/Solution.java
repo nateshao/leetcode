@@ -11,7 +11,6 @@ package com.nateshao.sword_offer.topic_15_deleteNode;
  */
 public class Solution {
 
-
     public ListNode deleteNode(ListNode head, int val) {
         if (head.val == val) return head.next;
         ListNode pre = head, cur = head.next;
