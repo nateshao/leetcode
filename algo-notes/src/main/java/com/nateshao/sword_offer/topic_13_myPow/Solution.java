@@ -7,7 +7,7 @@ package com.nateshao.sword_offer.topic_13_myPow;
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
  * @Gitee https://gitee.com/nateshao
- * Description:  剑指 Offer 16. 数值的整数次方
+ * Description:  剑指 Offer 16. 数值的整数次方 难度：中等
  * 实现 pow(x, n) ，即计算 x 的 n 次幂函数（即，xn）。不得使用库函数，同时不需要考虑大数问题。
  */
 public class Solution {
@@ -31,7 +31,6 @@ public class Solution {
         if ((n & 1) == 1 && n < 0) res = res * 1 / x;
 
         return res;
-
     }
 
     public double myPow2(double x, int n) {
