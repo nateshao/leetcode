@@ -20,7 +20,7 @@ public class Solution {
      * @return
      */
     public ListNode reverseList(ListNode head) {
-        if (head == null) return null;
+        if (head == null || head.next == null) return null;
         ListNode pre = null;
         ListNode cur = head;
         while (cur != null) {
@@ -30,6 +30,19 @@ public class Solution {
             cur = tmp;
         }
         return pre;
+    }
+
+    /**
+     *解法二：递归，时间复杂度：O(n)，空间复杂度：O(n)
+     * @param head
+     * @return
+     */
+    public ListNode reverseList2(ListNode head) {
+        if (head == null || head.next == null) return null;
+        ListNode p = reverseList2(head.next);
+        head.next.next = head.next;
+        head.next = null;
+        return p;
     }
 
 
