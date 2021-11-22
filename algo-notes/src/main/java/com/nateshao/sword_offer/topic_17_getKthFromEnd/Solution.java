@@ -44,7 +44,7 @@ public class Solution {
         if (head == null || k < 1) return null;
         ListNode fast = head;
         ListNode slow = head;
-        while (k-- > 1) {// 先比较在判断
+        while (k-- > 1) {// 先比较再判断
             if (fast.next == null) return null;
             fast = fast.next;
 //            k--;
