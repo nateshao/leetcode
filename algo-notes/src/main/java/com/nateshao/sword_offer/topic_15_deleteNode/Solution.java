@@ -10,8 +10,14 @@ package com.nateshao.sword_offer.topic_15_deleteNode;
  * Description: 删除链表的节点
  */
 public class Solution {
+    public static void main(String[] args) {
+        ListNode listNode = new ListNode(3);
+        int val = 3;
+        ListNode node = deleteNode(listNode, val);
+        System.out.println("node = " + node);
+    }
 
-    public ListNode deleteNode(ListNode head, int val) {
+    public static ListNode deleteNode(ListNode head, int val) {
         if (head.val == val) return head.next;
         ListNode pre = head, cur = head.next;
         while (cur != null && cur.val != val) {
@@ -44,6 +50,7 @@ public class Solution {
 
     /**
      * 单指针实现
+     *
      * @param head
      * @param val
      * @return
@@ -63,23 +70,19 @@ public class Solution {
 
     /**
      * 递归实现
+     *
      * @param head
      * @param val
      * @return
      */
     public ListNode deleteNode3(ListNode head, int val) {
-        if (head == null) {
-            return null;
-        }
-        if (head.val == val) {
-            return head.next;
-        } else {
-            head.next = deleteNode3(head.next, val);
-        }
+        if (head == null) return null;
+        if (head.val == val) return head.next;
+        else head.next = deleteNode3(head.next, val);
         return head;
     }
 
-    public class ListNode {
+    public static class ListNode {
         int val;
         ListNode next;
 

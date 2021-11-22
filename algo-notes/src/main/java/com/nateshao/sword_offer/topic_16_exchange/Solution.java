@@ -1,0 +1,54 @@
+package com.nateshao.sword_offer.topic_16_exchange;
+
+import java.util.Arrays;
+
+/**
+ * @date Created by 邵桐杰 on 2021/11/22 12:03
+ * @微信公众号 程序员千羽
+ * @个人网站 www.nateshao.cn
+ * @博客 https://nateshao.gitee.io
+ * @GitHub https://github.com/nateshao
+ * @Gitee https://gitee.com/nateshao
+ * Description:  调整数组顺序使奇数位于偶数前面
+ */
+public class Solution {
+
+    public static void main(String[] args) {
+        int[] nums = {2, 3, 5, 7, 7, 6, 8, 10};
+        int[] exchange = exchange(nums);
+        for (int i : exchange) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        int[] ints = exchange2(nums);
+        for (int anInt : ints) {
+            System.out.print(anInt + " ");
+        }
+    }
+
+    public static int[] exchange(int[] nums) {
+        int left = 0;
+        int right = nums.length - 1;
+        while (left < right) {
+            while (left < right && nums[left] % 2 != 0) left++;
+            while (left < right && nums[right] % 2 == 0) right--;
+            int temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
+        }
+        return nums;
+    }
+
+    public static int[] exchange2(int[] nums) {
+        int i = 0, j = nums.length - 1, tmp;
+        while (i < j) {
+            while (i < j && (nums[i] & 1) == 1) i++; //x&1 位运算 等价于 x%2 取余运算，即皆可用于判断数字奇偶性。
+            while (i < j && (nums[j] & 1) == 0) j--;
+            tmp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = tmp;
+        }
+        return nums;
+    }
+
+}
