@@ -11,6 +11,12 @@ package com.nateshao.sword_offer.topic_19_mergeTwoLists;
  */
 class Solution {
 
+    /**
+     * 方法一：递归
+     * @param l1
+     * @param l2
+     * @return
+     */
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null) return null;
         if (l2 == null) return null;
@@ -26,7 +32,7 @@ class Solution {
     }
 
     /**
-     * 精选解答
+     *  精选解答：递归
      * 复杂度分析：
      * 时间复杂度 O(M+N)：M, N分别为链表l1和l2
      * 空间复杂度 O(1) ：节点引用 dum, cur使用常数大小的额外空间。
