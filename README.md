@@ -38,7 +38,7 @@ leetcode 代码成长记录
 | 7    | [剑指 Offer 07. 用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/) |                                                              | 简单 |
 | 8    | [剑指 Offer 08. 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/) |                                                              | 简单 |
 | 9    | [剑指 Offer 09. 斐波那契数列](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/) |                                                              | 简单 |
-| 10   |                                                              |                                                              |      |
+| 10   | [剑指 Offer 10- II. 青蛙跳台阶问题](https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/) |                                                              |      |
 | 11   |                                                              |                                                              |      |
 | 12   |                                                              |                                                              |      |
 | 13   |                                                              |                                                              |      |
