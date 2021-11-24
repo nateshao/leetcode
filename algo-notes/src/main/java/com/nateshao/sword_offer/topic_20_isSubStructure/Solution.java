@@ -10,10 +10,25 @@ package com.nateshao.sword_offer.topic_20_isSubStructure;
  * Description: 判断二叉树A中是否包含子树B
  */
 class Solution {
-    public boolean isSubStructure(TreeNode A, TreeNode B) {
+    //    public boolean isSubStructure(TreeNode A, TreeNode B) {
+//        if (A == null) return true;
+//        if (B == null) return true;
+//
+//    }
+    public static void main(String[] args) {
+
 
     }
 
+    public static boolean isSubStructure(TreeNode A, TreeNode B) {
+        return (A != null && B != null) && (recur(A, B) || isSubStructure(A.left, B) || isSubStructure(A.right, B));
+    }
+
+    public static boolean recur(TreeNode A, TreeNode B) {
+        if (B == null) return true;
+        if (A == null || A.val != B.val) return false;
+        return recur(A.left, B.left) && recur(A.right, B.right);
+    }
 
     public class TreeNode {
         int val;
