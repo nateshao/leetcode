@@ -13,14 +13,6 @@ import java.util.Arrays;
  */
 public class Solution {
 
-    public static void main(String[] args) {
-        int[] ints = printNumbers(3);
-        for (int anInt : ints) {
-            System.out.print(anInt + " ");
-        }
-        Arrays.toString(ints);
-    }
-
     public static int[] printNumbers(int n) {
         int end = (int) Math.pow(10, n) - 1;
         int[] res = new int[end];
