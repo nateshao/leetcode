@@ -12,11 +12,39 @@ import java.util.Stack;
  * Description: 剑指 Offer 27. 二叉树的镜像
  */
 public class Solution {
+    /**
+     * 递归
+     *
+     * @param root
+     * @return
+     */
     public TreeNode mirrorTree(TreeNode root) {
         if (root == null) return null;
         TreeNode node = root.left;
         root.left = mirrorTree(root.right);
         root.right = mirrorTree(node);
+        return root;
+    }
+
+    /**
+     * 栈
+     *
+     * @param root
+     * @return
+     */
+    public TreeNode mirrorTree1(TreeNode root) {
+        if (root == null) return null;
+        Stack<TreeNode> stack = new Stack<TreeNode>() {{
+            add(root);
+        }};
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            if (node.left != null) stack.add(node.left);
+            if (node.right != null) stack.add(node.right);
+            TreeNode tmp = node.left;
+            node.left = node.right;
+            node.right = tmp;
+        }
         return root;
     }
 
