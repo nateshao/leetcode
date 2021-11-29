@@ -16,18 +16,57 @@ import java.util.Stack;
  * https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof
  */
 public class Solution {
+    public static void main(String[] args) {
+        int[] pushed = {1, 2, 3, 4, 5};
+        int[] popped = {4, 5, 3, 2, 1};
+        int[] popped1 = {4, 3, 5, 1, 2};
+        boolean b = validateStackSequences1(pushed, popped);
+        System.out.println("b = " + b);// b = true
+        boolean b1 = validateStackSequences2(pushed, popped1);
+        System.out.println("b1 = " + b1);
+    }
 
-    public boolean validateStackSequences(int[] pushed, int[] popped) {
-        if (pushed == null || popped == null) return false;
+    /**
+     * 精选解答
+     *
+     * @param pushed
+     * @param popped
+     * @return
+     */
+    public static boolean validateStackSequences1(int[] pushed, int[] popped) {
+        if (pushed == null || pushed == null) return false;
         Stack<Integer> stack = new Stack<>();
         int index = 0;
+        for (int num : pushed) {
+            stack.push(num);
+            while (!stack.isEmpty() && stack.peek() == popped[index]) {
+                stack.pop();
+                index++;
+            }
+        }
+        return stack.isEmpty();
+    }
+
+    /**
+     * 思路：用栈来压入弹出元素，相等则出栈。
+     *
+     * @param pushed
+     * @param popped
+     * @return
+     */
+    public static boolean validateStackSequences2(int[] pushed, int[] popped) {
+        if (pushed == null || popped == null) return false;
+        Stack<Integer> stack = new Stack<>();// 借用一个辅助栈stack
+        int index = 0;
         for (int i = 0; i < pushed.length; i++) {
-            stack.push(pushed[i]);
+            stack.push(pushed[i]);// 入栈
+            //循环判断 栈不为空 && 栈顶元素 == 弹出序列的当前元素
             while (!stack.isEmpty() && stack.peek().equals(popped[index])) {
                 stack.pop();
                 index++;
             }
         }
         return stack.isEmpty();
+//        return index==popped.length;
     }
 }
