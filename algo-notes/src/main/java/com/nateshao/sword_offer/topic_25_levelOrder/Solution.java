@@ -1,9 +1,6 @@
 package com.nateshao.sword_offer.topic_25_levelOrder;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * @date Created by 邵桐杰 on 2021/11/29 14:57
@@ -31,7 +28,7 @@ public class Solution {
      * @param root
      * @return
      */
-    public int[] levelOrder(TreeNode root) {
+    public int[] levelOrder1(TreeNode root) {
         if (root == null) return new int[0];//空树则返回空数组
         ArrayList<Integer> list = new ArrayList<>();// 申请一个动态数组 ArrayList 动态添加节点值
         Queue<TreeNode> queue = new LinkedList<>();
@@ -46,6 +43,90 @@ public class Solution {
         int[] res = new int[list.size()];
         for (int i = 0; i < res.length; i++) {
             res[i] = list.get(i);
+        }
+        return res;
+    }
+
+    /******************************* 递归 *****************************************/
+    public ArrayList<Integer> PrintFromTopToBottom2(TreeNode root) {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        if (root == null) {
+            return list;
+        }
+        list.add(root.val);
+        levelOrder(root, list);
+        return list;
+    }
+    public void levelOrder(TreeNode root, ArrayList<Integer> list) {
+        if (root == null) {
+            return;
+        }
+        if (root.left != null) {
+            list.add(root.left.val);
+        }
+        if (root.right != null) {
+            list.add(root.right.val);
+        }
+        levelOrder(root.left, list);
+        levelOrder(root.right, list);
+    }
+
+
+    /**
+     * 剑指 Offer 32 - II. 从上到下打印二叉树 II
+     * @param root
+     * @return
+     */
+    public List<List<Integer>> levelOrder2(TreeNode root) {
+        Queue<TreeNode> queue = new LinkedList<>();
+        List<List<Integer>> res = new ArrayList<>();
+        if(root != null) queue.add(root);
+        while(!queue.isEmpty()) {
+            List<Integer> tmp = new ArrayList<>();
+            for(int i = queue.size(); i > 0; i--) {
+                TreeNode node = queue.poll();
+                tmp.add(node.val);
+                if(node.left != null) queue.add(node.left);
+                if(node.right != null) queue.add(node.right);
+            }
+            res.add(tmp);
+        }
+        return res;
+    }
+
+    /**
+     *剑指 Offer 32 - III. 从上到下打印二叉树 III
+     * @param root
+     * @return
+     */
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        Deque<TreeNode> deque = new LinkedList<>();
+        List<List<Integer>> res = new ArrayList<>();
+        if(root != null) deque.add(root);
+        while(!deque.isEmpty()) {
+            // 打印奇数层
+            List<Integer> tmp = new ArrayList<>();
+            for(int i = deque.size(); i > 0; i--) {
+                // 从左向右打印
+                TreeNode node = deque.removeFirst();
+                tmp.add(node.val);
+                // 先左后右加入下层节点
+                if(node.left != null) deque.addLast(node.left);
+                if(node.right != null) deque.addLast(node.right);
+            }
+            res.add(tmp);
+            if(deque.isEmpty()) break; // 若为空则提前跳出
+            // 打印偶数层
+            tmp = new ArrayList<>();
+            for(int i = deque.size(); i > 0; i--) {
+                // 从右向左打印
+                TreeNode node = deque.removeLast();
+                tmp.add(node.val);
+                // 先右后左加入下层节点
+                if(node.right != null) deque.addFirst(node.right);
+                if(node.left != null) deque.addFirst(node.left);
+            }
+            res.add(tmp);
         }
         return res;
     }
