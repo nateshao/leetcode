@@ -13,10 +13,12 @@ import java.util.Stack;
  * 思路：定义两个栈，一个存放入的值。另一个存最小值。
  */
 public class MinStack {
-    Stack<Integer> stack1; // 数据栈
-    Stack<Integer> stack2; // 辅助栈，记录每次有元素进栈后或者出栈后，元素的最小值
+    private Stack<Integer> stack1; // 数据栈
+    private Stack<Integer> stack2; // 辅助栈，记录每次有元素进栈后或者出栈后，元素的最小值
 
-    /** initialize your data structure here. */
+    /**
+     * initialize your data structure here.
+     */
     public MinStack() {
         // 初始化辅助栈和数据栈
         stack1 = new Stack<>();
