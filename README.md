@@ -1,6 +1,6 @@
 [TOC]
 
-
+![Alt](https://repobeats.axiom.co/api/embed/5d41120dc0ef13265fcde9fccd622d275999e4b9.svg "Repobeats analytics image")
 
 # leetcode
 
