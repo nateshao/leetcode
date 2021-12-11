@@ -20,7 +20,43 @@ public class Solution {
         int[] nums2 = {3, 30, 34, 5, 9};
         System.out.println("minNumber(nums) = " + minNumber(nums));// minNumber(nums) = 102
         System.out.println("minNumber(nums2) = " + minNumber(nums2));// minNumber(nums2) = 3033459
+        System.out.println("minNumber1(nums2) = " + minNumber1(nums2));
+        System.out.println("minNumber3(nums2) = " + minNumber3(nums2));
+    }
 
+    public static String minNumber1(int[] nums) {
+        String[] strs = new String[nums.length];
+        for(int i = 0; i < nums.length; i++)
+            strs[i] = String.valueOf(nums[i]);// 转化为String类型
+        quickSort(strs, 0, strs.length - 1);
+        StringBuilder res = new StringBuilder();
+        for(String s : strs){
+            res.append(s);
+        }
+        return res.toString();
+    }
+
+    /**
+     * 快排
+     * @param strs
+     * @param left
+     * @param right
+     */
+    public static void quickSort(String[] strs, int left, int right) {
+        if(left >= right) return;
+        int i = left, j = right;
+        String tmp = strs[i];
+        while(i < j) {
+            while((strs[j] + strs[left]).compareTo(strs[left] + strs[j]) >= 0 && i < j) j--;
+            while((strs[i] + strs[left]).compareTo(strs[left] + strs[i]) <= 0 && i < j) i++;
+            tmp = strs[i];
+            strs[i] = strs[j];
+            strs[j] = tmp;
+        }
+        strs[i] = strs[left];
+        strs[left] = tmp;
+        quickSort(strs, left, i - 1);
+        quickSort(strs, i + 1, right);
     }
 
     /**
@@ -48,6 +84,24 @@ public class Solution {
         });
         for (int i = 0; i < len; i++) {
             sb.append(str[i]);
+        }
+        return sb.toString();
+    }
+
+    /**
+     * 贪心
+     * @param nums
+     * @return
+     */
+    public static String minNumber3(int[] nums) {
+        String[] strs = new String[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            strs[i] = String.valueOf(nums[i]);
+        }
+        Arrays.sort(strs, (o1, o2) -> (o1 + o2).compareTo(o2 + o1));
+        StringBuilder sb = new StringBuilder();
+        for (String str : strs) {
+            sb.append(str);
         }
         return sb.toString();
     }
