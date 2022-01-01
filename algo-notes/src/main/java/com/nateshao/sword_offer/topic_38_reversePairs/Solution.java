@@ -10,14 +10,38 @@ package com.nateshao.sword_offer.topic_38_reversePairs;
  * Description: 剑指 Offer 51. 数组中的逆序对
  * 在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。
  * 输入一个数组，求出这个数组中的逆序对的总数。
- *
+ * <p>
+ * 思路：本质是归并排序，在比较时加入全局变量 count 进行记录逆序对的个数，若
+ * data[start] >= data[index] ，则 count 值为 mid+1-start
  */
 public class Solution {
     public static void main(String[] args) {
         int[] arr = {7, 5, 6, 4};
         System.out.println("reversePairs(arr) = " + reversePairs(arr));//reversePairs(arr) = 5
+        System.out.println("reversePairs1(arr) = " + reversePairs1(arr));
     }
 
+    /**
+     * 暴力破解
+     *
+     * @param nums
+     * @return
+     * https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/solution/bao-li-jie-fa-fen-zhi-si-xiang-shu-zhuang-shu-zu-b/
+     */
+    public static int reversePairs1(int[] nums) {
+        int cnt = 0;
+        int len = nums.length;
+        for (int i = 0; i < len - 1; i++) {
+            for (int j = i + 1; j < len; j++) {
+                if (nums[i] < nums[j]) {
+                    cnt++;
+                }
+            }
+        }
+        return cnt;
+    }
+
+    /************* 剑指offer *****************/
     private static int count = 0;
 
     public static int reversePairs(int[] array) {
@@ -49,12 +73,15 @@ public class Solution {
                 count %= 1000000007;
             }
         }
+        //把左边剩余的数移入数组
         while (start <= mid) {
             arr[c++] = data[start++];
         }
+        //把右边剩余的数移入数组
         while (index <= end) {
             arr[c++] = data[index++];
         }
+        //把新数组中的数覆盖nums数组
         for (int d : arr) {
             data[s++] = d;
         }
