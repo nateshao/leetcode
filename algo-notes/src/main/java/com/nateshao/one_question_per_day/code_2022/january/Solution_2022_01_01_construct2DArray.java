@@ -52,7 +52,7 @@ package com.nateshao.one_question_per_day.code_2022.january;
  * 链接：https://leetcode-cn.com/problems/convert-1d-array-into-2d-array
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class Solution_2021_01_01_construct2DArray {
+public class Solution_2022_01_01_construct2DArray {
     public static void main(String[] args) {
         int[] original = {1, 2, 3, 4};
         int[][] array = construct2DArray(original, 2, 2);

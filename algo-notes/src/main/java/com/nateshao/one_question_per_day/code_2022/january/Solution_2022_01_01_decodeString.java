@@ -36,7 +36,7 @@ import java.util.LinkedList;
  * 输入：s = "abc3[cd]xyz"
  * 输出："abccdcdcdxyz"
  */
-public class Solution_2021_01_01_decodeString {
+public class Solution_2022_01_01_decodeString {
     public static void main(String[] args) {
 
     }
