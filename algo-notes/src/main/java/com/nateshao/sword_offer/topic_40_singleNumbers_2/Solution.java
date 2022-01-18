@@ -1,5 +1,8 @@
 package com.nateshao.sword_offer.topic_40_singleNumbers_2;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @date Created by 邵桐杰 on 2022/1/18 21:33
  * @微信公众号 千羽的编程时光
@@ -11,21 +14,26 @@ package com.nateshao.sword_offer.topic_40_singleNumbers_2;
  */
 public class Solution {
     public static void main(String[] args) {
-        int[] arr = {4, 1, 4, 6};
-        System.out.println("singleNumbers(arr) = " + singleNumbers(arr));
+        int[] arr = {9, 1, 7, 9, 7, 9, 7};
+        int[] arr2 = {3,4,3,3};
+        System.out.println("singleNumber(arr) = " + singleNumber(arr));
+        System.out.println("singleNumber(arr2) = " + singleNumber(arr2));
     }
 
-    public static int[] singleNumbers(int[] nums) {
-        int x = 0, y = 0, n = 0, m = 1;
-        for (int num : nums)               // 1. 遍历异或
-            n ^= num;
-        while ((n & m) == 0)               // 2. 循环左移，计算 m
-            m <<= 1;
-        for (int num : nums) {              // 3. 遍历 nums 分组
-            if ((num & m) != 0) x ^= num;  // 4. 当 num & m != 0
-            else y ^= num;                // 4. 当 num & m == 0
+    public static int singleNumber(int[] nums) {
+        Map<Integer, Integer> map = new HashMap<>();
+        //先把数字存储到map中，其中key存储的是当前数字，value是
+        //数字的出现的次数
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
-        return new int[]{x, y};          // 5. 返回出现一次的数字
+        //最后在遍历map中的所有元素，返回value值等于1的
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() == 1)
+                return entry.getKey();
+        }
+        return -1;
     }
+
 
 }
