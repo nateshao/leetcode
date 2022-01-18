@@ -15,12 +15,13 @@ import java.util.Set;
 public class Solution {
     /**
      * 双指针
+     *
      * @param headA
      * @param headB
      * @return
      */
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        if (headA == null||headB==null) return null;
+        if (headA == null || headB == null) return null;
         ListNode A = headA, B = headB;
         while (A != B) {
             A = A != null ? A.next : headB;
@@ -31,6 +32,7 @@ public class Solution {
 
     /**
      * 哈希集合
+     *
      * @param headA
      * @param headB
      * @return
@@ -38,15 +40,15 @@ public class Solution {
     public ListNode getIntersectionNode2(ListNode headA, ListNode headB) {
         Set<ListNode> visited = new HashSet<>();
         ListNode temp = headA;
-        while (temp!=null){
+        while (temp != null) {
             visited.add(temp);
             temp = temp.next;
         }
 
         temp = headB;
-        while (headB!=null){
-            if (visited.contains(temp))return temp;
-            temp=temp.next;
+        while (headB != null) {
+            if (visited.contains(temp)) return temp;
+            temp = temp.next;
         }
         return null;
     }
