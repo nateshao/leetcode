@@ -1,4 +1,4 @@
-package com.nateshao.sword_offer.topic_40_singleNumbers;
+package com.nateshao.sword_offer.topic_40_singleNumbers_2;
 
 /**
  * @date Created by 邵桐杰 on 2022/1/18 21:33
