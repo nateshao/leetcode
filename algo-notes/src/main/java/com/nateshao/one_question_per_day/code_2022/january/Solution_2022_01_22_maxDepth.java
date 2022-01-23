@@ -1,5 +1,8 @@
 package com.nateshao.one_question_per_day.code_2022.january;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * @date Created by 邵桐杰 on 2022/1/22 22:56
  * @微信公众号 千羽的编程时光
@@ -25,6 +28,29 @@ public class Solution_2022_01_22_maxDepth {
         int right = maxDepth(root.right);
         return Math.max(left, right) + 1;
     }
+
+    /**
+     * 方法二：层序遍历（BFS）
+     * @param root
+     * @return
+     */
+    public int maxDepth2(TreeNode root) {
+        if (root == null) return 0;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        int res = 0;
+        while (!queue.isEmpty()) {
+            res++;
+            int n = queue.size();
+            for (int i = 0; i < n; i++) {
+                TreeNode node = queue.poll();
+                if (node.left != null) queue.add(node.left);
+                if (node.right != null) queue.add(node.right);
+            }
+        }
+        return res;
+    }
+
 
     public class TreeNode {
         int val;
