@@ -55,6 +55,7 @@ public class Solution {
 
     /**
      * 双指针 O(1)
+     *
      * @param nums
      * @param target
      * @return
@@ -64,7 +65,7 @@ public class Solution {
         int right = nums.length - 1;
         while (left < right) {
             int cur = nums[left] + nums[right];
-            if (cur == target) return new int[]{nums[left] , nums[right]};
+            if (cur == target) return new int[]{nums[left], nums[right]};
             else if (cur > target) right--;
             else left++;
         }
@@ -73,6 +74,7 @@ public class Solution {
 
     /**
      * HashMap
+     *
      * @param nums
      * @param target
      * @return
@@ -80,16 +82,16 @@ public class Solution {
     public static int[] twoSum3(int[] nums, int target) {
         HashMap<Integer, Integer> hashMap = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            hashMap.put(nums[i],i);
+            hashMap.put(nums[i], i);
         }
 
         int[] result = new int[2];
         for (int num : nums) {
-            int value =  hashMap.getOrDefault((target-num),-1);
+            int value = hashMap.getOrDefault((target - num), -1);
             // System.out.println("key Three 对应的 value: " + value);
-            if (value!= -1 && value != hashMap.get(num)) {
+            if (value != -1 && value != hashMap.get(num)) {
                 result[0] = num;
-                result[1] = target-num;
+                result[1] = target - num;
             }
         }
         return result;
