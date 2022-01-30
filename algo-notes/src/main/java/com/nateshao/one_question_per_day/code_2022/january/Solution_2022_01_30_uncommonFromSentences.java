@@ -74,8 +74,4 @@ public class Solution_2022_01_30_uncommonFromSentences {
         for (String s : map.keySet()) if (map.get(s) == 1) list.add(s);
         return list.toArray(new String[list.size()]);
     }
-
-
-
-
 }
