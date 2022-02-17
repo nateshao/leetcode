@@ -3,6 +3,7 @@ package com.nateshao.basic_01_ten_sort;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 
 /**
@@ -64,5 +65,14 @@ public class Code_05_QuickSortTest {
         quickSort(arr, leftIndex, left - 1);
         quickSort(arr, right + 1, rightIndex);
 
+    }
+
+
+    @Test
+    public void  testA(){
+        HashMap<Object, Object> map = new HashMap<>();
+        map.put("name",null );
+        map.put("name","shao");
+        System.out.println(map.get("name"));
     }
 }
