@@ -25,7 +25,9 @@ package com.nateshao.sword_offer.topic_46_reverseLeftWords;
 public class Solution {
     public static void main(String[] args) {
         String s = "abcdefg";
-        System.out.println("reverseLeftWords1(s,2) = " + reverseLeftWords1(s, 2));
+        System.out.println("reverseLeftWords1(s,2) = " + reverseLeftWords1(s, 2));// reverseLeftWords1(s,2) = cdefgab
+        System.out.println("reverseLeftWords2(s,2) = " + reverseLeftWords2(s, 2)); // cdefgab
+        System.out.println("reverseLeftWords3(s,2) = " + reverseLeftWords3(s, 2));
     }
 
     /**
@@ -36,6 +38,41 @@ public class Solution {
      */
     public static String reverseLeftWords1(String s, int n) {
         return s.substring(n, s.length()) + s.substring(0, n);
+    }
+
+    /**
+     * 方法二：列表遍历拼接
+     *
+     * 算法流程：
+     * 1. 新建一个StringBuilder(Java) ，记为 res ；
+     * 2. 先向 res 添加 “第 n + 1 位至末位的字符” ；
+     * 3. 再向 res 添加 “首位至第 n 位的字符” ；
+     * 4. 将 res 转化为字符串并返回。
+     *
+     * @param s
+     * @param n
+     * @return
+     */
+    public static String reverseLeftWords2(String s, int n) {
+        StringBuilder res = new StringBuilder();
+        for (int i = n; i < s.length(); i++) {
+            res.append(s.charAt(i));
+        }
+        for (int i = 0; i < n; i++) {
+            res.append(s.charAt(i));
+        }
+        return res.toString();
+    }
+
+    public static String reverseLeftWords3(String s, int n) {
+        String res = "";
+        for (int i = n; i < s.length(); i++) {
+            res += s.charAt(i);
+        }
+        for (int i = 0; i < n; i++) {
+            res+=s.charAt(i);
+        }
+        return res;
     }
 
 
