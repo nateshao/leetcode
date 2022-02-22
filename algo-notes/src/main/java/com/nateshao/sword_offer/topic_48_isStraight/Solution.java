@@ -1,6 +1,8 @@
 package com.nateshao.sword_offer.topic_48_isStraight;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @date Created by 邵桐杰 on 2022/2/21 22:45
@@ -30,6 +32,7 @@ public class Solution {
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5};
         System.out.println("isStraight(nums) = " + isStraight(nums));
+        System.out.println("isStraight2(nums) = " + isStraight2(nums));
     }
     /**
      * 先对数组执行排序。
@@ -46,5 +49,20 @@ public class Solution {
             else if(nums[i]==nums[i+1])return false;//重复就返回false
         }
         return nums[4]-nums[joker]<5;//最大牌 - 最小牌 < 5 则可构成顺子
+    }
+
+    public static boolean isStraight2(int[] nums) {
+
+        Set<Integer> repeat = new HashSet<>();
+        int max = 0, min = 14;
+        for(int num : nums) {
+            if(num == 0) continue; // 跳过大小王
+            max = Math.max(max, num); // 最大牌
+            min = Math.min(min, num); // 最小牌
+            if(repeat.contains(num)) return false; // 若有重复，提前返回 false
+            repeat.add(num); // 添加此牌至 Set
+        }
+        return max - min < 5; // 最大牌 - 最小牌 < 5 则可构成顺子
+
     }
 }
