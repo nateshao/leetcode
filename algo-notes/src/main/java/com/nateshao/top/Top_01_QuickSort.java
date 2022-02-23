@@ -1,6 +1,9 @@
 package com.nateshao.top;
 
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * @date Created by 邵桐杰 on 2022/2/23 21:50
@@ -61,4 +64,36 @@ public class Top_01_QuickSort {
         quickSort(arr, right + 1, rightIndex);
     }
 
+
+    /**
+     * 非递归（使用LinkedHashMap）
+     *
+     * @param s
+     * @param left
+     * @param right
+     */
+    void quickSort1(int s[], int left, int right) {
+        LinkedHashMap<Integer, Integer> lhp = new LinkedHashMap<>();
+        //将0,n放入LinkedHashMap
+        lhp.put(left, right);
+        while (!lhp.isEmpty()) {      //只要有需要排序的段
+            //读取left，right
+            Iterator<Map.Entry<Integer, Integer>> it = lhp.entrySet().iterator();
+            left = it.next().getKey();
+            right = lhp.get(left);
+            //并从LinkedHashMap中删除
+            lhp.remove(left, right);
+            if (left >= right) continue;
+            int i = left, j = right, temp = s[right];
+            while (i < j) {         //遍历排序一遍
+                while (s[i] <= temp && i < j) i++;
+                if (i < j) s[j--] = s[i];
+                while (s[j] >= temp && i < j) j--;
+                if (i < j) s[i++] = s[j];
+            }
+            s[i] = temp;
+            lhp.put(left, i - 1);
+            lhp.put(i + 1, right);
+        }
+    }
 }
