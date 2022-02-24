@@ -21,8 +21,13 @@ package com.nateshao.sword_offer.topic_50_lsumNums;
  * 输出: 45
  */
 public class Solution {
-
+    /**
+     * 递归
+     * @param n
+     * @return
+     */
     public int sumNums(int n) {
-
+        boolean x = n > 1 && (n += sumNums(n - 1)) > 0;
+        return n;
     }
 }
