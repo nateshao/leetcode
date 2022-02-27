@@ -21,12 +21,15 @@ package com.nateshao.sword_offer.topic_50_lsumNums;
  * 输出: 45
  */
 public class Solution {
+    public static void main(String[] args) {
+        System.out.println("sumNums(9) = " + sumNums(9));
+    }
     /**
      * 递归
      * @param n
      * @return
      */
-    public int sumNums(int n) {
+    public static int sumNums(int n) {
         // 当 n = 1 时 n > 1 不成立 ，此时 “短路” ，终止后续递归
         boolean x = n > 1 && (n += sumNums(n - 1)) > 0;
         return n;
