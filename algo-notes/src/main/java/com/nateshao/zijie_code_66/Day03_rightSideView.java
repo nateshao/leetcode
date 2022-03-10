@@ -1,7 +1,9 @@
 package com.nateshao.zijie_code_66;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/10 8:44
@@ -29,11 +31,42 @@ import java.util.List;
  */
 public class Day03_rightSideView {
 
+
+    /**
+     * 层次遍历-队列
+     *
+     * @param root
+     * @return
+     */
+    public List<Integer> rightSideView2(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        if (root == null) return res;
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            for (int i = 0; i < queue.size(); i++) {
+                TreeNode node = queue.poll();
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) queue.offer(node.right);
+
+                //将 当前层的最后一个节点放入结果列表
+                if (i == queue.size() - 1)  res.add(node.val);
+
+            }
+        }
+        return res;
+    }
+
+
     List<Integer> res = new ArrayList<>();
 
     /**
      * 深度优先遍历
      * 思路： 我们按照 「根结点 -> 右子树 -> 左子树」 的顺序访问，就可以保证每层都是最先访问最右边的节点的。
+     *
      * @param root
      * @return
      */
