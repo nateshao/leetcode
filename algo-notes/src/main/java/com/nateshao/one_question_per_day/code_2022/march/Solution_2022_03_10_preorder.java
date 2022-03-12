@@ -1,5 +1,6 @@
 package com.nateshao.one_question_per_day.code_2022.march;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,10 +13,37 @@ import java.util.List;
  * Description:
  */
 public class Solution_2022_03_10_preorder {
-    public List<Integer> preorder(Node root) {
 
+    /**
+     * 递归
+     *
+     * @param root
+     * @return
+     */
+    public List<Integer> preorder(Node root) {
+        List<Integer> res = new ArrayList<>();
+        helper(root, res);
+        return res;
     }
 
+    private void helper(Node root, List<Integer> res) {
+        if (root == null) return;
+        res.add(root.val);
+        for (Node child : root.children) {
+            helper(child,res);
+        }
+    }
+
+
+    /**
+     * 迭代-栈
+     * @param
+     * @return
+     */
+//    public List<Integer> preorder2(Node root) {
+//
+//
+//    }
     class Node {
         public int val;
         public List<Node> children;
