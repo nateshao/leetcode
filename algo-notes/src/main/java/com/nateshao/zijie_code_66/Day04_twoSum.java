@@ -76,10 +76,12 @@ public class Day04_twoSum {
      */
     public int[] twoSum2(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
+        // 遍历数组 nums，i 为当前下标，每个值都判断map中是否存在 target-nums[i] 的 key 值
         for(int i = 0; i< nums.length; i++) {
             if(map.containsKey(target - nums[i])) {
                 return new int[] {map.get(target-nums[i]),i};
             }
+            //如果存在则找到了两个值，如果不存在则将当前的 (nums[i],i) 存入 map 中，继续遍历直到找到为止
             map.put(nums[i], i);
         }
         throw new IllegalArgumentException("No two sum solution");
