@@ -41,6 +41,7 @@ public class Day05_reverse {
     public static void main(String[] args) {
         System.out.println("reverse(123) = " + reverse(123));
     }
+
     public static int reverse(int x) {
         int result = 0;
         while (x != 0) {
@@ -52,5 +53,26 @@ public class Day05_reverse {
         return result;
 
     }
+
+    /**
+     * 求余
+     *https://leetcode-cn.com/problems/reverse-integer/solution/hua-jie-suan-fa-7-zheng-shu-fan-zhuan-by-guanpengc/
+     * @param x
+     * @return
+     */
+    public int reverse2(int x) {
+        int ans = 0;
+        while (x != 0) {
+            int pop = x % 10;
+            if (ans > Integer.MAX_VALUE / 10 || (ans == Integer.MAX_VALUE / 10 && pop > 7))
+                return 0;
+            if (ans < Integer.MIN_VALUE / 10 || (ans == Integer.MIN_VALUE / 10 && pop < -8))
+                return 0;
+            ans = ans * 10 + pop;
+            x /= 10;
+        }
+        return ans;
+    }
+
 
 }
