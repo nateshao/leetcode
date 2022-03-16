@@ -17,16 +17,17 @@ public class Solution {
         System.out.println("strToInt(arr) = " + strToInt(arr));
     }
     public static int strToInt(String str) {
-        char[] c = str.trim().toCharArray();
-        if(c.length == 0) return 0;
+        char[] c = str.trim().toCharArray(); //去前后空格
+        if(c.length == 0) return 0;// 字符串为空则直接返回
         int res = 0, bndry = Integer.MAX_VALUE / 10;
-        int i = 1, sign = 1;
-        if(c[0] == '-') sign = -1;
-        else if(c[0] != '+') i = 0;
+        int i = 1, sign = 1;// sign = 1记录第一个符合是否为负数  i = 1开始遍历的位置
+        if(c[0] == '-') sign = -1;// 保存负号
+        else if(c[0] != '+') i = 0;// 若无符号位，则需从 i = 0 开始数字拼接
         for(int j = i; j < c.length; j++) {
-            if(c[j] < '0' || c[j] > '9') break;
+            if(c[j] < '0' || c[j] > '9') break;// 遇到非数字的字符则跳出
+            // 根据字符串首负号判断返回最大值还是最小值
             if(res > bndry || res == bndry && c[j] > '7') return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
-            res = res * 10 + (c[j] - '0');
+            res = res * 10 + (c[j] - '0');// 数字拼接
         }
         return sign * res;
     }
