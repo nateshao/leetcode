@@ -16,6 +16,16 @@ public class Solution {
         String arr = "42";
         System.out.println("strToInt(arr) = " + strToInt(arr));
     }
+
+    /**
+     * 1. 首部空格： 删除之即可；
+     * 2. 符号位： 三种情况，即 ''++'' , ''-−'' , ''无符号" ；新建一个变量保存符号位，返回前判断正负即可。
+     * 3. 非数字字符： 遇到首个非数字的字符时，应立即返回。
+     * 4. 数字字符：
+     *
+     * @param str
+     * @return
+     */
     public static int strToInt(String str) {
         char[] c = str.trim().toCharArray(); //去前后空格
         if(c.length == 0) return 0;// 字符串为空则直接返回
@@ -93,5 +103,37 @@ public class Solution {
         }
         //兄弟首位都不对想啥呢，回去吧您
         return 0;
+    }
+
+
+    public int strToInt5(String str) {
+        str = str.trim();
+        if (str.length() == 0) return 0;
+
+        // 跳过 "+" "-" 并 判断符号
+        int sign = 1;
+        if (str.startsWith("+") && str.length() != 1) {
+            sign = 1;
+            str = str.substring(1);
+        } else if (str.startsWith("-") && str.length() != 1) {
+            sign = -1;
+            str = str.substring(1);
+        }
+
+        // 判断第一个字符非法情况
+        if (str.charAt(0) < '0' || str.charAt(0) > '9') return 0;
+
+        // 转成数字
+        Long res = 0l;
+        for (char c : str.toCharArray()) {
+            // 中间遇到非法字符, 直接跳出
+            if (c < '0' || c > '9') break;
+            res = res * 10 + (c - '0');
+            // 剪枝, 超过范围, 提前返回
+            if (res > Integer.MAX_VALUE)
+                return sign > 0 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+        }
+        // long -> int
+        return Integer.parseInt(String.valueOf(res * sign));
     }
 }
