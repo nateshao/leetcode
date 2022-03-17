@@ -1,6 +1,7 @@
 package com.nateshao.zijie_code_66;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -36,6 +37,13 @@ import java.util.List;
  * 输出：[1,2]
  */
 public class Day10_inorderTraversal {
+    /**
+     * 动态规划思路
+     * 定义：输入一个节点，返回以该节点为根的二叉树的中序遍历结果
+     *
+     * @param root
+     * @return
+     */
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         if (root == null) return res;
@@ -43,6 +51,32 @@ public class Day10_inorderTraversal {
         res.add(root.val);
         res.addAll(inorderTraversal(root.right));
         return res;
+    }
+
+    /**
+     * 回溯算法思路
+     * 返回前序遍历结果
+     *
+     * @param root
+     * @return
+     */
+    LinkedList<Integer> res = new LinkedList<>();
+    public List<Integer> inorderTraversal2(TreeNode root) {
+        traverse(root);
+        return res;
+    }
+
+    /**
+     * 二叉树遍历函数
+     *
+     * @param root
+     */
+    private void traverse(TreeNode root) {
+        if (root == null) return;
+        traverse(root.left);
+        // 中序遍历位置
+        res.add(root.val);
+        traverse(root.right);
     }
 
 
