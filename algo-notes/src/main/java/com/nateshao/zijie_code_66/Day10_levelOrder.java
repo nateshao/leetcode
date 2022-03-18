@@ -34,6 +34,7 @@ public class Day10_levelOrder {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> res = new LinkedList<>();
         if (root == null) return res;
+
         Queue<TreeNode> q = new LinkedList<>();
         q.offer(root);
         // while 循环控制从上向下一层层遍历
@@ -45,12 +46,15 @@ public class Day10_levelOrder {
             for (int i = 0; i < sz; i++) {
                 TreeNode cur = q.poll();
                 level.add(cur.val);
-                if (cur.left != null) q.offer(cur.left);
-                if (cur.right != null) q.offer(cur.right);
+                if (cur.left != null)
+                    q.offer(cur.left);
+                if (cur.right != null)
+                    q.offer(cur.right);
             }
             res.add(level);
         }
         return res;
+
     }
 
     public class TreeNode {
