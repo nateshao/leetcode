@@ -37,8 +37,5 @@ import java.util.Stack;
  */
 public class Day16_maxSlidingWindow {
 
-    private Stack<Integer> stack1;//  数据栈
-    private Stack<Integer> stack2;// 辅助栈，记录每一次有元素进栈后或者出栈后，元素的最小值
-
 
 }
