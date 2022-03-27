@@ -28,6 +28,16 @@ public class Day20_multiply {
         String num2 = "3";
         System.out.println(multiply(num1, num2));
     }
+
+    /**
+     * 对于比较小的数字，做运算可以直接使用编程语言提供的运算符，
+     * 但是如果相乘的两个因数非常大，语言提供的数据类型可能就会溢出。
+     * 一种替代方案就是，运算数以字符串的形式输入，
+     * 然后模仿我们小学学习的乘法算术过程计算出结果，并且也用字符串表示。
+     * @param num1
+     * @param num2
+     * @return
+     */
     public static String multiply(String num1, String num2) {
         int m = num1.length(), n = num2.length();
         int[] res = new int[m + n];
