@@ -1,5 +1,6 @@
 package com.nateshao.sword_offer2.Code_03_findRepeatNumber;
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 /**
@@ -32,6 +33,7 @@ public class Solution {
         int number = findRepeatNumber(nums);
         System.out.println("number = " + number);
     }
+
     /**
      * 用hashset
      * 遍历数组，如果数组中有相同的话，说明重复直接返回。
@@ -45,6 +47,21 @@ public class Solution {
         for (int num : nums) {
             if (set.contains(num)) return num;
             set.add(num);
+        }
+        return -1;
+    }
+
+    /**
+     * 先排序
+     * 如果前一位与后一位相等，说明重复，直接返回nums[i]
+     *
+     * @param nums
+     * @return
+     */
+    public static int findRepeatNumber2(int[] nums) {
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == nums[i + 1]) return nums[i];
         }
         return -1;
     }

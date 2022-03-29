@@ -1,6 +1,6 @@
 [TOC]
 
-![Alt](https://repobeats.axiom.co/api/embed/5d41120dc0ef13265fcde9fccd622d275999e4b9.svg "Repobeats analytics image")
+![](https://repobeats.axiom.co/api/embed/5d41120dc0ef13265fcde9fccd622d275999e4b9.svg "Repobeats analytics image")
 
 # leetcode
 
@@ -122,9 +122,27 @@ leetcode 代码成长记录
 
 
 
+## 打卡第二轮《剑指offer》68题 1天4题=17天
 
-
-
+|       天数        |                            第一题                            |                            第二题                            | 第三题 | 第四题 | 备注 |
+| :---------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----: | :----: | :--: |
+| 第一天-2022-03-29 | [剑指 Offer 03. 数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/) | [剑指 Offer 04. 二维数组中的查找](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/) |        |        |      |
+|                   | 解法1：hashSet遍历数组，有相同的直接返回,将不重复的添加到数组<br>解法2：先排序，遍历数组，如果前一位等于后一位，说明重复，直接返回 |                                                              |        |        |      |
+|                   |                                                              |                                                              |        |        |      |
+|                   |                                                              |                                                              |        |        |      |
+|                   |                                                              |                                                              |        |        |      |
+|                   |                                                              |                                                              |        |        |      |
+|                   |                                                              |                                                              |        |        |      |
+|                   |                                                              |                                                              |        |        |      |
+|                   |                                                              |                                                              |        |        |      |
+|                   |                                                              |                                                              |        |        |      |
+|                   |                                                              |                                                              |        |        |      |
+|                   |                                                              |                                                              |        |        |      |
+|                   |                                                              |                                                              |        |        |      |
+|                   |                                                              |                                                              |        |        |      |
+|                   |                                                              |                                                              |        |        |      |
+|                   |                                                              |                                                              |        |        |      |
+|                   |                                                              |                                                              |        |        |      |
 
 
 
