@@ -28,7 +28,7 @@ public class Solution {
     }
 
     /**
-     * 初始化一个 StringBuilder (Java) ，记为 res ；
+     * 初始化一个 StringBuilder，记为 res ；
      * 遍历列表 s 中的每个字符 c ：
      * 当 c 为空格时：向 res 后添加字符串 "%20" ；
      * 当 c 不为空格时：向 res 后添加字符 c ；
@@ -47,6 +47,16 @@ public class Solution {
         for (char c : s.toCharArray()) {
             if (c == ' ') res.append("%20");
             else res.append(c);
+        }
+        return res.toString();
+    }
+
+    public static String replaceSpace3(String s) {
+        StringBuilder res = new StringBuilder();
+        char[] chars = s.toCharArray();
+        for (char aChar : chars) {
+            if (aChar==' ') res.append("%20");
+            else res.append(aChar);
         }
         return res.toString();
     }
