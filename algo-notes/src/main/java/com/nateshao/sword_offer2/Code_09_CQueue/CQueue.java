@@ -26,10 +26,19 @@ import java.util.LinkedList;
  * <p>
  * 输入：
  * ["CQueue","deleteHead","appendTail","appendTail","deleteHead","deleteHead"]
- * [[],[],[5],[2],[],[]]
  * 输出：[null,-1,null,null,5,2]
+ * [[],[],[5],[2],[],[]]
  */
 public class CQueue {
+
+    /**
+     * 思路：
+     * 加入队尾 appendTail()函数： 将数字 val 加入栈 A 即可。
+     * 删除队首deleteHead()函数： 有以下三种情况。
+     * 当栈 B 不为空： B中仍有已完成倒序的元素，因此直接返回 B 的栈顶元素。
+     * 否则，当 A 为空： 即两个栈都为空，无元素，因此返回 −1 。
+     * 否则： 将栈 A 元素全部转移至栈 B 中，实现元素倒序，并返回栈 B 的栈顶元素。
+     */
     LinkedList<Integer> A, B;
 
     public CQueue() {
@@ -37,13 +46,26 @@ public class CQueue {
         B = new LinkedList<Integer>();
     }
 
+    /**
+     * 添加
+     *
+     * @param value
+     */
     public void appendTail(int value) {
         A.addLast(value);
     }
 
+    /**
+     * 删除
+     *
+     * @return
+     */
     public int delete() {
+        // 当栈 B 不为空： B中仍有已完成倒序的元素，因此直接返回 B 的栈顶元素。
         if (!B.isEmpty()) return B.removeLast();
+        // 否则，当 A 为空： 即两个栈都为空，无元素，因此返回 −1 。
         if (A.isEmpty()) return -1;
+        // 否则： 将栈 A 元素全部转移至栈 B 中，实现元素倒序，并返回栈 B 的栈顶元素。
         while (!A.isEmpty()) B.addLast(B.removeLast());
         return B.removeLast();
     }
