@@ -41,8 +41,11 @@ public class CQueue {
      */
     /**
      * 初始化两个链表，
+     * // 栈 B 元素实现栈 A 元素倒序 ,然后通过B.removeLast()将元素移出去
+     * // 栈A作为辅助元素
      */
     LinkedList<Integer> A, B;
+
 
     public CQueue() {
         A = new LinkedList<Integer>();
