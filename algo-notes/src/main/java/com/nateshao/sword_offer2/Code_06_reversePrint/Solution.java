@@ -1,6 +1,7 @@
 package com.nateshao.sword_offer2.Code_06_reversePrint;
 
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
@@ -21,8 +22,9 @@ import java.util.LinkedList;
 public class Solution {
 
     /**
-     * 入栈： 遍历链表，将各节点值 push 入栈。（Python​ 使用 append() 方法，​Java​借助 LinkedList 的addLast()方法）。
-     * 出栈： 将各节点值 pop 出栈，存储于数组并返回。（Python​ 直接返回 stack 的倒序列表，
+     * 栈
+     * 入栈： 遍历链表，将各节点值 push 入栈。​Java​借助 LinkedList 的addLast()方法。
+     * 出栈： 将各节点值 pop 出栈，存储于数组并返回。
      * Java ​新建一个数组，通过 popLast() 方法将各元素存入数组，实现倒序输出）。
      * <p>
      * 作者：jyd
@@ -45,17 +47,44 @@ public class Solution {
             res[i] = stack.removeLast();
         }
         return res;
-
-
     }
 
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
+    /**
+     * 递归
+     * 递推阶段： 每次传入 head.next ，以 head == null（即走过链表尾部节点）为递归终止条件，此时直接返回。
+     * 回溯阶段： 层层回溯时，将当前节点值加入列表，即tmp.add(head.val)。
+     * 最终，将列表 tmp 转化为数组 res ，并返回即可。
+     *
+     * 复杂度分析：
+     * 时间复杂度 O(N)O(N)： 遍历链表，递归 NN 次。
+     * 空间复杂度 O(N)O(N)： 系统递归需要使用 O(N)O(N) 的栈空间。
+     * @param head
+     * @return
+     */
+    ArrayList<Integer> tmp = new ArrayList<Integer>();
+    public int[] reversePrint2(ListNode head) {
+        recur(head);
+        int[] res = new int[tmp.size()];
+        for (int i = 0; i < res.length; i++)
+            res[i] = tmp.get(i);
+        return res;
     }
 
+    void recur(ListNode head) {
+        if (head == null) return;
+        recur(head.next);
+        tmp.add(head.val);
+    }
 }
+
+
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x;
+    }
+}
+
+
