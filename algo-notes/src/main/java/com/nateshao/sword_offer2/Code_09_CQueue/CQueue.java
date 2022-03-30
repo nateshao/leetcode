@@ -39,6 +39,9 @@ public class CQueue {
      * 否则，当 A 为空： 即两个栈都为空，无元素，因此返回 −1 。
      * 否则： 将栈 A 元素全部转移至栈 B 中，实现元素倒序，并返回栈 B 的栈顶元素。
      */
+    /**
+     * 初始化两个链表，
+     */
     LinkedList<Integer> A, B;
 
     public CQueue() {
