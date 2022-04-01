@@ -40,13 +40,25 @@ public class Solution {
      * @return
      */
     public static int minArray(int[] numbers) {
-        int i = 0, j = numbers.length - 1;
-        while (i < j) {
-            int mid = (i + j) / 2;
-            if (numbers[mid] > numbers[j]) i = mid + 1;
-            else if (numbers[mid] < numbers[j]) j = mid;
-            else j--;
+        int left = 0, right = numbers.length - 1;
+        while (left < right) {
+            int mid = (left + right) / 2;
+            if (numbers[mid] > numbers[right]) left = mid + 1;
+            else if (numbers[mid] < numbers[right]) right = mid;
+            else right--;
         }
-        return numbers[i];
+        return numbers[left];
+    }
+
+    /**
+     * 思路2，
+     * 1，先排序
+     * 2，返回数组第一个元素
+     * @param numbers
+     * @return
+     */
+    public static int minArray2(int[] numbers) {
+        Arrays.sort(numbers);
+        return numbers[0];
     }
 }

@@ -39,6 +39,5 @@ public class Solution {
             n -= 3;
         }
         return (int) (sum * n % 1000000007);
-
     }
 }

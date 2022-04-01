@@ -1,4 +1,4 @@
-package com.nateshao.sword_offer2.Code_14_cuttingRope;
+package com.nateshao.sword_offer2.Code_14_1_cuttingRope;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/7 17:46
@@ -33,10 +33,10 @@ public class Solution {
         if (n == 3) return 2;
         int sum = 1;
         while (n > 4) {
-            sum *= 3; // 1*3=3   9
-            n -= 3;//10-3=7 7-3=4
+            sum *= 3; // 1  * 3 = 3  9
+            n -= 3;   // 10 - 3 = 7  7 - 3 = 4
         }
-        return sum * n; // 4*9=36
+        return sum * n; // 4 * 9 = 36
     }
 
     /**

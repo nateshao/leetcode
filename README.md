@@ -8,6 +8,8 @@ leetcode 代码成长记录
 
 学习数据结构与算法的代码示例，目前提供 Java语言支持。编程是一门实践的手艺，多多练习，多多思考，把这里列举的所有算法，数据结构，以及对应的常见 leetcode 习题都自己手敲几遍，增强自己的编码基本功，写出高性能和高质量的代码！
 
+
+
 ## 十大经典排序算法
 
 文章介绍看这里 [十大经典排序算法](https://mp.weixin.qq.com/s?__biz=MzIyNjE0MDI1NQ==&mid=2247485793&idx=1&sn=426347202b22e700b2aab172de0aca98&chksm=e8744051df03c9476d218cf9ea685cb71611b9bdce5562a26c898a7023b25034346768875ff6&token=2138841491&lang=zh_CN#rd)
@@ -129,11 +131,11 @@ leetcode 代码成长记录
 | 第一天-2022-03-29 | [剑指 Offer 03. 数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/) | [剑指 Offer 04. 二维数组中的查找](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/) | [剑指 Offer 05. 替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/) | [剑指 Offer 06. 从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/) |            |
 |       思路        | 解法1：hashSet遍历数组，有相同的直接返回,将不重复的添加到数组<br>解法2：先排序，遍历数组，如果前一位等于后一位，说明重复，直接返回 | 二分法</br> 从矩阵 matrix 左下角元素（索引设为 (i, j) ）开始遍历，并与目标值对比： 当 matrix[i] [j] > target 时，执行 i-- ，即消去第 i 行元素； 当 matrix[i][j] < target 时，执行 j++ ，即消去第 j 列元素； 当 matrix[i] [j] = target 时，返回 true ，代表找到目标值。 若行索引或列索引越界，则代表矩阵中无目标值，返回 false 。 | 初始化一个 StringBuilder，记为 res ；  遍历列表 s 中的每个字符 c ： 当 c 为空格时：向 res 后添加字符串 "%20" ；  当 c 不为空格时：向 res 后添加字符 c ；将列表 res 转化为字符串并返回。 | 入栈： 遍历链表，将各节点值 push 入栈。（Python 使用 append() 方法，Java借助 LinkedList 的addLast()方法）。 * 出栈： 将各节点值 pop 出栈，存储于数组并返回。（Python 直接返回 stack 的倒序列表， * Java 新建一个数组，通过 popLast() 方法将各元素存入数组，实现倒序输出）。 |            |
 | 第二天2022-03-30  | [剑指 Offer 07. 重建二叉树](https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/) | [剑指 Offer 09. 用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/) | [剑指 Offer 10- I. 斐波那契数列](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/) | [剑指 Offer 10- II. 青蛙跳台阶问题](https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/) |            |
-|       思路        | 构造二叉树，第一件事一定是找根节点，然后想办法构造左右子树。 前序遍历结果第一个就是根节点的值，然后再根据中序遍历结果确定左右子树的节点。 | ![](https://pic.leetcode-cn.com/966aebd484002e620d88676847273a061ab9ab6d863ab5079ab347a643461e24-09.gif)初始化两个链表， 栈 B 元素实现栈 A 元素倒序 ,然后通过B.removeLast()将元素移出去。栈A作为辅助元素 |                           动态规划                           |                           动态规划                           | 重建二叉树 |
-|                   |                                                              |                                                              |                                                              |                                                              |            |
-|                   |                                                              |                                                              |                                                              |                                                              |            |
-|                   |                                                              |                                                              |                                                              |                                                              |            |
-|                   |                                                              |                                                              |                                                              |                                                              |            |
+|       思路        | 构造二叉树，第一件事一定是找根节点，然后想办法构造左右子树。 前序遍历结果第一个就是根节点的值，然后再根据中序遍历结果确定左右子树的节点。 | ![](https://pic.leetcode-cn.com/966aebd484002e620d88676847273a061ab9ab6d863ab5079ab347a643461e24-09.gif)初始化两个链表， 栈 B 元素实现栈 A 元素倒序 ,然后通过B.removeLast()将元素移出去。栈A作为辅助元素 | 1，**动态规划** `public static int fib(int n) {     int a = 0, b = 1, sum;     for (int i = 0; i < n; i++) {         sum = (a + b) % 1000000007;         a = b;         b = sum;     }     return a; }`。2，**递归** `public static int fib2(int n) {     n = help(n);     return n; }  private static int help(int n) {     if (n < 2) return n;     return (help(n - 1) + help(n - 2)) % 1000000007; }` | 1. 动态规划 `public static int numWays(int n) {     int a = 0, b = 1, sum;     for (int i = 0; i < n; i++) {         sum = (a + b) % 1000000007;         a = b;         b = sum;     }     return a; }` | 重建二叉树 |
+| 第三天2022-03-31  | [剑指 Offer 11. 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/) | [剑指 Offer 12. 矩阵中的路径](https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/) | [剑指 Offer 13. 机器人的运动范围](https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/) | [剑指 Offer 14- I. 剪绳子](https://leetcode-cn.com/problems/jian-sheng-zi-lcof/) |            |
+|       思路        | 1，先排序，再返回数组第一个元素  `Arrays.sort(numbers); return numbers[0];` 2，二分法 ` int left = 0, right = numbers.length - 1; while (left < right) { int mid = (left + right) / 2;   if (numbers[mid] > numbers[right]) left = mid + 1;         else if (numbers[mid] < numbers[right]) right = mid;         else right--;     }     return numbers[left]; ` |                     **深度优先遍历 DFS**                     |                     **深度优先遍历 DFS**                     | if (n == 1 \|\| n == 2) return 1; if (n == 3) return 2; int sum = 1; while (n > 4) {     sum *= 3;  n -= 3; } return sum * n; | 12，13，14 |
+| 第三天2022-04-01  | [剑指 Offer 14- II. 剪绳子 II](https://leetcode-cn.com/problems/jian-sheng-zi-ii-lcof/) | [剑指 Offer 15. 二进制中1的个数](https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/) |                                                              |                                                              |            |
+|                   | 把绳子尽可能切为多个长度为 3 的片段，留下的最后一段绳子的长度可能为 0,1,2 三种情况。`if (n == 1 || n == 2) return 1; if (n == 3) return 2; long sum = 1; while (n > 4) {     sum *= 3;     sum %= 1000000007;     n -= 3; } return (int) (sum * n % 1000000007);` |                                                              |                                                              |                                                              |            |
 |                   |                                                              |                                                              |                                                              |                                                              |            |
 |                   |                                                              |                                                              |                                                              |                                                              |            |
 |                   |                                                              |                                                              |                                                              |                                                              |            |
@@ -146,11 +148,13 @@ leetcode 代码成长记录
 
 
 
+**必须会手写：快排，归并，堆排序**。快排的优化方法
 
+掌握布隆过滤器，bit_map（思想和计数排序一样），在海量数据问题中会用到，海量数据问题是大厂面试特别喜欢考察的问题。
 
+海量数据问题：数据量远远大于内存应该如何去进行解决，比如我抖音二面遇到的在内存受限（比如16M）情况下如何求十亿个整数的中位数还有很多海量数据问题例如在2.5亿个整数中找出不重复的整数（内存不足以容纳这2.5亿个整数）问题基本上都是分文件，哈希，排序（归并，快排，堆排），优先级队列，布隆过滤器，bit_map，前缀树中的几种组合。
 
-
-
+如何对一个文件进行压缩（哈夫曼编码）
 
 
 
