@@ -15,6 +15,11 @@ public class Solution {
         System.out.println("hammingWeight2(11) = " + hammingWeight2(11));
     }
 
+    /**
+     * 逻辑与运算：n &= n - 1;
+     * @param n
+     * @return
+     */
     public static int hammingWeight(int n) {
         int res = 0;
         while (n != 0) {
@@ -31,7 +36,7 @@ public class Solution {
     }
 
     /**
-     *
+     *  逻辑与运算：res += n & 1;
      作者：jyd
      链接：https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/solution/mian-shi-ti-15-er-jin-zhi-zhong-1de-ge-shu-wei-yun/
      来源：力扣（LeetCode）
@@ -43,7 +48,7 @@ public class Solution {
         int res = 0;
         while(n != 0) {
             res += n & 1;
-            n >>>= 1;
+            n >>>= 1; // Java 中无符号右移为 ">>>>>>"
         }
         return res;
     }
