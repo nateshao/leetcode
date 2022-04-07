@@ -61,4 +61,12 @@ public class Solution {
         return pre;
     }
 
+    public ListNode reverseList3(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode node = reverseList3(head.next);
+        head.next.next = head;
+        head.next = null;
+        return node;
+
+    }
 }
