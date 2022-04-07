@@ -80,7 +80,6 @@ public class Solution {
                 numFlag = false;//为了避免123e这种请求，出现e之后就标志为false
                 //判定为+-符号，只能出现在第一位或者紧接e后面
             } else if ((s.charAt(i) == '+' || s.charAt(i) == '-') && (i == 0 || s.charAt(i - 1) == 'e' || s.charAt(i - 1) == 'E')) {
-
                 //其他情况，都是非法的
             } else {
                 return false;
@@ -108,5 +107,32 @@ public class Solution {
             } else return false; // 其它情况均为不合法字符
         }
         return isNum;
+    }
+
+    public boolean isNumber3(String s) {
+        if (s == null || s.length() == 0) return false;
+        // 去掉空格
+        s = s.trim();
+        boolean numFlag = false;// 数字
+        boolean dotFlag = false;// .
+        boolean eFlag = false;
+        for (int i = 0; i < s.length(); i++) {
+            // 如果是数字，标记为numFlag
+            if (s.charAt(i) >= '0' && s.charAt(i) <= '9') {
+                numFlag = true;
+                // 如果为.   需要没出现.  并且没出现e
+            } else if (s.charAt(i) == '.' && !dotFlag && !eFlag) {
+                dotFlag = true;
+                // 判定为e，需要没出现过e，并且没出现过数字了
+            } else if ((s.charAt(i) == 'e' || s.charAt(i) == 'E') && !eFlag && numFlag) {
+                eFlag = true;
+                numFlag = false;
+                //判定为+-符号，只能出现在第一位或者紧接e后面
+            } else if ((s.charAt(i) == '+' || s.charAt(i) == '-') && (i == 0 || s.charAt(i - 1) == 'e' || s.charAt(i - 1) == 'E')) {
+
+            } else return false;
+        }
+        return numFlag;
+
     }
 }

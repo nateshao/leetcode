@@ -135,10 +135,10 @@ leetcode 代码成长记录
 | 第三天2022-03-31  | [剑指 Offer 11. 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/) | [剑指 Offer 12. 矩阵中的路径](https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/) | [剑指 Offer 13. 机器人的运动范围](https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/) | [剑指 Offer 14- I. 剪绳子](https://leetcode-cn.com/problems/jian-sheng-zi-lcof/) |            |
 |       思路        | 1，先排序，再返回数组第一个元素  `Arrays.sort(numbers); return numbers[0];` 2，二分法 ` int left = 0, right = numbers.length - 1; while (left < right) { int mid = (left + right) / 2;   if (numbers[mid] > numbers[right]) left = mid + 1;         else if (numbers[mid] < numbers[right]) right = mid;         else right--;     }     return numbers[left]; ` |                     **深度优先遍历 DFS**                     |                     **深度优先遍历 DFS**                     | if (n == 1 \|\| n == 2) return 1; if (n == 3) return 2; int sum = 1; while (n > 4) {     sum *= 3;  n -= 3; } return sum * n; | 12，13，14 |
 | 第三天2022-04-01  | [剑指 Offer 14- II. 剪绳子 II](https://leetcode-cn.com/problems/jian-sheng-zi-ii-lcof/) | [剑指 Offer 15. 二进制中1的个数](https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/) | [剑指 Offer 16. 数值的整数次方](https://leetcode-cn.com/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/) | [剑指 Offer 17. 打印从1到最大的n位数](https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/) |            |
-|       思路        | 把绳子尽可能切为多个长度为 3 的片段，留下的最后一段绳子的长度可能为 0,1,2 三种情况。`if (n == 1 || n == 2) return 1; if (n == 3) return 2; long sum = 1; while (n > 4) {     sum *= 3;     sum %= 1000000007;     n -= 3; } return (int) (sum * n % 1000000007);` | 逻辑与运算：**1，** int res = 0; while(n != 0) {     res += n & 1;     n >>>= 1;  } return res;  **2，**int res = 0; while(n != 0) {     res += n & 1;     n >>>= 1; // Java 中无符号右移为 ">>>>>>" } return res; |                                                              |                                                              |            |
-| 第四天2022-04-06  | [剑指 Offer 18. 删除链表的节点](https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/) | [剑指 Offer 19. 正则表达式匹配](https://leetcode-cn.com/problems/zheng-ze-biao-da-shi-pi-pei-lcof/) |                                                              |                                                              |            |
-|                   | 递归：if (head == null) return null; if (head.val == val) return head.next; head.next = deleteNode(head.next, val); return head; |                                                              |                                                              |                                                              |            |
-|                   |                                                              |                                                              |                                                              |                                                              |            |
+|       思路        | 把绳子尽可能切为多个长度为 3 的片段，留下的最后一段绳子的长度可能为 0,1,2 三种情况。`if (n == 1 || n == 2) return 1; if (n == 3) return 2; long sum = 1; while (n > 4) {     sum *= 3;     sum %= 1000000007;     n -= 3; } return (int) (sum * n % 1000000007);` | 逻辑与运算：**1，** int res = 0; while(n != 0) {     res += n & 1;     n >>>= 1;  } return res;  **2，**int res = 0; while(n != 0) {     res += n & 1;     n >>>= 1; // Java 中无符号右移为 ">>>>>>" } return res; |                                                              |                                                              |     16     |
+| 第四天2022-04-06  | [剑指 Offer 18. 删除链表的节点](https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/) | [剑指 Offer 19. 正则表达式匹配](https://leetcode-cn.com/problems/zheng-ze-biao-da-shi-pi-pei-lcof/) | [剑指 Offer 20. 表示数值的字符串](https://leetcode-cn.com/problems/biao-shi-shu-zhi-de-zi-fu-chuan-lcof/) | [剑指 Offer 21. 调整数组顺序使奇数位于偶数前面](https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/) |            |
+|       思路        | 递归：if (head == null) return null; if (head.val == val) return head.next; head.next = deleteNode(head.next, val); return head; |                             困难                             | //判定为数字，则标记numFlag if (s.charAt(i) >= '0' && s.charAt(i) <= '9') {     numFlag = true;     //判定为.  需要没出现过.并且没出现过e } else if (s.charAt(i) == '.' && !dotFlag && !eFlag) {     dotFlag = true;     //判定为e，需要没出现过e，并且出过数字了 } else if ((s.charAt(i) == 'e' \|\| s.charAt(i) == 'E') && !eFlag && numFlag) {     eFlag = true;     numFlag = false;//为了避免123e这种请求，出现e之后就标志为false     //判定为+-符号，只能出现在第一位或者紧接e后面 } else if ((s.charAt(i) == '+' \|\| s.charAt(i) == '-') && (i == 0 \|\| s.charAt(i - 1) == 'e' \|\| s.charAt(i - 1) == 'E')) {     //其他情况，都是非法的 | 双指针 left , right 分列数组左右两端，循环执行： 指针 left 从左向右寻找偶数； 指针 right 从右向左寻找奇数； 将 偶数 nums[left]和 奇数 nums[right]交换。 可始终保证： 指针 left 左边都是奇数，指针 right 右边都是偶数 。 |            |
+|                   | [剑指 Offer 22. 链表中倒数第k个节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/) |                                                              |                                                              |                                                              |            |
 |                   |                                                              |                                                              |                                                              |                                                              |            |
 |                   |                                                              |                                                              |                                                              |                                                              |            |
 |                   |                                                              |                                                              |                                                              |                                                              |            |
@@ -156,12 +156,6 @@ leetcode 代码成长记录
 
 如何对一个文件进行压缩（哈夫曼编码）
 
-
-
-
-
-
-
 ## 关于作者
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
@@ -169,9 +163,10 @@ leetcode 代码成长记录
     <td align="center"><img alt="微信公众号" src="https://img.shields.io/static/v1?label=%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7&message=%E5%8D%83%E7%BE%BD%E7%9A%84%E7%BC%96%E7%A8%8B%E6%97%B6%E5%85%89&color=7BB32E&logo=wechat"/></td>
   </tr>
   <tr>
-    <td align="center"><img align="center" src="https://ae01.alicdn.com/kf/U44e6216b2f5448cfa65fce1b163753fba.jpg" width="200"/></td>
-     <td align="center"><img align="center" src="https://s4.ax1x.com/2021/03/19/6ftYuR.jpg" width="200"/></td>
+    <td align="center"><img align="center" src="https://cdn.jsdelivr.net/gh/nateshao/images/20220407212615.jpeg" width="200"/></td>
+     <td align="center"><img align="center" src="https://cdn.jsdelivr.net/gh/nateshao/images/20220407212652.jpeg" width="200"/></td>
   </tr>
 </table>
+
 
 

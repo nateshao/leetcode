@@ -26,8 +26,31 @@ public class Solution {
         }
     }
 
+    /**
+     * 考虑定义双指针 left , right 分列数组左右两端，循环执行：
+     * <p>
+     * 指针 left 从左向右寻找偶数；
+     * 指针 right 从右向左寻找奇数；
+     * 将 偶数 nums[left]和 奇数 nums[right]交换。
+     * 可始终保证： 指针 left 左边都是奇数，指针 right 右边都是偶数 。
+     *
+     * @param nums
+     * @return
+     */
     public static int[] exchange(int[] nums) {
-        // if (nums == null || nums.length == 0) return null;
+        int left = 0;
+        int right = nums.length - 1;
+        while (left < right) {
+            while (left < right && nums[left] % 2 != 0) left++;
+            while (left < right && nums[right] % 2 == 0) right--;
+            int temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
+        }
+        return nums;
+    }
+
+    public static int[] exchange2(int[] nums) {
         int left = 0;
         int right = nums.length - 1;
         while (left < right) {
