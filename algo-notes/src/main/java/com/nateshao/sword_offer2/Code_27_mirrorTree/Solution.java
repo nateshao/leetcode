@@ -23,11 +23,11 @@ public class Solution {
     }
 
     /**
-     * 终止条件： 当节点 root 为空时（即越过叶节点），则返回 nullnull ；
+     * 终止条件： 当节点 root 为空时（即越过叶节点），则返回 null ；
      * 递推工作：
-     * 初始化节点 tmp，用于暂存 root 的左子节点；
-     * 开启递归 右子节点 mirrorTree(root.right) ，并将返回值作为 root 的 左子节点 。
-     * 开启递归 左子节点 mirrorTree(tmp)，并将返回值作为 root 的 右子节点 。
+     * 1. 初始化节点 tmp，用于暂存 root 的左子节点；
+     * 2. 开启递归 右子节点 mirrorTree(root.right) ，并将返回值作为 root 的 左子节点 。
+     * 3. 开启递归 左子节点 mirrorTree(tmp)，并将返回值作为 root 的 右子节点 。
      * 返回值： 返回当前节点 root ；
      * <p>
      * 作者：jyd
@@ -72,5 +72,13 @@ public class Solution {
         return root;
     }
 
+    public TreeNode mirrorTree3(TreeNode root) {
+        if (root == null) return null;
+        TreeNode rootLeft = mirrorTree3(root.left);
+        TreeNode rootRight = mirrorTree3(root.right);
+        root.right = rootLeft;
+        root.left = rootRight;
+        return root;
+    }
 
 }

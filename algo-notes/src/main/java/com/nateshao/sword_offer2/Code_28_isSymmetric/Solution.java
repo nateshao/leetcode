@@ -23,10 +23,27 @@ public class Solution {
         }
     }
 
+    /**
+     * 对称二叉树定义： 对于树中 任意两个对称节点 L 和 R ，一定有：
+     * L.val = R.val ：即此两对称节点值相等。
+     * L.left.val = R.right.val：即 L 的 左子节点 和 R 的 右子节点 对称；
+     * L.right.val = R.left.val ：即 L 的 右子节点 和 R 的 左子节点 对称。
+     * @param root
+     * @return
+     */
     public boolean isSymmetric(TreeNode root) {
         return (root == null) ? true : recur(root.left, root.right);
     }
 
+    /**
+     * 当 L 和 R 同时越过叶节点： 此树从顶至底的节点都对称，因此返回 true ；
+     * 当 L 或 R 中只有一个越过叶节点： 此树不对称，因此返回 false ；
+     * 当节点 L 值 != 节点 R 值： 此树不对称，因此返回 false ；
+     *
+     * @param L
+     * @param R
+     * @return
+     */
     public boolean recur(TreeNode L, TreeNode R) {
         if (L == null && R == null) return true;
         if (L == null || R == null || L.val != R.val) return false;
@@ -34,14 +51,4 @@ public class Solution {
     }
 
 
-//    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        int[] res = new int[10];
-//        for (int i = 0; i < res.length; i++) {
-//            res[i] = sc.nextInt();
-//        }
-//        for (int re : res) {
-//            System.out.print(re + " ");
-//        }
-//    }
 }
