@@ -1,5 +1,7 @@
 package com.nateshao.sword_offer2.Code_31_validateStackSequences;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Stack;
 
 /**
@@ -49,5 +51,26 @@ public class Solution {
             }
         }
         return stack.isEmpty();//如果栈都为空了，说明true。
+    }
+
+    /**
+     * 判断合不合法，用个栈试一试:
+     * 把压栈的元素按顺序压入，当栈顶元素和出栈的第一个元素相同，则将该元素弹出，出栈列表指针后移并继续判断。
+     * 最后判断出栈列表指针是否指向出栈列表的末尾即可。
+     * @param pushed
+     * @param popped
+     * @return
+     */
+    public boolean validateStackSequences2(int[] pushed, int[] popped) {
+        Deque<Integer> stack = new ArrayDeque();
+        int j = 0;
+        for (int elem : pushed) {
+            stack.push(elem);
+            while (j < popped.length && !stack.isEmpty() && stack.peek() == popped[j]) {
+                stack.pop();
+                j++;
+            }
+        }
+        return j == popped.length;
     }
 }
