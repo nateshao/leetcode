@@ -33,7 +33,7 @@ import java.util.Queue;
  * ]
  */
 public class Solution {
-    /**
+    /** 层序遍历 BFS
      * 算法流程：
      * 特例处理： 当根节点为空，则返回空列表 [] ；
      * 初始化： 打印结果列表 res = [] ，包含根节点的队列 queue = [root] ；
@@ -54,7 +54,7 @@ public class Solution {
         if(root != null) queue.add(root);
         while(!queue.isEmpty()) {
             List<Integer> tmp = new ArrayList<>();// 新建一个临时列表 tmp ，用于存储当前层打印结果；
-            for(int i = queue.size(); i > 0; i--) {
+            for(int i = queue.size(); i > 0; i--) {// 分层打印
                 TreeNode node = queue.poll();
                 tmp.add(node.val);
                 if(node.left != null) queue.add(node.left);
