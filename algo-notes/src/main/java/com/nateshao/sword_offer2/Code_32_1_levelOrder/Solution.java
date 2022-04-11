@@ -1,4 +1,4 @@
-package com.nateshao.sword_offer2.Code_32_levelOrder;
+package com.nateshao.sword_offer2.Code_32_1_levelOrder;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
