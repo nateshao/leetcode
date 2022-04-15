@@ -65,12 +65,12 @@ public class Solution {
      */
     public int majorityElement3(int[] nums) {
         //摩尔投票
-        int count = 0;
-        Integer card = null;
-        for (int num : nums) {
-            if (count == 0) card = num;
-            count += (card == num) ? 1 : -1;
+        int x = 0, votes = 0;
+        for(int num : nums){
+            if(votes == 0) x = num;
+            votes += num == x ? 1 : -1;
         }
-        return card;
+        return x;
+
     }
 }
