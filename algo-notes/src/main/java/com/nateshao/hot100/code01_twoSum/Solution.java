@@ -13,6 +13,9 @@ import java.util.HashMap;
  * Description:
  */
 public class Solution {
+    public static void main(String[] args) {
+        System.out.println("-------");
+    }
     /**
      * 第一种解法：暴力求解，两层for循环
      * 运行结果：通过，速度击败 30%
