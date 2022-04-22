@@ -40,6 +40,7 @@ public class Solution {
      * @return
      */
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+        // 如果一棵树有，另一棵树没有，接上去
         if (t1 == null) return t2;
         if (t2 == null) return t1;
         // 合并根节点
