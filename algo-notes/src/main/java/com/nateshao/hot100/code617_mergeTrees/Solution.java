@@ -32,6 +32,13 @@ import com.nateshao.hot100.include.TreeNode;
  * 输出：[2,2]
  */
 public class Solution {
+    /**
+     * 方法一：深度优先搜索：递归
+     * 先序遍历 ：根左右
+     * @param t1
+     * @param t2
+     * @return
+     */
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
         if (t1 == null) return t2;
         if (t2 == null) return t1;
