@@ -99,20 +99,12 @@ leetcode 代码成长记录
 |  1   | [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/) | [Java](https://gitee.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code144_preorderTraversal/Solution.java)，[Go]() |   简单   |      |
 |  2   | [94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/) | [Java](https://gitee.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code94_inorderTraversal/Solution.java)，[Go]() |   简单   |      |
 |  3   | [145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/) | [Java](https://gitee.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code145_postorderTraversal/Solution.java)，[Go]() |   简单   |      |
-|  4   |                                                              |                                                              |          |      |
+|  4   | [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/) |                                                              |          |      |
 |  5   |                                                              |                                                              |          |      |
 |  6   |                                                              |                                                              |          |      |
 |  7   |                                                              |                                                              |          |      |
 |  8   |                                                              |                                                              |          |      |
 |  9   |                                                              |                                                              |          |      |
-
-
-
-
-
-
-
-
 
 
 
