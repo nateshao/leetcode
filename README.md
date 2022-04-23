@@ -92,6 +92,28 @@ leetcode 代码成长记录
 |      |                                                              |                                                              |                                                              |      |
 |      |                                                              |                                                              |                                                              |      |
 
+## 二叉树
+
+| 序号 | 题目                                                         | 解题代码 | 题目难度 | 备注 |
+| :--: | ------------------------------------------------------------ | -------- | -------- | ---- |
+|  1   | [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/) |          |          |      |
+|  2   | [94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/) |          |          |      |
+|  3   | [145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/) |          |          |      |
+|  4   |                                                              |          |          |      |
+|  5   |                                                              |          |          |      |
+|  6   |                                                              |          |          |      |
+|  7   |                                                              |          |          |      |
+|  8   |                                                              |          |          |      |
+|  9   |                                                              |          |          |      |
+
+
+
+
+
+
+
+
+
 
 
 ## 数组

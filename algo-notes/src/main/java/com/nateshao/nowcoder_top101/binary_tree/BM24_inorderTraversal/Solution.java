@@ -1,13 +1,14 @@
 package com.nateshao.nowcoder_top101.binary_tree.BM24_inorderTraversal;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
  * @date Created by 邵桐杰 on 2022/4/23 11:06
  * @微信公众号 千羽的编程时光
  * @个人网站 www.nateshao.cn
- * @博客 https://nateshao.gitee.io
+ * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
  * @Gitee https://gitee.com/nateshao
  * Description: https://www.nowcoder.com/practice/0bf071c135e64ee2a027783b80bf781d?tpId=295&tqId=1512964&ru=/exam/oj&qru=/ta/format-top101/question-ranking&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3D%25E7%25AE%2597%25E6%25B3%2595%25E7%25AF%2587%26topicId%3D295
@@ -24,19 +25,23 @@ public class Solution {
      * @param root TreeNode类
      * @return int整型一维数组
      */
-    List<Integer> res = new ArrayList<>();
+    /* 回溯算法思路 */
+    List<Integer> res = new LinkedList<>();
+    // 返回前序遍历结果
     public int[] inorderTraversal(TreeNode root) {
-        traversal(root);
+        traverse(root);
         return res.stream().mapToInt(Integer::intValue).toArray();
+    }
 
-        // write code here
-    }
-    void traversal(TreeNode root) {
+    // 二叉树遍历函数
+    void traverse(TreeNode root) {
         if (root == null) return;
-        if (root.left != null) traversal(root.left);
+        traverse(root.left);
+        // 中序遍历位置
         res.add(root.val);
-        if (root.right != null) traversal(root.left);
+        traverse(root.right);
     }
+
 
     public class TreeNode {
         int val = 0;
