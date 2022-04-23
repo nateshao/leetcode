@@ -1,4 +1,4 @@
-package com.nateshao.leetcode.binary_tree.code01_94_inorderTraversal;
+package com.nateshao.leetcode.binary_tree.code02_94_inorderTraversal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +34,7 @@ public class Solution {
      * @return
      */
     List<Integer> res = new ArrayList<Integer>();
+
     public List<Integer> inorderTraversal(TreeNode root) {
         traversal(root);
         return res;
@@ -46,6 +47,15 @@ public class Solution {
         traversal(root.right);
     }
 
+    /******************* 法二 ************************/
+    public List<Integer> inorderTraversal2(TreeNode root) {
+        ArrayList<Integer> res = new ArrayList<>();
+        if (root == null) return res;
+        res.addAll(inorderTraversal2(root.left));
+        res.add(root.val);
+        res.addAll(inorderTraversal2(root.right));
+        return res;
+    }
 
     public class TreeNode {
         int val;

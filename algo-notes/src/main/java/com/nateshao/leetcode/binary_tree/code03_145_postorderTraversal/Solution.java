@@ -51,6 +51,15 @@ public class Solution {
         traversal(root.right);
         res.add(root.val);
     }
+    /******************* 法二 ************************/
+    public List<Integer> inorderTraversal2(TreeNode root) {
+        ArrayList<Integer> res = new ArrayList<>();
+        if (root == null) return res;
+        res.addAll(inorderTraversal2(root.left));
+        res.addAll(inorderTraversal2(root.right));
+        res.add(root.val);
+        return res;
+    }
 
     public class TreeNode {
         int val;

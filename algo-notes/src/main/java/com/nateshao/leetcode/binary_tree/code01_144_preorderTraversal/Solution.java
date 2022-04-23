@@ -1,6 +1,7 @@
-package com.nateshao.leetcode.binary_tree.code02_144_preorderTraversal;
+package com.nateshao.leetcode.binary_tree.code01_144_preorderTraversal;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -35,7 +36,7 @@ import java.util.List;
  * 输出：[1,2]
  */
 public class Solution {
-
+    // 法一
     List<Integer> res = new ArrayList<>();
     public List<Integer> preorderTraversal(TreeNode root) {
         traversal(root);
@@ -47,6 +48,26 @@ public class Solution {
         res.add(root.val);
         traversal(root.left);
         traversal(root.right);
+    }
+    /************ 法二 ***************/
+    /**
+     * 一棵二叉树的前序遍历结果 = 根节点 + 左子树的前序遍历结果 + 右子树的前序遍历结果。
+     * Java 的话无论 ArrayList 还是 LinkedList，addAll 方法的复杂度都是 O(N)，
+     * 所以总体的最坏时间复杂度会达到 O(N^2)，除非你自己实现一个复杂度为 O(1) 的 addAll 方法，底层用链表的话并不是不可能。
+     * @param root
+     * @return
+     */
+    // 定义：输入一棵二叉树的根节点，返回这棵树的前序遍历结果
+    public List<Integer> preorderTraverse2(TreeNode root) {
+        List<Integer> res = new LinkedList<>();
+        if (root == null) return res;
+        // 前序遍历的结果，root.val 在第一个
+        res.add(root.val);
+        // 利用函数定义，后面接着左子树的前序遍历结果
+        res.addAll(preorderTraverse2(root.left));
+        // 利用函数定义，最后接着右子树的前序遍历结果
+        res.addAll(preorderTraverse2(root.right));
+        return res;
     }
 
     public class TreeNode {
