@@ -96,7 +96,7 @@ leetcode 代码成长记录
 
 | 序号 | 题目                                                         |                           解题代码                           | 题目难度 | 备注 |
 | :--: | ------------------------------------------------------------ | :----------------------------------------------------------: | :------: | ---- |
-|  1   | [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/) | [Java](com.nateshao.leetcode.binary_tree.code94_inorderTraversal.Solution)，[Go]() |   简单   |      |
+|  1   | [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/) | [Java](algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code94_inorderTraversal/Solution.java)，[Go]() |   简单   |      |
 |  2   | [94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/) |                       [Java]()，[Go]()                       |   简单   |      |
 |  3   | [145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/) |                       [Java]()，[Go]()                       |   简单   |      |
 |  4   |                                                              |                                                              |          |      |
