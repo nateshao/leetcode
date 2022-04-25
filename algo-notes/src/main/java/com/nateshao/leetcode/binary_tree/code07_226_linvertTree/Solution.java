@@ -41,22 +41,45 @@ public class Solution {
         root.left = invertTree(rightTree);
         return root;
     }
+
     /**
      * 利用后序遍历
+     *
      * @param root
      * @return
      */
-        public TreeNode invertTree2(TreeNode root) {
-            // 后序遍历-- 从下向上交换
-            if (root == null) return null;
-            TreeNode leftNode = invertTree2(root.left);
-            TreeNode rightNode = invertTree2(root.right);
-            root.right = leftNode;
-            root.left = rightNode;
-            return root;
-        }
+    public TreeNode invertTree2(TreeNode root) {
+        // 后序遍历-- 从下向上交换
+        if (root == null) return null;
+        TreeNode leftNode = invertTree2(root.left);
+        TreeNode rightNode = invertTree2(root.right);
+        root.right = leftNode;
+        root.left = rightNode;
+        return root;
+    }
     /************** labuladong ****************/
+    /**
+     * labuladong代码框架
+     *
+     * @param root
+     * @return
+     */
+    public TreeNode invertTree3(TreeNode root) {
+        traverse(root);
+        return root;
+    }
 
+    // 二叉树遍历函数
+    private void traverse(TreeNode root) {
+        if (root == null) return;
+        /**** 前序位置 ****/
+        // 每一个节点需要做的事就是交换它的左右子节点
+        TreeNode temp = root.left;
+        root.left = root.right;
+        root.right = temp;
+        traverse(root.left);
+        traverse(root.right);
+    }
 
     public class TreeNode {
         int val;
