@@ -41,6 +41,22 @@ public class Solution {
         root.left = invertTree(rightTree);
         return root;
     }
+    /**
+     * 利用后序遍历
+     * @param root
+     * @return
+     */
+        public TreeNode invertTree2(TreeNode root) {
+            // 后序遍历-- 从下向上交换
+            if (root == null) return null;
+            TreeNode leftNode = invertTree2(root.left);
+            TreeNode rightNode = invertTree2(root.right);
+            root.right = leftNode;
+            root.left = rightNode;
+            return root;
+        }
+    /************** labuladong ****************/
+
 
     public class TreeNode {
         int val;
