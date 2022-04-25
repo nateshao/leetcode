@@ -1,7 +1,9 @@
 package main
 
-func main() {
+import "fmt"
 
+func main() {
+	fmt.Print("----------")
 }
 
 // 方法一：暴力枚举
