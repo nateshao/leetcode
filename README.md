@@ -113,7 +113,7 @@ leetcode 代码成长记录
 |  5   | [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/) |                           Java，Go                           |   简单   |      |
 |  6   | [102. 二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/) |                           Java，Go                           |   简单   |      |
 |      |                                                              |                                                              |          |      |
-|  7   | [226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/) |                           Java，Go                           |   简单   |      |
+|  7   | [226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/) | [Java](https://gitee.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code07_226_linvertTree/Solution.java)，Go |   简单   |      |
 |  8   |                                                              |                           Java，Go                           |   简单   |      |
 |  9   |                                                              |                           Java，Go                           |   简单   |      |
 

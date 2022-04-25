@@ -81,6 +81,24 @@ public class Solution {
         traverse(root.right);
     }
 
+    /***************** labuladong 法二：分解 *****************/
+    /**
+     * 定义：将以 root 为根的这棵二叉树翻转，返回翻转后的二叉树的根节点
+     *
+     * @param root
+     * @return
+     */
+    public TreeNode invertTree4(TreeNode root) {
+        if (root == null) return null;
+        // 利用函数定义，先翻转左右子树
+        TreeNode left = invertTree4(root.left);
+        TreeNode right = invertTree4(root.right);
+        // 交换左右子节点
+        root.right = left;
+        root.left = right;
+        return root;
+    }
+
     public class TreeNode {
         int val;
         TreeNode left;
