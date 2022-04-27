@@ -114,8 +114,8 @@ leetcode 代码成长记录
 |  6   | [102. 二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/) |                           Java，Go                           |   简单   |      |
 |      |                                                              |                                                              |          |      |
 |  7   | [226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/) | [Java](https://gitee.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code07_226_linvertTree/Solution.java)，Go |   简单   |      |
-|  8   | [116. 填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/) |                           Java，Go                           |   简单   |      |
-|  9   | [114. 二叉树展开为链表](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/) |                           Java，Go                           |   简单   |      |
+|  8   | [116. 填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/) | [Java](https://gitee.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code08_116_connect/Solution.java)，Go |   简单   |      |
+|  9   | [114. 二叉树展开为链表](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/) | [Java](https://gitee.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code09_114_flatten/Solution.java)，Go |   简单   |      |
 |  10  |                                                              |                                                              |          |      |
 |  11  |                                                              |                                                              |          |      |
 |  12  |                                                              |                                                              |          |      |
