@@ -96,9 +96,9 @@ leetcode 代码成长记录
 
 二叉树解题的思维模式分两类：
 
-1、是否可以通过遍历一遍二叉树得到答案？如果可以，用一个 traverse 函数配合外部变量来实现，这叫「遍历」的思维模式。
+1. **是否可以通过遍历一遍二叉树得到答案？**如果可以，用一个 traverse 函数配合外部变量来实现，这叫「遍历」的思维模式。
 
-2、是否可以定义一个递归函数，通过子问题（子树）的答案推导出原问题的答案？如果可以，写出这个递归函数的定义，并充分利用这个函数的返回值，这叫「分解问题」的思维模式。
+2. **是否可以定义一个递归函数，通过子问题（子树）的答案推导出原问题的答案？**如果可以，写出这个递归函数的定义，并充分利用这个函数的返回值，这叫「分解问题」的思维模式。
 
 无论使用哪种思维模式，你都需要思考：
 
@@ -115,7 +115,12 @@ leetcode 代码成长记录
 |      |                                                              |                                                              |          |      |
 |  7   | [226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/) | [Java](https://gitee.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code07_226_linvertTree/Solution.java)，Go |   简单   |      |
 |  8   | [116. 填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/) |                           Java，Go                           |   简单   |      |
-|  9   |                                                              |                           Java，Go                           |   简单   |      |
+|  9   | [114. 二叉树展开为链表](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/) |                           Java，Go                           |   简单   |      |
+|  10  |                                                              |                                                              |          |      |
+|  11  |                                                              |                                                              |          |      |
+|  12  |                                                              |                                                              |          |      |
+|  13  |                                                              |                                                              |          |      |
+|  14  |                                                              |                                                              |          |      |
 
 
 
