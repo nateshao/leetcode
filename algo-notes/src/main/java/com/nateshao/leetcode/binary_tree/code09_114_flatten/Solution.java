@@ -27,6 +27,18 @@ package com.nateshao.leetcode.binary_tree.code09_114_flatten;
  * 输出：[0]
  */
 public class Solution {
+
+
+    /**
+     * 对于一个节点 x，可以执行以下流程：
+     *
+     * 1、先利用 flatten(x.left) 和 flatten(x.right) 将 x 的左右子树拉平。
+     * 2、将 x 的右子树接到左子树下方，然后将整个左子树作为右子树。
+     * 这样，以 x 为根的整棵二叉树就被拉平了，恰好完成了 flatten(x) 的定义。
+     * @param root
+     */
+
+
     // 定义：将以 root 为根的树拉平为链表
     public void flatten(TreeNode root) {
         // base case
