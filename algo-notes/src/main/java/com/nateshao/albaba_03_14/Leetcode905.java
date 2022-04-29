@@ -11,26 +11,30 @@ package com.nateshao.albaba_03_14;
  */
 public class Leetcode905 {
     /**
-     * 方法三：原地交换
-     * 思路
+     * 算法流程：
      *
-     * 记数组 nums 的长度为 n。先从 nums 左侧开始遍历，
-     * 如果遇到的是偶数，就表示这个元素已经排好序了，继续从左往右遍历，直到遇到一个奇数。
-     * 然后从 nums 右侧开始遍历，如果遇到的是奇数，就表示这个元素已经排好序了，
-     * 继续从右往左遍历，直到遇到一个偶数。交换这个奇数和偶数的位置，并且重复两边的遍历，直到在中间相遇，
-     * nums 排序完毕。
+     * 1. 初始化： i , j 双指针，分别指向数组 nums 左右两端；
+     * 2. 循环交换： 当 i = j 时跳出；
+     *    1. 指针 i 遇到奇数则执行 i = i + 1 跳过，直到找到偶数；
+     *    2. 指针 j 遇到偶数则执行 j = j - 1 跳过，直到找到奇数；
+     *    3. 交换 nums[i] 和 nums[j] 值；
+     *
+     * 3. 返回值：返回已修改的 nums 数组。
      * @param nums
      * @return
      */
     public int[] sortArrayByParity(int[] nums) {
-        int left = 0;
-        int right = nums.length - 1;
+        int left = 0, right = nums.length - 1;
         while (left < right) {
-            while (left < right && nums[left] % 2 != 0) left++;
-            while (left < right && nums[right] % 2 == 0) right--;
-            int temp = nums[left];
-            nums[left] = nums[right];
-            nums[right] = temp;
+            while (left < right && nums[left] % 2 == 0) left++;
+            while (left < right && nums[right] % 2 == 1) right--;
+            if (left < right) {
+                int temp = nums[left];
+                nums[left] = nums[right];
+                nums[right] = temp;
+                left++;
+                right--;
+            }
         }
         return nums;
     }
