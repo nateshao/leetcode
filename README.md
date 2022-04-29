@@ -117,9 +117,9 @@ leetcode 代码成长记录
 |  8   | [116. 填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/) | [Java](https://gitee.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code08_116_connect/Solution.java)，Go |   简单   |      |
 |  9   | [114. 二叉树展开为链表](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/) | [Java](https://gitee.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code09_114_flatten/Solution.java)，Go |   中等   |      |
 |      |                                                              |                                                              |          |      |
-|  10  | [654. 最大二叉树](https://leetcode-cn.com/problems/maximum-binary-tree/) |                           Java，Go                           |          |      |
-|  11  |                                                              |                           Java，Go                           |          |      |
-|  12  |                                                              |                           Java，Go                           |          |      |
+|  10  | [654. 最大二叉树](https://leetcode-cn.com/problems/maximum-binary-tree/) | [Java](https://gitee.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code10_645_constructMaximumBinaryTree/Solution.java)，Go |          |      |
+|  11  | [105. 从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) |                           Java，Go                           |          |      |
+|  12  | [106. 从中序与后序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) |                           Java，Go                           |          |      |
 |  13  |                                                              |                           Java，Go                           |          |      |
 |  14  |                                                              |                           Java，Go                           |          |      |
 
