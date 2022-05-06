@@ -1,4 +1,4 @@
-package com.nateshao.leetcode.binary_tree.code21_538;
+package com.nateshao.leetcode.binary_tree.code21_538_convertBST;
 
 /**
  * @date Created by 邵桐杰 on 2022/5/6 15:12
