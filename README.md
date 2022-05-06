@@ -124,11 +124,15 @@ leetcode 代码成长记录
 |      |                                                              |                                                              |          |      |
 |  14  | [297. 二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/) |                           Java，Go                           |          |      |
 |  15  | [652. 寻找重复的子树](https://leetcode-cn.com/problems/find-duplicate-subtrees/) |                           Java，Go                           |          |      |
-|      | 归并排序详解及应用                                           |                           Java，Go                           |          |      |
-|  16  | [912. 排序数组](https://leetcode-cn.com/problems/sort-an-array/) |                           Java，Go                           |          |      |
-|  17  | [315. 计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/) |                           Java，Go                           |          |      |
-|  18  | [493. 翻转对](https://leetcode-cn.com/problems/reverse-pairs/) |                           Java，Go                           |          |      |
-|  19  |                                                              |                           Java，Go                           |          |      |
+|      | 归并排序详解及应用                                           |                                                              |          |      |
+|  16  | [912. 排序数组](https://leetcode-cn.com/problems/sort-an-array/) |                           Java，Go                           |   中等   |      |
+|  17  | [315. 计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/) |                           Java，Go                           |   困难   |      |
+|  18  | [493. 翻转对](https://leetcode-cn.com/problems/reverse-pairs/) |                           Java，Go                           |   困难   |      |
+|  19  | [327. 区间和的个数](https://leetcode-cn.com/problems/count-of-range-sum/) |                           Java，Go                           |   困难   |      |
+|      |                                                              |                                                              |          |      |
+|  20  | [230. 二叉搜索树中第K小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/) |                           Java，Go                           |          |      |
+|      |                                                              |                           Java，Go                           |          |      |
+|      |                                                              |                           Java，Go                           |          |      |
 
 
 
