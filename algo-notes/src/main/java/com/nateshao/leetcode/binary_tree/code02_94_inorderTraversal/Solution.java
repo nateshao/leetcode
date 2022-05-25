@@ -34,18 +34,30 @@ public class Solution {
      * @return
      */
     List<Integer> res = new ArrayList<Integer>();
-
     public List<Integer> inorderTraversal(TreeNode root) {
         traversal(root);
         return res;
     }
 
-    void traversal(TreeNode root) {
+    /**
+     * 左右根
+     *
+     * @param root
+     */
+    private void traversal(TreeNode root) {
         if (root == null) return;
         traversal(root.left);
         res.add(root.val);
         traversal(root.right);
     }
+
+//    void traversal(TreeNode root) {
+//        if (root == null) return;
+//        traversal(root.left);
+//        res.add(root.val);
+//        traversal(root.right);
+//    }
+
 
     /******************* 法二 ************************/
     public List<Integer> inorderTraversal2(TreeNode root) {

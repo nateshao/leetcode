@@ -129,9 +129,9 @@ leetcode 代码成长记录
 |  17  | [315. 计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/) | [Java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code17_315_countSmaller/Solution.java)，Go |   困难   |      |
 |  18  | [493. 翻转对](https://leetcode-cn.com/problems/reverse-pairs/) | [Java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code18_439_reversePairs/Solution.java)，Go |   困难   |      |
 |  19  | [327. 区间和的个数](https://leetcode-cn.com/problems/count-of-range-sum/) | [Java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code19_327_countRangeSum/Solution.java)，Go |   困难   |      |
-|      |                                                              |                                                              |          |      |
-|  20  | [230. 二叉搜索树中第K小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/) | [Java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code20_230_kthSmallest/Solution.java)，Go |          |      |
-|      |                                                              |                           Java，Go                           |          |      |
+|      | 中序遍历解决升序问题                                         |                                                              |          |      |
+|  20  | [230. 二叉搜索树中第K小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/) | [Java](https://github.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code20_230_kthSmallest/Solution.java)，Go |   中等   |      |
+|  21  | [538. 把二叉搜索树转换为累加树](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/) | [Java](https://gitee.com/nateshao/leetcode/blob/main/algo-notes/src/main/java/com/nateshao/leetcode/binary_tree/code21_538_convertBST/Solution.java)，Go |   中等   |      |
 |      |                                                              |                           Java，Go                           |          |      |
 
 

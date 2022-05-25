@@ -43,6 +43,10 @@ public class Solution {
         return res;
     }
 
+    /**
+     * 根左右
+     * @param root
+     */
     void traversal(TreeNode root) {
         if (root == null) return;
         res.add(root.val);
