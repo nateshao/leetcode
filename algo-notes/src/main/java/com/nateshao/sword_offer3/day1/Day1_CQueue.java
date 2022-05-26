@@ -2,7 +2,7 @@ package com.nateshao.sword_offer3.day1;
 
 import java.util.LinkedList;
 
-/**
+/**栈与队列（简单）
  * @date Created by 邵桐杰 on 2022/5/25 22:53
  * @微信公众号 千羽的编程时光
  * @个人网站 www.nateshao.cn
@@ -28,6 +28,11 @@ public class Day1_CQueue {
 
     /**
      * 删除元素
+     * 如果B不为空，删除B的最后一个元素
+     * 如果A为空，返回-1
+     * 如果A不为空，B添加最后的元素，（A移除最后一个元素）
+     * 然会B的最后一个元素
+     *
      * @return
      */
     public int deleteHead() {
