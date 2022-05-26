@@ -26,14 +26,14 @@ import java.util.Stack;
  * minStack.top();      --> 返回 0.
  * minStack.min();   --> 返回 -2.
  */
-public class Day2_MinStack {
+public class Day1_2MinStack {
     // 初始化两个栈A,B
     Stack<Integer> A, B;
 
     /**
      * initialize your data structure here.
      */
-    public Day2_MinStack() {
+    public Day1_2MinStack() {
         A = new Stack<>();
         B = new Stack<>();
     }

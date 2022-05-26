@@ -14,10 +14,10 @@ import java.util.LinkedList;
  * 初始化：两个链表A,B
  *
  */
-public class Day1_CQueue {
+public class Day1_1CQueue {
     LinkedList<Integer> A, B;
 
-    public Day1_CQueue() {
+    public Day1_1CQueue() {
         A = new LinkedList<Integer>();
         B = new LinkedList<Integer>();
     }
