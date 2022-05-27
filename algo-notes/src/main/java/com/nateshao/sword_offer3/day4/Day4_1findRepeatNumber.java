@@ -1,6 +1,5 @@
 package com.nateshao.sword_offer3.day4;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
