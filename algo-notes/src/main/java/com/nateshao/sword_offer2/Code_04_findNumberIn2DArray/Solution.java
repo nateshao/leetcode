@@ -25,10 +25,6 @@ package com.nateshao.sword_offer2.Code_04_findNumberIn2DArray;
  * 给定 target = 5，返回 true。
  * <p>
  * 给定 target = 20，返回 false。
- * <p>
- * 来源：力扣（LeetCode）
- * 链接：https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof
- * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class Solution {
     /**
@@ -44,18 +40,12 @@ public class Solution {
      * 当 matrix[i][j] < target 时，执行 j++ ，即消去第 j 列元素；
      * 当 matrix[i][j] = target 时，返回 true ，代表找到目标值。
      * 若行索引或列索引越界，则代表矩阵中无目标值，返回 false 。
-     * <p>
-     * 作者：jyd
-     * 链接：https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/solution/mian-shi-ti-04-er-wei-shu-zu-zhong-de-cha-zhao-zuo/
-     * 来源：力扣（LeetCode）
-     * 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-     *
      * @param matrix
      * @param target
      * @return
      */
     public boolean findNumberIn2DArray(int[][] matrix, int target) {
-        int i = matrix.length - 1, j = 0;
+        int i = matrix.length - 1, j = 0;// i,j = x,y
         while (i >= 0 && j < matrix[0].length) {
             if (matrix[i][j] > target) i--;
             else if (matrix[i][j] < target) j++;

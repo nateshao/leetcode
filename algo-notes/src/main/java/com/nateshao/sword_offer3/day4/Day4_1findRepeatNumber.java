@@ -1,5 +1,6 @@
 package com.nateshao.sword_offer3.day4;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -42,6 +43,8 @@ public class Day4_1findRepeatNumber {
      * @return
      */
     public int findRepeatNumber(int[] nums) {
+//        Arrays.sort(nums);
+
         Set<Integer> set = new HashSet<>();
         for (int num : nums) {
             if (set.contains(num))return num;
