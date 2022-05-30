@@ -44,7 +44,7 @@ public class CQueue {
      * // 栈 B 元素实现栈 A 元素倒序 ,然后通过B.removeLast()将元素移出去
      * // 栈A作为辅助元素
      */
-    LinkedList<Integer> A, B;
+    LinkedList<Integer> A, B;// 栈A支持插入操作，栈B支持删除操作
 
 
     public CQueue() {
