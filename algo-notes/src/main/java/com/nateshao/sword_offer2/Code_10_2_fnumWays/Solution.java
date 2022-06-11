@@ -29,6 +29,7 @@ package com.nateshao.sword_offer2.Code_10_2_fnumWays;
 public class Solution {
     public static void main(String[] args) {
         System.out.println("numWays(5) = " + numWays(5));
+        System.out.println("numWays2(7) = " + numWays2(7));
     }
     public static int numWays(int n) {
         int a = 0, b = 1, sum;
@@ -45,7 +46,7 @@ public class Solution {
      * @param n
      * @return
      */
-    public int numWays2(int n) {
+    public static int numWays2(int n) {
         if (n == 0 || n == 1) {
             return 1;
         }
