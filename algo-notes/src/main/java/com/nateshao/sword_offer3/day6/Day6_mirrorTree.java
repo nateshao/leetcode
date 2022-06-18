@@ -69,11 +69,11 @@ public class Day6_mirrorTree {
         if (root == null) {
             return null;
         }
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
+        Queue<TreeNode> queue = new LinkedList<>(); //队列
+        queue.add(root); // 添加头节点
         while (!queue.isEmpty()) {
-            TreeNode node = queue.poll();
-            TreeNode temp = node.left;
+            TreeNode node = queue.poll(); // 取出头节点
+            TreeNode temp = node.left; // 交换
             node.left = node.right;
             node.right = temp;
             if (node.left != null) {
