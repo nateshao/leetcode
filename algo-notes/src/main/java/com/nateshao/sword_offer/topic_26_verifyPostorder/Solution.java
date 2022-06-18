@@ -46,7 +46,7 @@ public class Solution {
      */
     public static boolean verifyPostorder2(int[] postorder) {
         Stack<Integer> stack = new Stack<>();
-        //初始化： 单调栈 stackstack ，父节点值 root = +∞ （初始值为正无穷大，可把树的根节点看为此无穷大节点的左孩子）；
+        //初始化： 单调栈 stack ，父节点值 root = +∞ （初始值为正无穷大，可把树的根节点看为此无穷大节点的左孩子）；
         int root = Integer.MAX_VALUE;
         // 倒序遍历 postorder：记每个节点为 i
         for (int i = postorder.length - 1; i >= 0; i--) {

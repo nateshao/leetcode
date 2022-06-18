@@ -1,5 +1,7 @@
 package com.nateshao.test;
 
+import org.checkerframework.checker.units.qual.C;
+
 import java.util.Objects;
 
 /**
@@ -13,16 +15,29 @@ import java.util.Objects;
  */
 public class Test {
 
-    @org.junit.Test
-    public void int_to_string() { 
-        int[] arr = {1, 2, 3, 4, 5};
-        for (int i : arr) {
-            String s1 = String.valueOf(i);
-            System.out.print(" "+s1);
-            System.out.println(getType(s1));
-        }
+    public static void main(String[] args) {
+        int a = 0, c = 0;
+        do{
+            --c;
+            a=a-1;
+
+        }while (a>0);
+        System.out.println(c);
     }
-    static String getType(Object a) {
-        return a.getClass().toString();
-    }
+    // 使用标准SQL嵌套语句查询选修课程名称为'税收基础’的学员学号和姓名。
+    // --实现代码：
+    //SELECT SN,SD FROM
+    //WHERE [S#] IN(
+    //SELECT [S#] FROM C,SC
+    //WHERE C.[C#]=SC.[C#]
+    //AND CN=N'税收基础')
+
+//
+//    --实现代码：
+//    SELECT S.SN,S.SD FROM S,SC
+//    WHERE S.[S#]=SC.[S#]
+//    AND SC.[C#]='C2'[@more@]
+
+    //SELECT `S#`,`SN` FROM s WHERE `S#` in (SELECT `S#` FROM sc GROUP BY `S#`
+    //HAVING COUNT(*) = (SELECT COUNT(*) FROM c))
 }

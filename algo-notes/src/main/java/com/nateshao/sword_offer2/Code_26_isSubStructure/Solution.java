@@ -63,7 +63,7 @@ public class Solution {
      * @return
      */
     public boolean isSubStructure(TreeNode A, TreeNode B) {
-        if (A == null || B == null) return false;//约定空树不是任意一个树的子结构
+        if (A == null || B == null) return false;// 约定空树不是任意一个树的子结构
         return recur(A, B) || isSubStructure(A.left, B) || isSubStructure(A.right, B);
     }
 
