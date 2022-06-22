@@ -8,7 +8,7 @@ func verifyPostorder(postorder []int) bool {
 		return true
 	}
 
-	index := len(postorder) - 1   // 区分左右子树：左子树上的值全都比根节点小，右子树上的值全都比根节点大
+	index := len(postorder) - 1   // 区分左右子树：左子树上的值 全都比根节点小，右子树上的值全都比根节点大
 	rootValue := postorder[index] // 用来记录根节点的值
 
 	for k, v := range postorder {
