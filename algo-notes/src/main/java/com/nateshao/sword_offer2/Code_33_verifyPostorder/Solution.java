@@ -1,5 +1,7 @@
 package com.nateshao.sword_offer2.Code_33_verifyPostorder;
 
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Stack;
 
 /**
@@ -61,19 +63,47 @@ public class Solution {
 
     /**
      * 递归
+     *
      * @param postorder
      * @return
      */
     public boolean verifyPostorder2(int[] postorder) {
         return recur(postorder, 0, postorder.length - 1);
     }
+
     boolean recur(int[] postorder, int i, int j) {
-        if(i >= j) return true;// 说明此子树节点数量 ≤ 1 ，无需判别正确性，因此直接返回 true ；
+        if (i >= j) return true;// 说明此子树节点数量 ≤ 1 ，无需判别正确性，因此直接返回 true ；
         int p = i;
-        while(postorder[p] < postorder[j]) p++;
+        while (postorder[p] < postorder[j]) p++;
         int m = p;
-        while(postorder[p] > postorder[j]) p++;
+        while (postorder[p] > postorder[j]) p++;
         return p == j && recur(postorder, i, m - 1) && recur(postorder, m, j - 1);
+    }
+
+    /**
+     * 栈
+     * @param postorder
+     * @return
+     */
+    public boolean verifyPostorder3(int[] postorder) {
+        // 单调栈使用，单调递增的单调栈
+        Deque<Integer> stack = new LinkedList<>();
+        int pervElem = Integer.MAX_VALUE;
+        // 逆向遍历，就是翻转的先序遍历
+        for (int i = postorder.length - 1; i >= 0; i--) {
+            // 左子树元素必须要小于递增栈被peek访问的元素，否则就不是二叉搜索树
+            if (postorder[i] > pervElem) {
+                return false;
+            }
+            while (!stack.isEmpty() && postorder[i] < stack.peek()) {
+                // 数组元素小于单调栈的元素了，表示往左子树走了，记录下上个根节点
+                // 找到这个左子树对应的根节点，之前右子树全部弹出，不再记录，因为不可能在往根节点的右子树走了
+                pervElem = stack.pop();
+            }
+            // 这个新元素入栈
+            stack.push(postorder[i]);
+        }
+        return true;
     }
 
 }
