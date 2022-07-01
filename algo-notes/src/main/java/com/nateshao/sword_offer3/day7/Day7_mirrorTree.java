@@ -1,7 +1,5 @@
 package com.nateshao.sword_offer3.day7;
 
-import sun.reflect.generics.tree.Tree;
-
 /**
  * @date Created by 邵桐杰 on 2022/7/1 23:41
  * @微信公众号 千羽的编程时光
@@ -27,9 +25,6 @@ import sun.reflect.generics.tree.Tree;
  *   7     2
  *  / \   / \
  * 9   6 3   1
- *
- *
- *
  * 示例 1：
  *
  * 输入：root = [4,2,7,1,3,6,9]
