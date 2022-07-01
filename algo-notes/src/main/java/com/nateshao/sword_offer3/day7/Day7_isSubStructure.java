@@ -44,13 +44,13 @@ public class Day7_isSubStructure {
         return recur(A, B) || isSubStructure(A.left, B) || isSubStructure(A.right, B);
     }
 
-    //同时遍历A和B的相同位置节点
+    // 同时遍历A和B的相同位置节点
     boolean recur(TreeNode A, TreeNode B) {
-        //当B某个节点为null，则无需比较了，直接返回true，比较其他节点
+        // 当B某个节点为null，则无需比较了，直接返回true，比较其他节点
         if (B == null) return true;
-        //如果相同位置的两个节点不相同，则返回false，不用再继续比较了
+        // 如果相同位置的两个节点不相同，则返回false，不用再继续比较了
         if (A == null || A.val != B.val) return false;
-        //继续往下遍历比较
+        // 继续往下遍历比较
         return recur(A.left, B.left) && recur(A.right, B.right);
     }
     public class TreeNode {
