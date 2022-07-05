@@ -13,7 +13,7 @@ package com.nateshao.sword_offer3.day7;
  * <p>
  * 例如输入：
  * <p>
- * 4
+ *      4
  * /   \
  * 2     7
  * / \   / \
