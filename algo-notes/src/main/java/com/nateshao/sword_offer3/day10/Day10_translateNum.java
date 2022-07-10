@@ -27,7 +27,7 @@ public class Day10_translateNum {
      * @return
      */
     public int translateNum(int num) {
-        String s = String.valueOf(num);
+        String s = String.valueOf(num); // int 转 string
         int[] dp = new int[s.length() + 1];
         dp[0] = 1;
         dp[1] = 1;
