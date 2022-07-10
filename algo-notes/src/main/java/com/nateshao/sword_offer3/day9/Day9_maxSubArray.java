@@ -48,4 +48,24 @@ public class Day9_maxSubArray {
         }
         return res;
     }
+
+
+    /**
+     * 动态规划
+     * 通俗易懂
+     * @param nums
+     * @return
+     */
+    public int maxSubArray2(int[] nums) {
+        if (nums == null || nums.length == 0) return 0;
+        int sum = 0;
+        int res = nums[0];
+        for (int num : nums) {
+            sum = sum > 0 ? sum + num : num;
+            res = Math.max(res, sum);
+        }
+        return res;
+    }
+
+
 }
