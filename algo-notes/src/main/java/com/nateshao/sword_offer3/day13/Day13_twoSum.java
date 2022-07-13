@@ -24,9 +24,16 @@ public class Day13_twoSum {
     public static void main(String[] args) {
 
     }
+
     /**
      * 双指针
-     *
+     * 1，初始化： 双指针 i , j 分别指向数组 nums 的左右两端 （俗称对撞双指针）。
+     * 2，循环搜索： 当双指针相遇时跳出；
+     * 3，计算和 s = nums[i] + nums[j]；
+     * 若 s > target ，则指针 j 向左移动，即执行 j = j - 1 ；
+     * 若 s < target ，则指针 i 向右移动，即执行 i = i + 1 ；
+     * 若 s = target ，立即返回数组 [nums[i], nums[j]] ；
+     * 4，返回空数组，代表无和为 target的数字组合。
      * @param nums
      * @param target
      * @return
@@ -41,6 +48,5 @@ public class Day13_twoSum {
             else return new int[]{nums[i], nums[j]};
         }
         return new int[0];
-
     }
 }
