@@ -18,7 +18,12 @@ package com.nateshao.sword_offer3.day13;
 public class Day13_exchange {
     /**
      * 双指针
+     * 考虑定义双指针 i , j 分列数组左右两端，循环执行：
      *
+     * 指针 i 从左向右寻找偶数；
+     * 指针 j 从右向左寻找奇数；
+     * 将 偶数 nums[i]和 奇数 nums[j]交换。
+     * 可始终保证： 指针 i 左边都是奇数，指针 j 右边都是偶数 。
      * @param nums
      * @return
      */
