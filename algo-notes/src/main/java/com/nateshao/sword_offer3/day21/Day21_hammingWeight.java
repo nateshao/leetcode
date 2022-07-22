@@ -10,6 +10,11 @@ package com.nateshao.sword_offer3.day21;
  * Description:
  */
 public class Day21_hammingWeight {
+    /**
+     * 逻辑与
+     * @param n
+     * @return
+     */
     public int hammingWeight(int n) {
         int res = 0;
         while (n != 0) {
