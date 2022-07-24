@@ -97,7 +97,6 @@ public class Day27_maxSlidingWindow {
                 res[j++] = nums[queue.peek()];
             }
         }
-
         return res;
     }
 
