@@ -20,6 +20,14 @@ package com.nateshao.sword_offer3.day24;
  * 输出：[10,30] 或者 [30,10]
  */
 public class Day24_twoSum {
+    /**
+     * 思路1：双层遍历：暴力破解
+     * 思路二：hashmap
+     * 思路三：双指针
+     * @param nums
+     * @param target
+     * @return
+     */
     public int[] twoSum(int[] nums, int target) {
         // 左右双指针
         int left = 0, right = nums.length - 1;
@@ -50,5 +58,14 @@ public class Day24_twoSum {
         return nums;
     }
 
-
+    public int[] twoSum3(int[] nums, int target) {
+        int left = 0, right = nums.length - 1;
+        while (left < right) {
+            int sum = nums[left]+nums[right];
+            if (sum<target)left++;
+            else if (sum>target)right--;
+            else return new int[]{nums[left],nums[right]};
+        }
+        return null;
+    }
 }
