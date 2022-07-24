@@ -30,8 +30,9 @@ public class Day24_cuttingRope {
      * @return
      */
     public int cuttingRope(int n) {
-        if (n == 1 || n == 2) return 1;
-        if (n == 3) return 2;
+//        if (n == 1 || n == 2) return 1;
+//        if (n == 3) return 2;
+        if (n < 4) return n - 1;
         int sum = 1;
         while (n > 4) {
             sum *= 3;

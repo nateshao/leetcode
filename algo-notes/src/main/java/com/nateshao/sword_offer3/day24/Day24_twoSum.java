@@ -38,13 +38,14 @@ public class Day24_twoSum {
         }
         return null;
     }
+
     public int[] twoSum2(int[] nums, int target) {
-        int left =0,right =nums.length-1;
-        while (left<right){
-            int sum = nums[left]+nums[right];
-            if (sum<target)left++;
-            else if (sum>target)right--;
-            else return new int[]{nums[left],nums[right]};
+        int left = 0, right = nums.length - 1;
+        while (left < right) {
+            int sum = nums[left] + nums[right];
+            if (sum < target) left++;
+            else if (sum > target) right--;
+            else return new int[]{nums[left], nums[right]};
         }
         return nums;
     }
