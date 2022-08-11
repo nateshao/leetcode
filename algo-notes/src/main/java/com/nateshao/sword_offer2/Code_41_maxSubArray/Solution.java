@@ -44,4 +44,8 @@ public class Solution {
         return res;
     }
 
+//    public int maxSubArray3(int[] nums) {
+//        if (nums==null)return 0;
+//        Math.max()
+//    }
 }

@@ -18,7 +18,9 @@ public class Top_01_QuickSort {
 
     public static void main(String[] args) {
         int[] arr = {3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48};
-        quickSort(arr, 0, arr.length - 1);
+//        quickSort(arr, 0, arr.length - 1);
+//        System.out.println(Arrays.toString(arr));
+        quickSort2(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -95,5 +97,40 @@ public class Top_01_QuickSort {
             lhp.put(left, i - 1);
             lhp.put(i + 1, right);
         }
+
+    }
+
+
+    /**
+     * 1.如果left>right return null
+     * 2.以左边第一个为基准值
+     * 从右向左遍历，如果右边的值比左边小，就放到左边
+     * 从左向右遍历，如果左边的值比右边大，就放到右边，
+     * 循环递归
+     *
+     * @param arr
+     * @param leftIndex
+     * @param rightIndex
+     */
+    static void quickSort2(int[] arr, int leftIndex, int rightIndex) {
+        if (leftIndex >= rightIndex) return;
+        int left = leftIndex;
+        int right = rightIndex;
+        // 初始化基准值
+        int key = arr[left];
+        while (left < right) {
+            while (right > left && arr[right] >= key) {
+                right--;
+            }
+            arr[left] = arr[right];
+            while (left < right && arr[left] <= key) {
+                left++;
+            }
+            arr[right] = arr[left];
+        }
+        arr[left] = key;
+        quickSort2(arr, leftIndex, left - 1);
+        quickSort2(arr, right + 1, rightIndex);
+
     }
 }
