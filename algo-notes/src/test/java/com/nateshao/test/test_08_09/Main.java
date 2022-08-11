@@ -10,6 +10,7 @@ import java.util.HashMap;
  * @GitHub https://github.com/nateshao
  * @Gitee https://gitee.com/nateshao
  * Description:
+ * https://leetcode.cn/problems/longest-palindromic-substring/
  * 输入一个字符串，比如“abcbaddd”,返回这个字符串中的最长回文子串
  * 1. 统计每个字符出现的次数，并且排序，
  * c  bb aa  ddd
