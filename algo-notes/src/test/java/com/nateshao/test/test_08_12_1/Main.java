@@ -40,7 +40,6 @@ public class Main {
             } else {
                 return mid;
             }
-
         }
         return -1;
     }
