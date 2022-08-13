@@ -3,24 +3,24 @@ package main
 import "strconv"
 
 func main() {
-	
+
 }
 
 // 快排实现排序，排序后转成string
 func minNumber(nums []int) string {
 	res := make([]string, len(nums))
-	for i,v := range nums {
+	for i, v := range nums {
 		res[i] = strconv.Itoa(v)
 	}
 	compare := func(str1, str2 string) bool {
-		num1, _ := strconv.Atoi(str1+str2)
-		num2, _ := strconv.Atoi(str2+str1)
+		num1, _ := strconv.Atoi(str1 + str2)
+		num2, _ := strconv.Atoi(str2 + str1)
 		if num1 < num2 {
 			return true
 		}
 		return false
 	}
-	var quickSort func(strArr []string, l,r int)
+	var quickSort func(strArr []string, l, r int)
 	quickSort = func(strArr []string, l, r int) {
 		if l >= r {
 			return
