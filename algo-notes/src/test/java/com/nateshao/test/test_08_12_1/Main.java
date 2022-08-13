@@ -38,7 +38,6 @@ public class Main {
             } else if (target < arr[mid]) {
                 right = mid - 1;
             } else {
-
                 return mid;
             }
 
