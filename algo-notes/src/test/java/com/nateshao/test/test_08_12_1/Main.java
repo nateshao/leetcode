@@ -21,7 +21,7 @@ public class Main {
         System.out.println(res);
     }
 
-    /**
+    /** 二分查找
      * @param arr
      * @return
      */
