@@ -56,4 +56,31 @@ public class Solution {
 
     }
 
+    /**
+     * 这题比其他滑动窗口的题目简单，连 need 和 valid 都不需要，而且更新窗口内数据也只需要简单的更新计数器 window 即可。
+     * <p>
+     * 当 window[c] 值大于 1 时，说明窗口中存在重复字符，不符合条件，就该移动 left 缩小窗口了。
+     * <p>
+     * 另外，要在收缩窗口完成后更新 res，因为窗口收缩的 while 条件是存在重复元素，换句话说收缩完成后一定保证窗口中没有重复。
+     *
+     * @param s
+     * @return
+     */
+    public int lengthOfLongestSubstring3(String s) {
+        if (s.length() == 0) return 0;
+        HashMap<Character, Integer> map = new HashMap<>();
+        int maxLen = 0;
+        int left = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (map.containsKey(s.charAt(i))) {
+                Math.max(left, map.get(s.charAt(i)) + 1);
+            }
+            //不管是否更新left，都要更新 s.charAt(i) 的位置！
+            map.put(s.charAt(i), i);
+            maxLen = Math.max(maxLen, i - left + 1);
+        }
+        return maxLen;
+    }
+
+
 }
