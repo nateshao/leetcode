@@ -85,7 +85,7 @@ public class Main {
 //            }
 //        }
 //        System.out.println(arr);
-////        new Main().buleOrRed(arr.stream().mapToInt(arr));
+////        new Solution().buleOrRed(arr.stream().mapToInt(arr));
 //    }
 
 

@@ -22,7 +22,7 @@ public class Demo04_Dynamic_Array {
         array.add(1, 100);
         System.out.println("array = " + array);
         System.out.println("args = " + Arrays.deepToString(args));
-        System.out.println("Main.main");
+        System.out.println("Solution.main");
 
         System.out.println("-----------------------------------");
         array.add(1, 102);
