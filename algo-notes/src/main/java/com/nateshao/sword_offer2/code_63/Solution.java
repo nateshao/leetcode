@@ -38,6 +38,33 @@ public class Solution {
         return max;
     }
 
+    /**
+     * 动态规划
+     * 1. 遍历一遍
+     * 2. 判断比较最小值，如果前一位比后一位小，就更新最小值
+     * 3. 更新利润，比较前一位与后一位比较，更新利润，取最大值
+     *
+     * @param prices
+     * @return
+     */
+    public int maxProfit2(int[] prices) {
+        int max = 0;
+        for (int i = 1; i < prices.length; i++) {
+            max = Math.max(max, prices[i] - prices[i - 1]); // 更新利润，比较前一位与后一位比较，更新利润，取最大值
+            if (prices[i] > prices[i - 1]) prices[i] = prices[i - 1]; //
+        }
+        return max;
+    }
+
+    public int maxProfit3(int[] prices) {
+        int profix = 0; // 利润
+        int cost = Integer.MAX_VALUE;   // 花费
+        for (int price : prices) {
+            cost = Math.min(cost, price);
+            profix = Math.max(profix, price - cost);
+        }
+        return profix;
+    }
 }
 
 

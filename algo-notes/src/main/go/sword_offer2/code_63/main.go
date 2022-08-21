@@ -1,5 +1,7 @@
 package main
 
+import "math"
+
 func main() {
 
 }
@@ -14,4 +16,33 @@ func maxProfit(prices []int) int {
 		}
 	}
 	return max
+}
+
+func maxProfit2(prices []int) int {
+	profix := 0
+	buyPrice := math.MaxInt32
+	for _, price := range prices {
+		if buyPrice > price {
+			buyPrice = price
+		}
+		if price-buyPrice > profix {
+			profix = price - buyPrice
+		}
+	}
+	return profix
+}
+
+func maxProfit3(prices []int) int {
+	maxProfit := 0
+	buyPrice := math.MaxInt32
+	for _, price := range prices {
+		if buyPrice > price {
+			buyPrice = price
+		}
+
+		if price-buyPrice > maxProfit {
+			maxProfit = price - buyPrice
+		}
+	}
+	return maxProfit
 }
