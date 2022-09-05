@@ -23,13 +23,27 @@ package com.nateshao.hot100.code_two_pointers;
  * 输出：1
  */
 public class Code_11_maxArea {
-
+    /**
+     * 双指针
+     * cur_area当前面积，表示：Math.min(height[left], height[right])  * (right - left);
+     * 如果height[left] < height[right] ，指针向右移动
+     *
+     * @param height
+     * @return
+     */
     public int maxArea(int[] height) {
-        int left = 0;
-        int right = height.length - 1;
+        int left = 0, right = height.length - 1, res = 0;
         while (left < right) {
-
+            int cur_area = Math.min(height[left], height[right]) * (right - left);
+            res = Math.max(res, cur_area);
+            // 双指针移动，移动较低的一边
+            if (height[left]<height[right]){
+                left++;
+            }else {
+                right--;
+            }
         }
+        return res;
     }
 
 
