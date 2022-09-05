@@ -1,4 +1,4 @@
-package com.nateshao.hot100.code_two_pointers;
+package com.nateshao.hot100.code_two_pointers.code_11_maxArea;
 
 /**
  * @date Created by 邵桐杰 on 2022/9/5 9:39
