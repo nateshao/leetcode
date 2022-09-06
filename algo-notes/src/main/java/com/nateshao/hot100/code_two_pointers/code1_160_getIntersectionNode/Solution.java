@@ -1,4 +1,4 @@
-package com.nateshao.hot100.code_two_pointers.code_160_getIntersectionNode;
+package com.nateshao.hot100.code_two_pointers.code1_160_getIntersectionNode;
 
 /**
  * @date Created by 邵桐杰 on 2022/9/5 15:57

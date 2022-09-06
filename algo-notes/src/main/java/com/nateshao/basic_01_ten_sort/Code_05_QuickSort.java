@@ -30,7 +30,6 @@ public class Code_05_QuickSort {
         if (leftIndex >= rightIndex) {
             return;
         }
-
         int left = leftIndex;
         int right = rightIndex;
         //待排序的第一个元素作为基准值

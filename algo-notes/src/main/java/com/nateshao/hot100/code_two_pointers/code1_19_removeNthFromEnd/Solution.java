@@ -1,4 +1,4 @@
-package com.nateshao.hot100.code_two_pointers.code_19_removeNthFromEnd;
+package com.nateshao.hot100.code_two_pointers.code1_19_removeNthFromEnd;
 
 /**
  * @date Created by 邵桐杰 on 2022/9/5 14:05
@@ -50,7 +50,7 @@ public class Solution {
             fast = fast.next;
             n--;
         }
-        //只要快指针不指向空，就继续循环
+        // 只要快指针不指向空，就继续循环
         while (fast.next != null) {
             //让快慢指针同时移动
             slow = slow.next;

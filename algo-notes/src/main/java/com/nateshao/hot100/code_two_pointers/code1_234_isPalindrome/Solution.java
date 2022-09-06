@@ -1,4 +1,4 @@
-package com.nateshao.hot100.code_two_pointers.code_234_isPalindrome;
+package com.nateshao.hot100.code_two_pointers.code1_234_isPalindrome;
 
 
 import java.util.Stack;
