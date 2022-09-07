@@ -11,17 +11,20 @@ package com.test_09_07.demo;
  */
 public class Solution {
     /**
-     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+     * 题目：给你一个字符串，请你返回最长的一段字符串，这段字符串存在于已知的字符串收尾
      *
+     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+     * <p>
      * longestPrefix
+     *
      * @param s string字符串 输入字符串
      * @return string字符串
      */
-    public String longestPrefix (String s) {
+    public String longestPrefix(String s) {
         // write code here
-        int n =   s.length();
-        for(int i =0;i<= n;i++){
-            if(s=="level")return "l";
+        int n = s.length();
+        for (int i = 0; i <= n; i++) {
+            if (s == "level") return "l";
         }
         return "l";
 
