@@ -41,7 +41,7 @@ public class Solution {
      */
     public ListNode removeNthFromEnd(ListNode head, int n) {
         //定义一个伪节点，用于返回结果
-        ListNode pre = new ListNode(0);
+        ListNode pre = new ListNode(-1);
         pre.next = head;
         //定义一个快慢指针,指向伪节点，用于遍历链表
         ListNode fast = pre, slow = pre;
