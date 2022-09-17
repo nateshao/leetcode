@@ -32,7 +32,7 @@ public class Code_05_QuickSort {
         }
         int left = leftIndex;
         int right = rightIndex;
-        //待排序的第一个元素作为基准值
+        //左边待排序的第一个元素作为基准值
         int key = arr[left];
 
         //从左右两边交替扫描，直到left = right
@@ -44,12 +44,10 @@ public class Code_05_QuickSort {
 
             //找到这种元素将arr[right]放入arr[left]中
             arr[left] = arr[right];
-
             while (left < right && arr[left] <= key) {
                 //从左往右扫描，找到第一个比基准值大的元素
                 left++;
             }
-
             //找到这种元素将arr[left]放入arr[right]中
             arr[right] = arr[left];
         }
