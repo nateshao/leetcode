@@ -8,7 +8,7 @@ import java.util.HashMap;
 
 /**
  * @date Created by 邵桐杰 on 2021/11/8 17:48
- * @微信公众号 程序员千羽
+ * @微信公众号 千羽的编程时光
  * @个人网站 www.nateshao.cn
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
@@ -21,10 +21,10 @@ public class Code_05_QuickSortTest {
     public void testQuickSort() {
         int[] arr = {3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48};
         quickSort(arr, 0, arr.length - 1);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]+" ");
-        }
-//        System.out.println(Arrays.toString(arr));
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i]+" ");
+//        }
+        System.out.println(Arrays.toString(arr));
     }
 
     /**
@@ -37,12 +37,10 @@ public class Code_05_QuickSortTest {
          * 如果左边大于右边，则return
          */
         if (leftIndex >= rightIndex) return;
-
         int left = leftIndex;
         int right = rightIndex;
         // 选第一个元素为基准值
         int key = arr[left];
-
         /**
          * 从左右两边交替扫描
          */
@@ -51,15 +49,12 @@ public class Code_05_QuickSortTest {
             if (right > left && arr[right] >= key) {
                 right--;
             }
-
             arr[left] = arr[right];
             // 从左往右
             while (left < right && arr[left] <= key) {
                 left++;
             }
-
             arr[right] = arr[left];
-
         }
         arr[left] = key;
         quickSort(arr, leftIndex, left - 1);

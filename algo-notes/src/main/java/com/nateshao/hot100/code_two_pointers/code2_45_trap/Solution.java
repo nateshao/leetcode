@@ -11,6 +11,7 @@ package com.nateshao.hot100.code_two_pointers.code2_45_trap;
  * https://leetcode.cn/problems/trapping-rain-water/
  */
 public class Solution {
+//    private transient int  id;
     /**
      * @param height
      * @return
