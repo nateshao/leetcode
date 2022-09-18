@@ -31,6 +31,6 @@ public class SolutionTest {
             else if (matrix[i][j] < target) j++;
             else return true;
         }
-        return false;
+        return false;// while 循环中没有找到，则 target 不存在
     }
 }
