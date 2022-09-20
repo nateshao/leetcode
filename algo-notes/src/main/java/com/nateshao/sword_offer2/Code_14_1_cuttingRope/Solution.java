@@ -39,6 +39,7 @@ public class Solution {
         return sum * n; // 4 * 9 = 36
     }
 
+
     /**
      * 作者：jyd
      *     链接：https://leetcode-cn.com/problems/jian-sheng-zi-lcof/solution/mian-shi-ti-14-i-jian-sheng-zi-tan-xin-si-xiang-by/

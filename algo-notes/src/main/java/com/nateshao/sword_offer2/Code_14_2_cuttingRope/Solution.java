@@ -29,9 +29,9 @@ public class Solution {
     public static void main(String[] args) {
         System.out.println("cuttingRope(10) = " + cuttingRope(10));
     }
-    public static int cuttingRope(int n)  {
-        if (n == 1 || n == 2) return 1;
-        if (n == 3) return 2;
+
+    public static int cuttingRope(int n) {
+        if (n <= 3) return n - 1;
         long sum = 1;
         while (n > 4) {
             sum *= 3;
