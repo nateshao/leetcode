@@ -59,15 +59,12 @@ public class Solution {
 
     public ListNode getKthFromEnd2(ListNode head, int k) {
         if (head == null || k < 1) return null;
-        // 定义快慢指针
-        ListNode fast = head;
-        ListNode slow = head;
-        while (k > 1) {
-            if (fast.next == null) return null;
+        ListNode fast = head, slow = head;
+        while (fast != null && k > 0) {
             fast = fast.next;
             k--;
         }
-        while (fast.next != null) {
+        while (fast != null) {
             fast = fast.next;
             slow = slow.next;
         }

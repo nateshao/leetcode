@@ -1,6 +1,4 @@
 package com.nateshao.sword_offer2.Code_30_MinStack;
-
-
 import java.util.Stack;
 
 /**
@@ -18,7 +16,7 @@ import java.util.Stack;
  * 思路：本题难点： 将 min() 函数复杂度降为 O(1) ，可通过建立辅助栈实现；
  * 1. 数据栈 A ： 栈 A 用于存储所有元素，保证入栈 push() 函数、出栈 pop() 函数、获取栈顶 top() 函数的正常逻辑。
  * 2. 辅助栈 B ： 栈 B 中存储栈 A 中所有 非严格降序 的元素，则栈 A 中的最小元素始终对应栈 B 的栈顶元素，即 min() 函数只需返回栈 B 的栈顶元素即可。
- * 因此，只需设法维护好 栈 B 的元素，使其保持非严格降序，即可实现 min() 函数的 O(1)O(1) 复杂度。
+ * 因此，只需设法维护好 栈 B 的元素，使其保持非严格降序，即可实现 min() 函数的 O(1) 复杂度。
  *
  */
 public class MinStack {

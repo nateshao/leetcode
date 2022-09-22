@@ -13,15 +13,6 @@ import java.util.Scanner;
  */
 public class Solution {
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     /**
      * 对称二叉树定义： 对于树中 任意两个对称节点 L 和 R ，一定有：
@@ -50,5 +41,13 @@ public class Solution {
         return recur(L.left, R.right) && recur(R.left, L.right);
     }
 
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
 
+        TreeNode(int x) {
+            val = x;
+        }
+    }
 }

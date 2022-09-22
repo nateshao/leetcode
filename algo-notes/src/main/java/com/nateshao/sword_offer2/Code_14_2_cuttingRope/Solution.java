@@ -30,6 +30,12 @@ public class Solution {
         System.out.println("cuttingRope(10) = " + cuttingRope(10));
     }
 
+    /**
+     *         if (n == 1 || n == 2) return 1;
+     *         if (n == 3) return 2;
+     * @param n
+     * @return
+     */
     public static int cuttingRope(int n) {
         if (n <= 3) return n - 1;
         long sum = 1;

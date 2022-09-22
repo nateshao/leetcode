@@ -45,6 +45,14 @@ public class Solution {
         root.right = mirrorTree(node);
         return root;
     }
+    public TreeNode mirrorTree3(TreeNode root) {
+        if (root == null) return null;
+        TreeNode rootLeft = mirrorTree3(root.left);
+        TreeNode rootRight = mirrorTree3(root.right);
+        root.right = rootLeft;
+        root.left = rootRight;
+        return root;
+    }
 
     /**
      * 栈
@@ -72,13 +80,5 @@ public class Solution {
         return root;
     }
 
-    public TreeNode mirrorTree3(TreeNode root) {
-        if (root == null) return null;
-        TreeNode rootLeft = mirrorTree3(root.left);
-        TreeNode rootRight = mirrorTree3(root.right);
-        root.right = rootLeft;
-        root.left = rootRight;
-        return root;
-    }
 
 }

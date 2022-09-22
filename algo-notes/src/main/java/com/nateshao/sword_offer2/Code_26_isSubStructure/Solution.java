@@ -44,16 +44,6 @@ package com.nateshao.sword_offer2.Code_26_isSubStructure;
  */
 public class Solution {
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     /**
      * 先序遍历树 A 中的每个节点 nA；（对应函数 isSubStructure(A, B)）
      * 判断树 A 中 以 nA为根节点的子树 是否包含树 B 。（对应函数 recur(A, B)）
@@ -79,9 +69,7 @@ public class Solution {
 
     public boolean isSubStructure2(TreeNode A, TreeNode B) {
         if (A == null || B == null) return false;
-
         return dfs(A, B) || isSubStructure2(A.left, B) || isSubStructure2(A.right, B);
-
     }
 
     private boolean dfs(TreeNode A, TreeNode B) {
@@ -90,5 +78,13 @@ public class Solution {
         return dfs(A.left, B.left) || dfs(B.right, B.right);
     }
 
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
 
+        TreeNode(int x) {
+            val = x;
+        }
+    }
 }

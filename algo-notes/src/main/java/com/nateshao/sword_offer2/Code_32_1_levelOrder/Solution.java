@@ -17,11 +17,11 @@ import java.util.Queue;
  * 例如:
  * 给定二叉树: [3,9,20,null,null,15,7],
  * <p>
- *       3
- *      / \
- *     9  20
- *       /  \
- *      15   7
+ * 3
+ * / \
+ * 9  20
+ * /  \
+ * 15   7
  * 返回：
  * <p>
  * [3,9,20,15,7]
@@ -37,22 +37,17 @@ public class Solution {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);// 根节点入队列
         while (!queue.isEmpty()) {
-            TreeNode node = queue.poll();//取出当前队首元素
+            TreeNode node = queue.poll(); // 取出当前队首元素
             list.add(node.val);
             if (node.left != null) queue.offer(node.left);
             if (node.right != null) queue.offer(node.right);
-
         }
 //        int[] res = new int[list.size()];
 //        for (int i = 0; i < res.length; i++) {
-//            res[i] =list.get(i);
+//            res[i] = list.get(i);
 //        }
 //        return res;
         return list.stream().mapToInt(Integer::intValue).toArray();// 将 ArrayList 转为 int数组并返回
-
-
-
-
     }
 
     public class TreeNode {
