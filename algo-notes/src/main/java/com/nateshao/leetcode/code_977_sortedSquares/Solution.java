@@ -1,6 +1,5 @@
 package com.nateshao.leetcode.code_977_sortedSquares;
 
-import netscape.security.UserTarget;
 
 import java.util.Arrays;
 
