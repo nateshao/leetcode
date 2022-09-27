@@ -46,7 +46,7 @@ public class Code_05_QuickSortTest {
          */
         while (left < right) {
             // 从右往左
-            if (right > left && arr[right] >= key) {
+            while (right > left && arr[right] >= key) {
                 right--;
             }
             arr[left] = arr[right];
