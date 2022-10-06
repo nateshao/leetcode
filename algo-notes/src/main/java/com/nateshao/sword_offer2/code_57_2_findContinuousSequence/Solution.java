@@ -32,11 +32,12 @@ class Solution {
                 list.add(temp);
             }
         }
-        int[][] res = new int[list.size()][];
-        for (int i = 0; i < res.length; i++) {
-            res[i] = list.get(i);
-        }
-        return res;
+//        int[][] res = new int[list.size()][];
+//        for (int i = 0; i < res.length; i++) {
+//            res[i] = list.get(i);
+//        }
+//        return res;
+        return list.toArray(new int[list.size()][]);
     }
 
     /**
@@ -77,4 +78,24 @@ class Solution {
         return list.toArray(new int[list.size()][]);
     }
 
+    public int[][] findContinuousSequence3(int target) {
+        ArrayList<int[]> list = new ArrayList<>();
+        // 定义左右指针
+        int left = 1, right = 2;
+        while (left < right) {
+            // 左右指针之间的数字和为 sum = n*(a1+an)/2
+            int sum = (right - left + 1) * (left + right) / 2;
+            if (sum == target) {
+                //创建数组存储左右指针之间的数组组合
+                int[] temp = new int[right - left + 1];
+                for (int i = 0; i < temp.length; i++) {
+                    temp[i] = left + i;
+                }
+                list.add(temp);
+                left++; // 继续探索下一种方案
+            } else if (sum < target) right++;
+            else left++;
+        }
+        return list.toArray(new int[list.size()][]);
+    }
 }

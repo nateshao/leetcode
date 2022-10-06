@@ -56,6 +56,14 @@ public class Solution {
         return max;
     }
 
+    /**
+     * k神
+     *
+     * 前i日最大利润=max(前(i−1)日最大利润,第i日价格−前i日最低价格)
+     * dp[i]=max(dp[i−1],prices[i]−min(prices[0:i]))
+     * @param prices
+     * @return
+     */
     public int maxProfit3(int[] prices) {
         int profix = 0; // 利润
         int cost = Integer.MAX_VALUE;   // 花费

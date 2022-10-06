@@ -30,18 +30,28 @@ public class Solution {
      */
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (p.val > q.val) return lowestCommonAncestor(root, q, p);
-        if (root.val >= p.val && root.val <= q.val) {
+        if (root.val >= p.val && root.val <= q.val)
             // p <= root <= q
             // 即 p 和 q 分别在 root 的左右子树，那么 root 就是 LCA
             return root;
-        }
+
         // p 和 q 都在 root 的左子树，那么 LCA 在左子树
         if (root.val > q.val) return lowestCommonAncestor(root.left, p, q);
             // p 和 q 都在 root 的右子树，那么 LCA 在右子树
         else return lowestCommonAncestor(root.right, p, q);
     }
 
-
+    /**
+     * 方法二：递归
+     * 递推工作：
+     * 当 p, q 都在 root 的 右子树 中，则开启递归 root.right 并返回；
+     * 否则，当 p,q 都在 root 的 左子树 中，则开启递归 root.left并返回；
+     * 返回值： 最近公共祖先 root 。
+     * @param root
+     * @param p
+     * @param q
+     * @return
+     */
     public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
         if (root.val > q.val && root.val > p.val) return lowestCommonAncestor2(root.left, p, q);
         if (root.val < q.val && root.val < p.val) return lowestCommonAncestor2(root.right, p, q);
