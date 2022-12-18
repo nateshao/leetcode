@@ -6,13 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="zuochengyun" />
         <module name="algo-notes (1) (com.nateshao.algonotes)" />
+        <module name="zuochengyun" />
+        <module name="interview" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="algo-notes (1) (com.nateshao.algonotes)" target="8" />
       <module name="algo-notes (2) (com.nateshao)" target="1.5" />
+      <module name="interview" target="1.5" />
       <module name="zuochengyun" target="1.5" />
     </bytecodeTargetLevel>
   </component>

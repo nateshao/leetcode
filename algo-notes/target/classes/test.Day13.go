@@ -20,8 +20,7 @@ import (
 //	h.Spin()
 //}
 
-
-func main( ){
+func main() {
 	var a = 2
 	var b = 3
 	result := calculate(a, b)
@@ -29,6 +28,6 @@ func main( ){
 	return
 }
 func calculate(x, y int) {
-	z := x*y
+	z := x * y
 	return z
 }

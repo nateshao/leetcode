@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/algo-notes/algo-notes (1) (com.nateshao.algonotes).iml" filepath="$PROJECT_DIR$/algo-notes/algo-notes (1) (com.nateshao.algonotes).iml" />
       <module fileurl="file://$PROJECT_DIR$/algo-notes (2) (com.nateshao).iml" filepath="$PROJECT_DIR$/algo-notes (2) (com.nateshao).iml" />
+      <module fileurl="file://$PROJECT_DIR$/interview/interview.iml" filepath="$PROJECT_DIR$/interview/interview.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZuoChengYun/zuochengyun.iml" filepath="$PROJECT_DIR$/ZuoChengYun/zuochengyun.iml" />
     </modules>
   </component>
