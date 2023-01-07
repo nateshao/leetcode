@@ -1,5 +1,7 @@
 package com.nateshao.hot100.code_two_pointers.code1_141_hasCycle;
 
+import java.util.HashSet;
+
 /**
  * @date Created by 邵桐杰 on 2022/9/5 15:07
  * @微信公众号 千羽的编程时光
@@ -28,6 +30,9 @@ package com.nateshao.hot100.code_two_pointers.code1_141_hasCycle;
  * 输入：head = [1], pos = -1
  * 输出：false
  * 解释：链表中没有环。
+ * <p>
+ * <p>
+ * 我的理解，相当一个数组，里面有没有重复数字，有就返回true，没有就false
  */
 public class Solution {
     /**
@@ -50,6 +55,39 @@ public class Solution {
         }
         return false;
     }
+
+    public boolean isCircleByTwoPoint(ListNode head) {
+        if (head == null || head.next == null) return false;
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast != null && fast.next != null) { // 注意这个条件，要防止空指针
+            fast = fast.next.next; // 快指针走一步。
+            slow = slow.next; // 慢指针走两步。
+            if (fast == slow) return true;
+        }
+        return false;
+    }
+
+    /**
+     * 前提：不限制空间复杂度
+     * 思路：遍历链表，判断当前节点是否在哈希表中，如果存在，就说明当前链表有环
+     * 如果不存在，那么我们将当前链表的节点存入哈希表中，并继续往后遍历，直到发生哈希碰撞。
+     * 如果存在环，那么就一定会发生哈希碰撞，如果不存在环，那么就一定有一个节点的next指针指向null，此时循环停止。
+     *
+     * @param head
+     * @return
+     */
+    public boolean hasCycle2(ListNode head) {
+        if (head == null) return false;
+        HashSet<ListNode> res = new HashSet<>();
+        while (head != null) {
+            if (res.contains(head)) return true;
+            res.add(head);
+            head = head.next;
+        }
+        return false;
+    }
+
 
     class ListNode {
         int val;

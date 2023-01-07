@@ -43,6 +43,23 @@ public class StringDemoTest {
         s3.intern();
         String s4 = "11";
         System.out.println(s3 == s4);
+
+//        //在堆中创建一个字符串对象; 这里不涉及字符串常量池
+//        String m = new String("abc");
+////由于字符串常量池中没有记录过"abc", 所以调用intern()方法后, 字符串常量池中生成一个引用, 该引用指向堆中的"abc"对象
+//        String n = m.intern();
+////n指向堆中的"abc"对象, m指向堆中的"abc"对象, 所以n和m指向相同的"abc", 打印true
+//        System.out.println(m == n);
+
+
+        //使用双引号创建字符串, 字符串常量池会记录该字符串
+        String k = "abc";
+//在堆中创建一个字符串对象; 这里不涉及字符串常量池
+        String m = new String("abc");
+//字符串常量池记录过"abc", 调用intern()方法后, 返回一个引用, 该引用指向首次出现的"abc"对象, 所以并不指向上一句创建的字符串对象!
+        String n = m.intern();
+//n指向首次出现的"abc"对象, m指向堆中新创建的"abc"对象, 所以n和m指向的是不同的"abc"对象, 打印false
+        System.out.println(m == n);
     }
 
 }
