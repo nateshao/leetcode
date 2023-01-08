@@ -18,7 +18,9 @@ import java.util.List;
  */
 public class Code_15_threeSumTest {
     public static void main(String[] args) {
-
+        int[] nums = {-1,0,1,2,-1,-4};
+        List<List<Integer>> res = threeSumTwoPoiters(nums);
+        res.stream().forEach(list-> System.out.println("list = " + list));
     }
 
     public List<List<Integer>> threeSum(int[] nums) {
@@ -58,7 +60,7 @@ public class Code_15_threeSumTest {
      * @param nums
      * @return
      */
-    public List<List<Integer>> threeSumTwoPoiters(int[] nums) {
+    public static List<List<Integer>> threeSumTwoPoiters(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
