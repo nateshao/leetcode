@@ -1,6 +1,5 @@
-package com.test_11_11;
+package com.nateshao.test_2022.test_11_11;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**

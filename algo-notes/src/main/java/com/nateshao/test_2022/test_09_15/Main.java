@@ -1,6 +1,4 @@
-package com.test_09_15;
-
-import com.nateshao.hot100.include.ListNode;
+package com.nateshao.test_2022.test_09_15;
 
 /**
  * @date Created by 邵桐杰 on 2022/9/15 14:22
