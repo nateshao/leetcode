@@ -73,7 +73,7 @@ public class Code_15_threeSum {
                 } else if (sum > 0) {
                     while (left < right && nums[right] == nums[--right]); // 右指针后退并去重
                 } else {
-                    res.add(new ArrayList<Integer>(Arrays.asList(nums[k], nums[left], nums[right])));
+                    res.add(Arrays.asList(nums[k], nums[left], nums[right]));
                     while (left < right && nums[left] == nums[++left]) ; // 左指针前进并去重
                     while (left < right && nums[right] == nums[--right]) ; // 右指针后退并去重
                 }
