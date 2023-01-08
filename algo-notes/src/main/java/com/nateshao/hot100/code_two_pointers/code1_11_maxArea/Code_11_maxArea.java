@@ -37,9 +37,9 @@ public class Code_11_maxArea {
             int cur_area = Math.min(height[left], height[right]) * (right - left);
             res = Math.max(res, cur_area);
             // 双指针移动，移动较低的一边
-            if (height[left]<height[right]){
+            if (height[left] < height[right]) {
                 left++;
-            }else {
+            } else {
                 right--;
             }
         }
