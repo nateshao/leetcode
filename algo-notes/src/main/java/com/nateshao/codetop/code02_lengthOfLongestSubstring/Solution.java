@@ -1,6 +1,9 @@
 package com.nateshao.codetop.code02_lengthOfLongestSubstring;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @date Created by 邵桐杰 on 2022/8/11 23:49
@@ -45,5 +48,35 @@ public class Solution {
         }
         return max;
 
+    }
+
+    /**
+     * 滑动窗口+hashSet
+     * 1. 定义双指针
+     * 2. 在s.length遍历，
+     * 当set不含有重复元素。右指针向右移动，不重复就添加进去，右指针++
+     * 如果含有重复元素，右指针不动，左指针向右移动，删除左指针经过的重复元素，left++;
+     * 3. res = 每次记录set的大小
+     *
+     * @param s
+     * @return
+     */
+    public int lengthOfLongestSubstring3(String s) {
+        //维护当前最长不重复字符子串
+        Set<Character> set = new HashSet<>();
+        int left = 0, right = 0;
+        int res = 0;
+        while (right < s.length()) {
+            if (!set.contains(s.charAt(right))) { //未查到重复字符就一直加，right右移
+                set.add(s.charAt(right));
+                right++;
+            } else {
+                //right查到重复字符先不动，left右移，set删left经过的字符，直到重复的这个字符删掉为止
+                set.remove(s.charAt(left));
+                left++;
+            }
+            res = Math.max(res, set.size());//每一次计算当前set子串的长度
+        }
+        return res;
     }
 }

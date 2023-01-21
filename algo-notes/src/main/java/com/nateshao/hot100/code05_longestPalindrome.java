@@ -22,6 +22,11 @@ package com.nateshao.hot100;
  * 输出："bb"
  */
 public class code05_longestPalindrome {
+    public static void main(String[] args) {
+        String s = "babad";
+        String res = longestPalindrome4(s);
+        System.out.println("res = " + res);
+    }
 
     public String longestPalindrome(String s) {
         if (s == null || s.length() == 0) return null;
@@ -49,7 +54,7 @@ public class code05_longestPalindrome {
     /**
      * 双指针
      * 寻找回文串的问题核心思想是：从中间开始向两边扩散来判断回文串，对于最长回文子串，就是这个意思：
-     *  找回文串的关键技巧是传入两个指针 l 和 r 向两边扩散，因为这样实现可以同时处理回文串长度为奇数和偶数的情况。
+     * 找回文串的关键技巧是传入两个指针 l 和 r 向两边扩散，因为这样实现可以同时处理回文串长度为奇数和偶数的情况。
      *
      * @param s
      * @return
@@ -79,5 +84,42 @@ public class code05_longestPalindrome {
         // 返回以 s[l] 和 s[r] 为中心的最长回文串
         return s.substring(l + 1, r);
     }
+
+    /**
+     * 双指针
+     * 定义左右指针，两个指针由两边向中间走
+     * (l>0 && l<r && s.charAt(l) == s.charAt(r))
+     * l++
+     * r--
+     * 截取res
+     *
+     * @param s
+     * @return
+     */
+    public static String longestPalindrome4(String s) {
+        String res = "";
+        for (int i = 0; i < s.length(); i++) {
+            String s1 = reverse(s, i, i);
+            String s2 = reverse(s, i, i + 1);
+            res = res.length() > s1.length() ? res : s1;
+            res = res.length() > s2.length() ? res : s2;
+        }
+        return res;
+    }
+
+    static String reverse(String s, int l, int r) {
+
+        if (l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)) {
+            l--;
+            r++;
+        }
+        return s.substring(l + 1, r);
+    }
+
+
+
+
+
+
 
 }
