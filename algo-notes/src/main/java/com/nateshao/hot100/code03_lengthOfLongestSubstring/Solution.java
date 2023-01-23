@@ -1,7 +1,9 @@
 package com.nateshao.hot100.code03_lengthOfLongestSubstring;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * @date Created by 邵桐杰 on 2022/4/20 15:24
@@ -82,5 +84,47 @@ public class Solution {
         return maxLen;
     }
 
+    /**
+     * hashset
+     * 定义左右指针都在左边初始位置，left=right=0
+     * 遍历字符，如果右指针不包含，right++，res添加右指针
+     * else left++移除做指针
+     *
+     * @param s
+     * @return
+     */
+    public int lengthOfLongestSubstring4(String s) {
+        Set<Character> set = new HashSet<>();
+        int left = 0, right = 0, res = 0;
+        while (right < s.length()) {
+            if (!set.contains(s.charAt(right))) {
+                set.add(s.charAt(right));
+                right++;
+            } else {
+                set.remove(s.charAt(left));
+                left++;
+            }
+            res = Math.max(res, set.size());
+        }
+        return res;
+
+
+    }
+
+    public int lengthOfLongestSubstring5(String s) {
+        int left = 0, right = 0, res = 0;
+        Set<Character> set = new HashSet<>();
+        while (right < s.length()) {
+            if (!set.contains(s.charAt(right))) {
+                set.add(s.charAt(right));
+                right++;
+            } else {
+                set.remove(s.charAt(left));
+                left++;
+            }
+            res = Math.max(res, set.size());
+        }
+        return res;
+    }
 
 }
