@@ -182,4 +182,44 @@ public class Solution {
 
 
 
+
+
+
+
+
+
+    public static int lengthOfLongestSubstringDemo(String s) {
+        int left = 0,right = 0,res = 0;
+        HashSet<Character> set = new HashSet<>();
+        while (right<s.length()){
+            if (!set.contains(s.charAt(right))){
+                set.add(s.charAt(right));
+                right++;
+            }else {
+                set.remove(s.charAt(left));
+                left++;
+            }
+           res = Math.max(res,set.size());
+        }
+        return res;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

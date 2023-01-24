@@ -41,4 +41,59 @@ public class Solution {
             }
         return ans;
     }
+
+
+//    public String longestPalindrome(String s) {
+//        String res = "";
+//        for (int i = 0; i < s.length(); i++) {
+//            String s1 = palindrome(s, i, i);
+//            String s2 = palindrome(s, i, i + 1);
+//            res = res.length() > s1.length() ? res : s1;
+//            res = res.length() > s2.length() ? res : s2;
+//        }
+//
+//        return res;
+//    }
+//
+//    String palindrome(String s, int left, int right) {
+//        while (left > 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+//            left--;
+//            right++;
+//        }
+//        return s.substring(left + 1, right);
+//    }
+
+
+    /**
+     * 5. 最长回文子串
+     * BAB
+     * BAAB
+     *
+     * @param s
+     * @return
+     */
+    public String longestPalindrome(String s) {
+        String res = "";
+        // 遍历
+        for (int i = 0; i < s.length(); i++) {
+            // 奇数情况
+            String s1 = palindrome(s, i, i);
+            // 偶数情况
+            String s2 = palindrome(s, i, i + 1);
+            res = res.length() > s1.length() ? res : s1;
+            res = res.length() > s2.length() ? res : s2;
+        }
+        // 结果
+        return res;
+    }
+
+    String palindrome(String s, int left, int right) {
+        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+            left--;
+            right++;
+        }
+        return s.substring(left + 1, right);
+    }
+
+
 }
