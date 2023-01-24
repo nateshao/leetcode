@@ -15,6 +15,11 @@ import java.util.Set;
  * Description:
  */
 public class Solution {
+    public static void main(String[] args) {
+        String s = "abcabcbb";
+        System.out.println("lengthOfLongestSubstring6(s) = " + lengthOfLongestSubstring6(s));
+    }
+
     /**
      * 滑动窗口
      * 暴力解法时间复杂度较高，会达到 O(n2)，故而采取滑动窗口的方法降低时间复杂度
@@ -126,5 +131,55 @@ public class Solution {
         }
         return res;
     }
+// public int lengthOfLongestSubstring(String s) {
+    //     //维护当前最长不重复字符子串
+    //     Set<Character> set = new HashSet<>();
+    //     int left = 0;
+    //     int right = 0;
+    //     int max = 0;
+    //     while(right<s.length()){
+    //         if(!set.contains(s.charAt(right))){
+    //             //未查到重复字符就一直加，right右移
+    //             set.add(s.charAt(right));
+    //             right++;
+    //         }else{
+    //             //right查到重复字符先不动，left右移，set删left经过的字符，直到重复的这个字符删掉为止
+    //             set.remove(s.charAt(left));
+    //             left++;
+    //         }
+    //         //每一次计算当前set子串的长度
+    //         max = Math.max(max, set.size());
+    //     }
+    //     return max;
+    // }
+
+
+    /**
+     * 两个指针都在最左边位置，
+     * 当右指针小于s.length长度，
+     * 如果不包含右指针，右指针前进，并把右指针添加到res
+     * 如果包含左指针，左指针前进并移除左指针的元素。
+     *
+     * @param s
+     * @return
+     */
+    public static int lengthOfLongestSubstring6(String s) {
+        int left = 0, right = 0, res = 0;
+        Set<Character> set = new HashSet<>();
+        while (right < s.length()) {
+            if (!set.contains(s.charAt(right))) {
+                set.add(s.charAt(right));
+                right++;
+            } else {
+                set.remove(s.charAt(left));
+                left++;
+            }
+            res = Math.max(res, set.size());
+        }
+        return res;
+    }
+
+
+
 
 }
