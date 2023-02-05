@@ -1,5 +1,7 @@
 package com.nateshao.test_2023;
 
+import java.util.Stack;
+
 /**
  * @date Created by 邵桐杰 on 2023/2/6 0:34
  * @微信公众号 千羽的编程时光
@@ -41,13 +43,14 @@ public class Code234_isPalindrome {
 //        }
 //        return pre;
 //    }
+
     /**
      * 反转（迭代）
      */
-    ListNode reverse(ListNode head){
+    ListNode reverse(ListNode head) {
         ListNode pre = null;
         ListNode next = null;
-        while(head != null) {
+        while (head != null) {
             next = head.next;
             head.next = pre;
             pre = head;
@@ -59,7 +62,7 @@ public class Code234_isPalindrome {
     /**
      * 反转（递归）
      */
-    ListNode reverse2(ListNode head){
+    ListNode reverse2(ListNode head) {
         // 递归到最后一个节点，返回新的新的头结点
         if (head.next == null) {
             return head;
@@ -70,6 +73,28 @@ public class Code234_isPalindrome {
         return newHead;
     }
 
+    /**
+     * （简单暴力）先循环一遍，将值保存到栈中，再次循环列表与出栈的值比较
+     * @param head
+     * @return
+     */
+    public boolean isPalindrome2(ListNode head) {
+        if (head == null) return true;
+        //暴力解法 保存值 重新循环查看是否一致
+        ListNode node = head;
+        Stack<Integer> stack = new Stack<>();
+        while (node != null) {
+            stack.push(node.val);
+            node = node.next;
+        }
+        //利用栈的特性
+        while (head != null) {
+            if (head.val != stack.pop()) return false;
+            head = head.next;
+        }
+        //循环走到这里，说明都匹配
+        return true;
+    }
 
     public class ListNode {
         int val;
