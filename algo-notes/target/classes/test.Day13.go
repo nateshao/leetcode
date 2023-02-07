@@ -1,11 +1,5 @@
 package main
 
-import (
-	"context"
-	"fmt"
-	"net"
-)
-
 //import (
 //	"code.byted.org/middleware/hertz/pkg/app
 //	"code.byted.org/middleware/hertz/pkg/app/server
@@ -19,15 +13,3 @@ import (
 //	})
 //	h.Spin()
 //}
-
-func main() {
-	var a = 2
-	var b = 3
-	result := calculate(a, b)
-	fmt.Println(result)
-	return
-}
-func calculate(x, y int) {
-	z := x * y
-	return z
-}

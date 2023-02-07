@@ -33,21 +33,21 @@ public class Code234_isPalindrome {
         return true;
     }
 
-//    ListNode reverse(ListNode head) {
-//        ListNode pre = null, cur = head;
-//        while (cur != null) {
-//            ListNode next = cur.next;
-//            cur.next = pre;
-//            pre = cur;
-//            cur = next;
-//        }
-//        return pre;
-//    }
+    ListNode reverse(ListNode head) {
+        ListNode pre = null, cur = head;
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        return pre;
+    }
 
     /**
      * 反转（迭代）
      */
-    ListNode reverse(ListNode head) {
+    ListNode reverse2(ListNode head) {
         ListNode pre = null;
         ListNode next = null;
         while (head != null) {
@@ -62,7 +62,7 @@ public class Code234_isPalindrome {
     /**
      * 反转（递归）
      */
-    ListNode reverse2(ListNode head) {
+    ListNode reverse3(ListNode head) {
         // 递归到最后一个节点，返回新的新的头结点
         if (head.next == null) {
             return head;
@@ -75,6 +75,7 @@ public class Code234_isPalindrome {
 
     /**
      * （简单暴力）先循环一遍，将值保存到栈中，再次循环列表与出栈的值比较
+     *
      * @param head
      * @return
      */

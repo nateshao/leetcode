@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @date Created by 邵桐杰 on 2022/9/26 15:49
@@ -90,5 +92,90 @@ public class Main {
             res = Math.max(res, set.size());//每一次计算当前set子串的长度
         }
         return res;
+    }
+
+    /**
+     * @date Created by 邵桐杰 on 2023/2/7 20:07
+     * @微信公众号 千羽的编程时光
+     * @个人网站 www.nateshao.cn
+     * @博客 https://nateshao.gitlab.io
+     * @GitHub https://github.com/nateshao
+     * @Gitee https://gitee.com/nateshao
+     * Description:
+     */
+    public static class Main4 {
+        /**
+         * 创建三个线程
+         * 无线循环
+         * a线程无限输出a
+         * b线程无限输出b
+         * c线程无线输出c
+         * <p>
+         * 依此输出abc，abc，
+         * https://blog.csdn.net/zuishengmengsi_/article/details/55504680
+         * @param args
+         */
+        public static int cnt = 0;
+        public static final int COUNT = 30;
+
+        public static void main(String[] args) {
+
+            final Lock lock = new ReentrantLock();
+            Thread A = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    while (true) {
+                        lock.lock();
+                        if (cnt >= COUNT) {
+                            lock.unlock();
+                            return;
+                        }
+                        if (cnt % 3 == 0) {
+                            System.out.println("A");
+                            cnt++;
+                        }
+                        lock.unlock();
+                    }
+                }
+
+            });
+
+            Thread B = new Thread(new Runnable() {
+                public void run() {
+                    while (true) {
+                        lock.lock();
+                        if (cnt >= COUNT) {
+                            lock.unlock();
+                            return;
+                        }
+                        if (cnt % 3 == 1) {
+                            System.out.println("B");
+                            cnt++;
+                        }
+                        lock.unlock();
+                    }
+                }
+            });
+
+            Thread C = new Thread(new Runnable() {
+                public void run() {
+                    while (true) {
+                        lock.lock();
+                        if (cnt >= COUNT) {
+                            lock.unlock();
+                            return;
+                        }
+                        if (cnt % 3 == 2) {
+                            System.out.println("C");
+                            cnt++;
+                        }
+                        lock.unlock();
+                    }
+                }
+            });
+            A.start();
+            B.start();
+            C.start();
+        }
     }
 }
