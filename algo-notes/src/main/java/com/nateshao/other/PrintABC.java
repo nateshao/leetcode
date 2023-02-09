@@ -1,4 +1,4 @@
-package com;
+package com.nateshao.other;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

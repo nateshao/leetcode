@@ -1,4 +1,4 @@
-package com;
+package com.nateshao.other;
 
 /**
  * @date Created by 邵桐杰 on 2022/9/26 18:26

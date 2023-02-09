@@ -1,4 +1,4 @@
-package com;
+package com.nateshao.other;
 
 import java.util.HashMap;
 import java.util.HashSet;
