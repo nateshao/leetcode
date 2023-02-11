@@ -9,7 +9,7 @@ package com.nateshao.test_2023;
  * @Gitee https://gitee.com/nateshao
  * Description:
  */
-public class Main {
+public class Conclusion {
     public static void main(String[] args) {
 
     }

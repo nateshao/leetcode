@@ -15,7 +15,7 @@ import java.util.Arrays;
  *  1,2,2,3,4,5,6,7,8,9   target  = 7
  *  [2,2,3],[3,4],[7]
  */
-public class MainTest {
+public class ConclusionTest {
     public static void main(String[] args) {
         int target = 7;
         int[] arr = {1, 2, 2, 3, 4, 5, 6, 7, 8};
