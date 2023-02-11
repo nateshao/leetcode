@@ -49,4 +49,14 @@ public class Conclusion {
         traverse(root.right);
     }
 
+    // N叉树遍历
+//    class TreeNode {
+//        int val;
+//        TreeNode[] children;
+//    }
+//    void traverse(TreeNode root) {
+//        for (TreeNode child : root.children)
+//            traverse(child);
+//    }
+
 }
