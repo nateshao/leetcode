@@ -38,4 +38,15 @@ public class Conclusion {
         int val;
         ListNode next;
     }
+
+    // 二叉树遍历。1.递归
+    class TreeNode{
+        int val;
+        TreeNode left,right;
+    }
+    void traverse(TreeNode root){
+        traverse(root.left);
+        traverse(root.right);
+    }
+
 }
