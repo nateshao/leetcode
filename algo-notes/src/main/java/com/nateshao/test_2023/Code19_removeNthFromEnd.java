@@ -79,24 +79,27 @@ public class Code19_removeNthFromEnd {
      * 快指针先走n步
      * fast.next!=null,快慢指针一起走，
      * 删除节点
+     *
      * @param head
      * @param n
      * @return
      */
     public ListNode removeNthFromEnd3(ListNode head, int n) {
-        ListNode pre = new ListNode(-1);
-        pre.next=head;
-        ListNode fast = pre,slow = pre;
+        ListNode res = new ListNode(-1);
+        res.next = head;
+        ListNode fast = res, slow = res;
+//        for (int i = 0; i < n; i++) {
+//            fast = fast.next;
+//        }
         while (n>0){
-            fast = fast.next;
+            fast=fast.next;
             n--;
         }
-        while (fast.next!=null){
+        while (fast.next != null) {
             fast = fast.next;
-            slow=slow.next;
+            slow = slow.next;
         }
-            slow.next=slow.next.next;
-        return pre.next;
-
+        slow.next = slow.next.next;
+        return res.next;
     }
 }
