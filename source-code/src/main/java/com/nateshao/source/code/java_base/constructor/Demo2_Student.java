@@ -20,8 +20,6 @@ public class Demo2_Student {
         Student s1 = new Student();
         Student s2 = new Student();
     }
-
-
     static class Student {
         {
             System.out.println("Student 静态代码块");
