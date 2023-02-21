@@ -1,4 +1,4 @@
-package com.nateshao.source.code.java_base;
+package com.nateshao.source.code.java_base.base;
 
 import java.util.Scanner;
 
