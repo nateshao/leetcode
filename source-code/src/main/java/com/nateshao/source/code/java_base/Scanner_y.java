@@ -14,9 +14,9 @@ import java.util.Scanner;
 public class Scanner_y {
     public static void main(String[] args) {
         int y;
-        Scanner aa = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("请输入整数x的值：");
-        int x = aa.nextInt();
+        int x = sc.nextInt();
         if (x >= 3) {        //当x大于3时
             y = 2 * x + 1;
         } else if (x > -1 && x < 3) {    //x>-1且x<3两个条件同时成立时
