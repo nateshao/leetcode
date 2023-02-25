@@ -1,0 +1,28 @@
+// 声明语法，不显示声明默认是2.0的语法。
+syntax = "proto3";
+// 指定模板类的包路径
+option java_package = "com.test.basic.java.serialize.proto.dto";
+// 指定模板类的名称，名称必须是有实际业务意义的
+option java_outer_classname = "UserProto";
+
+// 定义用户对象
+message User {
+  // 名字
+  string name = 1;
+  // 年龄
+  int32 age = 2;
+}
+// 声明语法，不显示声明默认是2.0的语法。
+syntax = "proto3";
+// 指定模板类的包路径
+option java_package = "com\nateshao\source\code\serializable\protobuf_Serializable\User.proto";
+// 指定模板类的名称，名称必须是有实际业务意义的
+option java_outer_classname = "UserProto";
+
+// 定义用户对象
+message User {
+  // 名字
+  string name = 1;
+  // 年龄
+  int32 age = 2;
+}
