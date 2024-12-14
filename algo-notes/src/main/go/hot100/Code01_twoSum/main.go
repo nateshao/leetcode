@@ -1,4 +1,4 @@
-package main
+package Code01_twoSum
 
 import "fmt"
 
@@ -26,6 +26,17 @@ func twoSum2(nums []int, target int) []int {
 			return []int{p, i}
 		}
 		hashTable[x] = i
+	}
+	return nil
+}
+
+func twoSum3(nums []int, target int) []int {
+	hashMap := map[int]int{}
+	for i, num := range nums {
+		if p, ok := hashMap[target-num]; ok {
+			return []int{p, i}
+		}
+		hashMap[num] = i
 	}
 	return nil
 }

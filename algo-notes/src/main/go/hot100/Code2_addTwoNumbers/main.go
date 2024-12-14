@@ -9,7 +9,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-//链接：https://leetcode-cn.com/problems/add-two-numbers/solution/by-chicc-6-u9gw/
+// 链接：https://leetcode-cn.com/problems/add-two-numbers/solution/by-chicc-6-u9gw/
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) (head *ListNode) {
 	//定义一个尾结点，或者可以理解为临时节点
 	var tail *ListNode
