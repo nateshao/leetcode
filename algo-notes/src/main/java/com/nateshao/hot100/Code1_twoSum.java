@@ -26,7 +26,9 @@ public class Code1_twoSum {
         HashMap<Integer, Integer> res = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int need = target - nums[i];
-            if (res.containsKey(need)) return new int[]{res.get(need), i};
+            if (res.containsKey(need)) {
+                return new int[]{res.get(need), i};
+            }
             res.put(nums[i], i);
         }
         return null;
@@ -46,7 +48,7 @@ public class Code1_twoSum {
             int sum = nums[left] + nums[right];
             if (sum > target) right--;
             else if (sum < target) left++;
-            else if (sum==target) {
+            else if (sum == target) {
                 return new int[]{nums[left], nums[right]};
             }
         }

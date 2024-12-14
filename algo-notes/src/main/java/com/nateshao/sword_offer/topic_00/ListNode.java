@@ -12,7 +12,7 @@ public class ListNode {
     ListNode next; // 下一个节点
     ListNode before; //
     public ListNode(){} // 创建一个无参数构造方法，用于初始化
-    ListNode(int val){  // 创建一个有参数构造方法，便于给结点传数据
+    public ListNode(int val){  // 创建一个有参数构造方法，便于给结点传数据
         this.val = val;
     }
 

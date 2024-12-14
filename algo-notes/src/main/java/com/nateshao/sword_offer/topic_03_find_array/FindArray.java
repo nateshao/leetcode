@@ -1,6 +1,5 @@
 package com.nateshao.sword_offer.topic_03_find_array;
 
-import org.junit.Test;
 
 /**
  * @date Created by 邵桐杰 on 2021/11/9 23:31
@@ -102,12 +101,12 @@ public class FindArray {
 
     }
 
-
-    @Test
-    public void testfindNumberIn2DArray() {
-        int[][] arr = {{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}};
-        int target = 8;
-        boolean numberIn2DArray = findNumberIn2DArray2(arr, target);
-        System.out.println(numberIn2DArray);
-    }
+//
+//    @Test
+//    public void testfindNumberIn2DArray() {
+//        int[][] arr = {{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}};
+//        int target = 8;
+//        boolean numberIn2DArray = findNumberIn2DArray2(arr, target);
+//        System.out.println(numberIn2DArray);
+//    }
 }
