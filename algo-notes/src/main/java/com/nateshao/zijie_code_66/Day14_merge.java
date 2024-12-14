@@ -1,6 +1,5 @@
 package com.nateshao.zijie_code_66;
 
-import com.nateshao.play_with_data_structures.lesson_01_arrays.Demo04_Dynamic_Array;
 
 import java.util.Arrays;
 import java.util.LinkedList;
