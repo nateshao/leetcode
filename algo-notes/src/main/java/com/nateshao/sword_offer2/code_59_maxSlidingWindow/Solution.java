@@ -5,11 +5,9 @@ import java.util.LinkedList;
 
 /**
  * @date Created by 邵桐杰 on 2022/10/3 15:14
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode.cn/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/
  * 剑指 Offer 59 - I. 滑动窗口的最大值
  * 给定一个数组 nums 和滑动窗口的大小 k，请找出所有滑动窗口里的最大值。

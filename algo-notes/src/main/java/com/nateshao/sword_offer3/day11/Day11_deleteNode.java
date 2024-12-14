@@ -2,11 +2,9 @@ package com.nateshao.sword_offer3.day11;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/11 22:31
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 18. 删除链表的节点
  * 给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。

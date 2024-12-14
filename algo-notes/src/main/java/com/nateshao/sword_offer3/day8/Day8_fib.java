@@ -2,11 +2,9 @@ package com.nateshao.sword_offer3.day8;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/5 12:51
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 10- I. 斐波那契数列
  * 写一个函数，输入 n ，求斐波那契（Fibonacci）数列的第 n 项（即 F(N)）。斐波那契数列的定义如下：

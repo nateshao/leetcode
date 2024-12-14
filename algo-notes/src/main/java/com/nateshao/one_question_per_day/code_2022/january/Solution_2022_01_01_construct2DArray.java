@@ -2,11 +2,9 @@ package com.nateshao.one_question_per_day.code_2022.january;
 
 /**
  * @date Created by 邵桐杰 on 2022/1/1 9:22
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 2022. 将一维数组转变成二维数组
  * 给你一个下标从 0 开始的一维整数数组 original 和两个整数 m 和  n 。你需要使用 original 中 所有 元素创建一个 m 行 n 列的二维数组。

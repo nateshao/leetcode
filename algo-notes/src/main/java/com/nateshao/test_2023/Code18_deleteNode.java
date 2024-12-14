@@ -2,11 +2,9 @@ package com.nateshao.test_2023;
 
 /**
  * @date Created by 邵桐杰 on 2023/1/8 21:43
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 剑指 Offer 18. 删除链表的节点
  * https://leetcode.cn/problems/shan-chu-lian-biao-de-jie-dian-lcof/
  */

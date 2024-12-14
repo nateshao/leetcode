@@ -5,11 +5,9 @@ import java.util.PriorityQueue;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/15 23:14
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 215. 数组中的第K个最大元素
  * 给定整数数组 nums 和整数 k，请返回数组中第 k 个最大的元素。

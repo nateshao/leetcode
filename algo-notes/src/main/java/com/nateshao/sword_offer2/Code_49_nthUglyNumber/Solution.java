@@ -2,11 +2,9 @@ package com.nateshao.sword_offer2.Code_49_nthUglyNumber;
 
 /**
  * @date Created by 邵桐杰 on 2022/4/19 20:40
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 49. 丑数
  * 我们把只包含质因子 2、3 和 5 的数称作丑数（Ugly Number）。求按从小到大的顺序的第 n 个丑数。

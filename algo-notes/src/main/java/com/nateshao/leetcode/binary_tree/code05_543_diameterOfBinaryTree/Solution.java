@@ -2,11 +2,9 @@ package com.nateshao.leetcode.binary_tree.code05_543_diameterOfBinaryTree;
 
 /**
  * @date Created by 邵桐杰 on 2022/4/23 18:23
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/diameter-of-binary-tree/
  * 543. 二叉树的直径
  * 给定一棵二叉树，你需要计算它的直径长度。一棵二叉树的直径长度是任意两个结点路径长度中的最大值。这条路径可能穿过也可能不穿过根结点。

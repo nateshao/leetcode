@@ -2,11 +2,9 @@ package com.nateshao.sword_offer2.Code_19_isMatch;
 
 /**
  * @date Created by 邵桐杰 on 2022/4/6 9:52
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 19. 正则表达式匹配
  * 请实现一个函数用来匹配包含'. '和'*'的正则表达式。模式中的字符'.'表示任意一个字符，

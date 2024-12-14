@@ -2,11 +2,9 @@ package com.nateshao.sword_offer3.day8;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/5 21:59
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 70. 爬楼梯
  * 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。

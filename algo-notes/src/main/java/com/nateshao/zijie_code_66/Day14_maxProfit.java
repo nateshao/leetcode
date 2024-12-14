@@ -2,11 +2,9 @@ package com.nateshao.zijie_code_66;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/21 10:05
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
  * 121. 买卖股票的最佳时机
  * 给定一个数组 prices ，它的第 i 个元素 prices[i] 表示一支给定股票第 i 天的价格。

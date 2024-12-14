@@ -5,11 +5,9 @@ import java.util.List;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/16 9:25
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/spiral-matrix/
  * 54. 螺旋矩阵
  * 给你一个 m 行 n 列的矩阵 matrix ，请按照 顺时针螺旋顺序 ，返回矩阵中的所有元素。

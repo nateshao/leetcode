@@ -5,11 +5,9 @@ import java.util.Scanner;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/4 9:24
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 看域构建多少种树
  * 小强现在有个节点,他想请你帮他计算出有多少种不同的二叉树满足节点个数为且树的高度不超过的方案.因为答案很大,所以答案需要模上1e9+7后输出.
  * 树的高度: 定义为所有叶子到根路径上节点个数的最大值.

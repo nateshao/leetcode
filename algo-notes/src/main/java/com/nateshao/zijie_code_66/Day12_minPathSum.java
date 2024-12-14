@@ -4,11 +4,9 @@ import java.util.Arrays;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/19 22:46
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/minimum-path-sum/
  * 64. 最小路径和
  * 给定一个包含非负整数的 m x n 网格 grid ，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。

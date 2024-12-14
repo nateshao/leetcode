@@ -4,11 +4,9 @@ import org.junit.Test;
 
 /**
  * @date Created by 邵桐杰 on 2021/11/9 23:31
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 面试题3: 二维数组中的查找
  * 题目描述：在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列
  * <p>

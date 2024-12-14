@@ -2,11 +2,9 @@ package com.nateshao.zijie_code_66;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/27 20:40
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/multiply-strings/
  * 43. 字符串相乘
  * 给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。

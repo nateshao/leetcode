@@ -6,11 +6,9 @@ import org.msgpack.template.Templates;
 
 /**
  * @date Created by 邵桐杰 on 2022/8/13 18:31
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  */
 
@@ -18,18 +16,18 @@ public class MessagePackTest {
 
     @Test
     public void test01() throws Exception {
-        String msg = "千羽的编程时光 https://nateshao.gitlab.io/";
+        String msg = "程序员千羽 https://nateshao.gitlab.io/";
         MessagePack messagePack = new MessagePack();
 
         // 序列化
         final byte[] bytes = messagePack.write(msg);
 
         // 反序列化
-        // 千羽的编程时光 https://nateshao.gitlab.io/
+        // 程序员千羽 https://nateshao.gitlab.io/
         final String s = messagePack.read(bytes, String.class);
 
         // 反序列化
-        // "千羽的编程时光 https://nateshao.gitlab.io/"
+        // "程序员千羽 https://nateshao.gitlab.io/"
         final String s2 = messagePack.read(bytes).toString();
 
         // 反序列化

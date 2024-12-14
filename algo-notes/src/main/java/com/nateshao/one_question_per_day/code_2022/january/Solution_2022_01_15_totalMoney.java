@@ -2,11 +2,9 @@ package com.nateshao.one_question_per_day.code_2022.january;
 
 /**
  * @date Created by 邵桐杰 on 2022/1/15 23:35
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 1716. 计算力扣银行的钱
  * <p>
  * Hercy 想要为购买第一辆车存钱。他 每天 都往力扣银行里存钱。

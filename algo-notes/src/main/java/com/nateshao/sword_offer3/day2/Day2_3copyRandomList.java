@@ -5,11 +5,9 @@ import java.util.Map;
 
 /**
  * @date Created by 邵桐杰 on 2022/5/26 11:39
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 剑指 Offer 35. 复杂链表的复制
  */
 public class Day2_3copyRandomList {

@@ -2,11 +2,9 @@ package com.nateshao.leetcode.Arrays;
 
 /**
  * @date Created by 邵桐杰 on 2021/11/3 18:13
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 122. 买卖股票的最佳时机 II
  *
  * 给定一个数组 prices ，其中 prices[i] 是一支给定股票第 i 天的价格。

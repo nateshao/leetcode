@@ -2,11 +2,9 @@ package com.nateshao.test_2023;
 
 /**
  * @date Created by 邵桐杰 on 2023/2/5 1:13
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 19. 删除链表的倒数第 N 个结点
  */
 public class Code19_removeNthFromEnd {

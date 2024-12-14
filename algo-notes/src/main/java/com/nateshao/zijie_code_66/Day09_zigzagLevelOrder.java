@@ -6,11 +6,9 @@ import java.util.Queue;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/16 18:38
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/
  * 103. 二叉树的锯齿形层序遍历
  * 给你二叉树的根节点 root ，返回其节点值的 锯齿形层序遍历 。（即先从左往右，再从右往左进行下一层遍历，以此类推，层与层之间交替进行）。

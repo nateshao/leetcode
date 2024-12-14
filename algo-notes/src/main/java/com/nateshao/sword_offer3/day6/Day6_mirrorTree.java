@@ -7,11 +7,9 @@ import java.util.Stack;
 
 /**
  * @date Created by 邵桐杰 on 2022/6/17 9:42
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 剑指 Offer 27. 二叉树的镜像
  * 请完成一个函数，输入一个二叉树，该函数输出它的镜像。
  * <p>

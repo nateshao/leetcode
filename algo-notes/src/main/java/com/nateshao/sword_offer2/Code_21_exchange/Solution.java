@@ -2,11 +2,9 @@ package com.nateshao.sword_offer2.Code_21_exchange;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/8 8:45
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 21. 调整数组顺序使奇数位于偶数前面
  * 输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有奇数在数组的前半部分，所有偶数在数组的后半部分。

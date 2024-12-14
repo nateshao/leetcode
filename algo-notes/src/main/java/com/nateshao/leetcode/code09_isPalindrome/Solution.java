@@ -2,11 +2,9 @@ package com.nateshao.leetcode.code09_isPalindrome;
 
 /**
  * @date Created by 邵桐杰 on 2022/9/27 16:44
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 9. 回文数
  * 给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。

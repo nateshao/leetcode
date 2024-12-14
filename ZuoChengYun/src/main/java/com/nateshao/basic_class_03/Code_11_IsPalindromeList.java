@@ -3,11 +3,9 @@ package com.nateshao.basic_class_03;
 import java.util.Stack;
 /**
  * @date Created by 邵桐杰 on 2021/9/13 20:56
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 题目十一  判断一个链表是否为回文结构
  * 【题目】 给定一个链表的头节点head，请判断该链表是否为回 文结构。

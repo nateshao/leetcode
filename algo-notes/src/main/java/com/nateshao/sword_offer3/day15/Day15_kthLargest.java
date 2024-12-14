@@ -2,11 +2,9 @@ package com.nateshao.sword_offer3.day15;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/18 22:46
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 54. 二叉搜索树的第k大节点
  * 给定一棵二叉搜索树，请找出其中第 k 大的节点的值。

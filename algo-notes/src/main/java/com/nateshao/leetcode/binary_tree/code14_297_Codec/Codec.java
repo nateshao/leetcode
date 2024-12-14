@@ -4,11 +4,9 @@ import java.util.LinkedList;
 
 /**
  * @date Created by 邵桐杰 on 2022/5/4 11:17
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 297. 二叉树的序列化与反序列化
  * 序列化是将一个数据结构或者对象转换为连续的比特位的操作，进而可以将转换后的数据存储在一个文件或者内存中，

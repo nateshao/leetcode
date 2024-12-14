@@ -2,11 +2,9 @@ package com.nateshao.basic_class_03;
 
 /**
  * @date Created by 邵桐杰 on 2021/9/23 17:17
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 转圈打印矩阵
  * 【题目】 给定一个整型矩阵matrix，请按照转圈的方式打印它。
  * 例如： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16

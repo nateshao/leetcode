@@ -2,11 +2,9 @@ package com.nateshao.sword_offer3.day22;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/23 9:47
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 56 - I. 数组中数字出现的次数
  * 一个整型数组 nums 里除两个数字之外，其他数字都出现了两次。请写程序找出这两个只出现一次的数字。

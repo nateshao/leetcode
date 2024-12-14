@@ -4,11 +4,9 @@ import java.util.Arrays;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/16 15:42
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 105. 从前序与中序遍历序列构造二叉树
  * 给定两个整数数组 preorder 和 inorder ，其中 preorder 是二叉树的先序遍历， inorder 是同一棵树的中序遍历，

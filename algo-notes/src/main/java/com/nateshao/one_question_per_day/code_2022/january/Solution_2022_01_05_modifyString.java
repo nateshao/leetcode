@@ -2,11 +2,9 @@ package com.nateshao.one_question_per_day.code_2022.january;
 
 /**
  * @date Created by 邵桐杰 on 2022/1/5 9:13
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 1576. 替换所有的问号
  * 给你一个仅包含小写英文字母和 '?' 字符的字符串 s，请你将所有的 '?' 转换为若干小写字母，使最终的字符串不包含任何 连续重复 的字符。

@@ -2,11 +2,9 @@ package com.nateshao.sword_offer2.Code_05_replaceSpace;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/5 21:35
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 05. 替换空格
  * 请实现一个函数，把字符串 s 中的每个空格替换成"%20"。

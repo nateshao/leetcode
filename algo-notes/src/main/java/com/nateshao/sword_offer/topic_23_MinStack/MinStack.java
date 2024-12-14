@@ -4,11 +4,9 @@ import java.util.Stack;
 
 /**
  * @date Created by 邵桐杰 on 2021/11/28 21:38
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 包含min函数的栈
  * 思路：定义两个栈，一个存放入的值。另一个存最小值。
  */

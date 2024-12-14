@@ -5,11 +5,9 @@ import java.util.List;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/17 11:09
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 34. 二叉树中和为某一值的路径
  * 给你二叉树的根节点 root 和一个整数目标和 targetSum ，

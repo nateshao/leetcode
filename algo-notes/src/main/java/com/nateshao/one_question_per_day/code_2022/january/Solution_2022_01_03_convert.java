@@ -8,11 +8,9 @@ import java.util.Arrays;
 
 /**
  * @date Created by 邵桐杰 on 2022/1/1 11:17
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 6. Z 字形变换
  * 将一个给定字符串 s 根据给定的行数 numRows ，以从上往下、从左到右进行 Z 字形排列。

@@ -5,11 +5,9 @@ import java.util.Set;
 
 /**
  * @date Created by 邵桐杰 on 2022/10/3 16:54
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode.cn/problems/bu-ke-pai-zhong-de-shun-zi-lcof/
  * 剑指 Offer 61. 扑克牌中的顺子
  * 从若干副扑克牌中随机抽 5 张牌，判断是不是一个顺子，即这5张牌是不是连续的。

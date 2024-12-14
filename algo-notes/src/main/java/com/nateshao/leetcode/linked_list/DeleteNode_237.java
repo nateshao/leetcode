@@ -2,11 +2,9 @@ package com.nateshao.leetcode.linked_list;
 
 /**
  * @date Created by 邵桐杰 on 2021/11/4 23:25
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 237. 删除链表中的节点
  * https://leetcode-cn.com/problems/delete-node-in-a-linked-list/
  * <p>

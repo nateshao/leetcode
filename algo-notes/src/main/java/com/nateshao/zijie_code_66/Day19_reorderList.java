@@ -2,11 +2,9 @@ package com.nateshao.zijie_code_66;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/26 11:57
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/reorder-list/
  * 143. 重排链表
  * 给定一个单链表 L 的头节点 head ，单链表 L 表示为：

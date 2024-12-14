@@ -4,11 +4,9 @@ import java.util.HashSet;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/10 21:38
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 48. 最长不含重复字符的子字符串
  * 请从字符串中找出一个最长的不包含重复字符的子字符串，计算该最长子字符串的长度。

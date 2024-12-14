@@ -3,11 +3,9 @@ package com.nateshao.basic_class_03;
 import java.util.Stack;
 /**
  * @date Created by 邵桐杰 on 2021/9/24 10:06
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 实现一个特殊的栈，在实现栈的基本功能的基础上，再实现返 回栈中最小元素的操作。
  * 【要求】

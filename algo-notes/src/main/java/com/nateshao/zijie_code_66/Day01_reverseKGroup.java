@@ -2,11 +2,9 @@ package com.nateshao.zijie_code_66;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/8 11:01
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/reverse-nodes-in-k-group/
  * 25. K 个一组翻转链表
  * 给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。

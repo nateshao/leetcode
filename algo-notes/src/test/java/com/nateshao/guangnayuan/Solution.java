@@ -6,11 +6,9 @@ import java.util.List;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/8 11:50
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 广纳院
  * <p>
  * 1. 一段长的文本被两种不同切割方法切割成多段文本，两种切割方法产生的相邻片段具有重叠部分，请设计一个算法对这些片段进行拼接，以输出完整的文本。

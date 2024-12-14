@@ -2,11 +2,9 @@ package com.nateshao.sword_offer3.day9;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/10 15:51
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 47. 礼物的最大价值
  * 在一个 m*n 的棋盘的每一格都放有一个礼物，每个礼物都有一定的价值（价值大于 0）。

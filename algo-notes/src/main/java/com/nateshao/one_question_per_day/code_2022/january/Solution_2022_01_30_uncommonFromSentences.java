@@ -4,11 +4,9 @@ import java.util.*;
 
 /**
  * @date Created by 邵桐杰 on 2022/1/30 10:32
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/uncommon-words-from-two-sentences
  * 884. 两句话中的不常见单词
  * 句子 是一串由空格分隔的单词。每个 单词 仅由小写字母组成。

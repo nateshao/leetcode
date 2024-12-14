@@ -2,11 +2,9 @@ package com.nateshao.sword_offer2.code_55_maxDepth;
 
 /**
  * @date Created by 邵桐杰 on 2022/8/4 22:28
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 55 - I. 二叉树的深度
  * 输入一棵二叉树的根节点，求该树的深度。

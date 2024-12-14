@@ -8,11 +8,9 @@ import java.util.Queue;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/17 9:47
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/binary-tree-level-order-traversal/
  * 102. 二叉树的层序遍历
  * 给你二叉树的根节点 root ，返回其节点值的 层序遍历 。 （即逐层地，从左到右访问所有节点）。

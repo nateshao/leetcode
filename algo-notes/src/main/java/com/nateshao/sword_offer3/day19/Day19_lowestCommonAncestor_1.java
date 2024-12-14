@@ -2,11 +2,9 @@ package com.nateshao.sword_offer3.day19;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/20 11:23
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 235. 二叉搜索树的最近公共祖先
  * 给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。

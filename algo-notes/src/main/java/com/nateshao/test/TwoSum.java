@@ -2,11 +2,9 @@ package com.nateshao.test;
 
 /**
  * @date Created by 邵桐杰 on 2022/6/2 14:29
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 两个大整数相加
  * 大整数相加，要能运行，参数是两个string，考虑各种异常。
  * 返回String

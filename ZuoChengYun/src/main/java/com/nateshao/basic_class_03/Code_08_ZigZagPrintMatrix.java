@@ -1,11 +1,9 @@
 package com.nateshao.basic_class_03;
 /**
  * @date Created by 邵桐杰 on 2021/9/20 10:06
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: “之”字形打印矩阵
  * 【题目】 给定一个矩阵matrix，按照“之”字形的方式打印这 个矩阵，
  * 例如： 1 2 3 4 5 6 7 8 9 10 11 12

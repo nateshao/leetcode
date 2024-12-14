@@ -2,11 +2,9 @@ package com.nateshao.leetcode.binary_tree.code21_538_convertBST;
 
 /**
  * @date Created by 邵桐杰 on 2022/5/6 15:12
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 538. 把二叉搜索树转换为累加树
  * 给出二叉 搜索 树的根节点，该树的节点值各不相同，请你将其转换为累加树（Greater Sum Tree），使每个节点 node 的新值等于原树中大于或等于 node.val 的值之和。

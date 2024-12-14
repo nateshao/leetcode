@@ -3,11 +3,9 @@ import java.util.Stack;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/21 11:37
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/
  * 剑指 Offer 30. 包含min函数的栈
  * 定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数在该栈中，

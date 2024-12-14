@@ -4,11 +4,9 @@ import java.util.HashMap;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/20 17:59
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 07. 重建二叉树
  * 输入某二叉树的前序遍历和中序遍历的结果，请构建该二叉树并返回其根节点。

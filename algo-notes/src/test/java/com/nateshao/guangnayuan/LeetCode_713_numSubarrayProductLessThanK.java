@@ -2,11 +2,9 @@ package com.nateshao.guangnayuan;
 
 /**
  * @date Created by 邵桐杰 on 2022/4/10 22:04
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/subarray-product-less-than-k/
  * 713. 乘积小于K的子数组
  * 给定一个正整数数组 nums和整数 k 。

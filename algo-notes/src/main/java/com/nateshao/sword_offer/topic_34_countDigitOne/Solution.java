@@ -2,11 +2,9 @@ package com.nateshao.sword_offer.topic_34_countDigitOne;
 
 /**
  * @date Created by 邵桐杰 on 2021/12/11 11:00
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 剑指 Offer 43. 1～n 整数中 1 出现的次数
  * https://leetcode-cn.com/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/
  */

@@ -2,11 +2,9 @@ package com.nateshao.sword_offer3.day15;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/17 11:56
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 36. 二叉搜索树与双向链表
  * 输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的循环双向链表。要求不能创建任何新的节点，

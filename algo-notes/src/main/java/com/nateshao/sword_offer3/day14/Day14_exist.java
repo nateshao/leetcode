@@ -2,11 +2,9 @@ package com.nateshao.sword_offer3.day14;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/16 22:37
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 12. 矩阵中的路径
  * 给定一个 m x n 二维字符网格 board 和一个字符串单词 word 。如果 word 存在于网格中，返回 true ；否则，返回 false 。

@@ -5,11 +5,9 @@ import java.util.LinkedList;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/5 22:04
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * <p>
  * 剑指 Offer 09. 用两个栈实现队列

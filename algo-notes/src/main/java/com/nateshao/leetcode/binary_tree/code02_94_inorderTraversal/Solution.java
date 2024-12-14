@@ -5,11 +5,9 @@ import java.util.List;
 
 /**
  * @date Created by 邵桐杰 on 2022/4/23 14:32
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/binary-tree-inorder-traversal/
  * 94. 二叉树的中序遍历
  * 给定一个二叉树的根节点 root ，返回 它的 中序 遍历 。

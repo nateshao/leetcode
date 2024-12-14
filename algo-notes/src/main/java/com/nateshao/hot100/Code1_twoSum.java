@@ -5,11 +5,9 @@ import java.util.HashMap;
 
 /**
  * @date Created by 邵桐杰 on 2023/2/11 13:29
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 给定一个整数数组 nums 和一个整数目标值 target，
  * 请你在该数组中找出 和为目标值 target的那两个整数，并返回它们的数组下标。

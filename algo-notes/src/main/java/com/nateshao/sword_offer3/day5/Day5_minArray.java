@@ -4,11 +4,9 @@ import java.util.Arrays;
 
 /**
  * @date Created by 邵桐杰 on 2022/5/30 17:32
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 11. 旋转数组的最小数字
  * 把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。

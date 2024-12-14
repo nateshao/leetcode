@@ -4,11 +4,9 @@ import java.util.LinkedHashMap;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/8 10:56
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/lru-cache/
  * 146. LRU 缓存
  * 请你设计并实现一个满足  LRU (最近最少使用) 缓存 约束的数据结构。

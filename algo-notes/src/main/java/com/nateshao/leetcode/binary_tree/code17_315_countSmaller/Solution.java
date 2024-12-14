@@ -5,11 +5,9 @@ import java.util.List;
 
 /**
  * @date Created by 邵桐杰 on 2022/5/4 11:36
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 315. 计算右侧小于当前元素的个数
  * 给你一个整数数组 nums ，按要求返回一个新数组 counts 。数组 counts 有该性质：

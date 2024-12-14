@@ -12,11 +12,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="algo-notes (1) (com.nateshao.algonotes)" target="8" />
-      <module name="algo-notes (2) (com.nateshao)" target="1.5" />
       <module name="interview" target="1.5" />
-      <module name="source-code" target="1.5" />
-      <module name="zuochengyun" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -7,11 +7,9 @@ import java.util.Queue;
 
 /**
  * @date Created by 邵桐杰 on 2021/12/5 19:48
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 剑指 Offer 40. 最小的k个数
  * 题目描述：输入 n 个整数，找出其中最小的 K 个数。
  * 思路：先将前 K 个数放入数组，进行堆排序，若之后的数比它还小，则进行调整

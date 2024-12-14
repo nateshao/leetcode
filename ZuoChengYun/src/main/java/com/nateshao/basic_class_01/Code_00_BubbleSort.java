@@ -3,11 +3,9 @@ package com.nateshao.basic_class_01;
 import java.util.Arrays;
 /**
  * @date Created by 邵桐杰 on 2021/9/15 20:03
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 冒泡排序
  */
 public class Code_00_BubbleSort {

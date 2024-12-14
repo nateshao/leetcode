@@ -2,11 +2,9 @@ package com.nateshao.leetcode.binary_tree.code10_645_constructMaximumBinaryTree;
 
 /**
  * @date Created by 邵桐杰 on 2022/4/29 12:23
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/maximum-binary-tree/
  * 654. 最大二叉树
  * 给定一个不重复的整数数组 nums 。 最大二叉树 可以用下面的算法从 nums 递归地构建:

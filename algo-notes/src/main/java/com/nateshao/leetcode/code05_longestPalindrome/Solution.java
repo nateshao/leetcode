@@ -2,11 +2,9 @@ package com.nateshao.leetcode.code05_longestPalindrome;
 
 /**
  * @date Created by 邵桐杰 on 2022/9/27 16:28
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 5. 最长回文子串
  * 给你一个字符串 s，找到 s 中最长的回文子串。

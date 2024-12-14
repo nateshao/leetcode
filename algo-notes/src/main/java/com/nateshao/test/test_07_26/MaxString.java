@@ -4,11 +4,9 @@ import java.util.HashMap;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/26 19:24
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 给定字符串，给出重复次数最多的一个。获取最多的次数？
  *
  *

@@ -4,11 +4,9 @@ import java.util.Arrays;
 
 /**
  * @date Created by 邵桐杰 on 2021/10/30 22:33
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 912. 排序数组
  * 原文链接：https://leetcode-cn.com/problems/sort-an-array/
  * 给你一个整数数组 nums，请你将该数组升序排列。

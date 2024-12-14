@@ -6,11 +6,9 @@ import java.util.Arrays;
 
 /**
  * @date Created by 邵桐杰 on 2022/9/21 17:57
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 给出一个排序好的数组和一个数，求数组中连续元素的和等于所给数的子数组
  *  1,2,2,3,4,5,6,7,8,9   target  = 7
  *  [2,2,3],[3,4],[7]

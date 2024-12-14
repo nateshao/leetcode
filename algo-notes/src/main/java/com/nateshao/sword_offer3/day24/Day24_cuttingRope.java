@@ -2,11 +2,9 @@ package com.nateshao.sword_offer3.day24;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/23 22:35
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 14- I. 剪绳子
  * 给你一根长度为 n 的绳子，请把绳子剪成整数长度的 m 段（m、n都是整数，n>1并且m>1），

@@ -2,11 +2,9 @@ package com.nateshao.sword_offer2.Code_42_maxSubArray;
 
 /**
  * @date Created by 邵桐杰 on 2022/4/16 10:32
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 42. 连续子数组的最大和
  * 输入一个整型数组，数组中的一个或连续多个整数组成一个子数组。求所有子数组的和的最大值。

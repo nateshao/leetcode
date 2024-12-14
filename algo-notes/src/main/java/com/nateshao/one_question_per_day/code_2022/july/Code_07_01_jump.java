@@ -2,11 +2,9 @@ package com.nateshao.one_question_per_day.code_2022.july;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/1 21:59
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 45. 跳跃游戏 II
  * 给你一个非负整数数组 nums ，你最初位于数组的第一个位置。

@@ -2,11 +2,9 @@ package com.nateshao.sword_offer3.day13;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/13 14:20
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 58 - I. 翻转单词顺序
  * 输入一个英文句子，翻转句子中单词的顺序，但单词内字符的顺序不变。

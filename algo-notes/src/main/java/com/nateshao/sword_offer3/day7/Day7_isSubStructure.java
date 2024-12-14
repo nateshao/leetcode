@@ -2,11 +2,9 @@ package com.nateshao.sword_offer3.day7;
 
 /**
  * @date Created by 邵桐杰 on 2022/6/26 23:21
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 26. 树的子结构
  * 输入两棵二叉树A和B，判断B是不是A的子结构。(约定空树不是任意一个树的子结构)

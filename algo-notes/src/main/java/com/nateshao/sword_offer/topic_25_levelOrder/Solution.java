@@ -4,11 +4,9 @@ import java.util.*;
 
 /**
  * @date Created by 邵桐杰 on 2021/11/29 14:57
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: 从上到下打印二叉树 思路：利用队列（链表）辅助实现。
  *
  * add 增加一个元索 如果队列已满，则抛出一个IIIegaISlabEepeplian异常

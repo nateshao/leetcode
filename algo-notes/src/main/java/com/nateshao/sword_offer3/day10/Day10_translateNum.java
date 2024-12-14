@@ -2,11 +2,9 @@ package com.nateshao.sword_offer3.day10;
 
 /**
  * @date Created by 邵桐杰 on 2022/7/10 18:15
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 剑指 Offer 46. 把数字翻译成字符串
  * 给定一个数字，我们按照如下规则把它翻译为字符串：0 翻译成 “a” ，

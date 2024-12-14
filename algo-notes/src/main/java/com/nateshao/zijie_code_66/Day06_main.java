@@ -4,11 +4,9 @@ import java.util.Scanner;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/16 9:31
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/tJau2o/
  * bytedance-006. 夏季特惠
  * 某公司游戏平台的夏季特惠开始了，你决定入手一些游戏。现在你一共有X元的预算，该平台上所有的 n 个游戏均有折扣，标号为 i 的游戏的原价 a_ia

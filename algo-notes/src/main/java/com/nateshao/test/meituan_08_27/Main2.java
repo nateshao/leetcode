@@ -5,11 +5,9 @@ import java.util.Arrays;
 
 /**
  * @date Created by 邵桐杰 on 2022/8/27 16:09
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 小美有一个精致的珠宝链子。初始这个链子上有n个宝石，从左到右分别编号为1~n
  * （宝石上的编号不会因为交换位置而改变编号）。

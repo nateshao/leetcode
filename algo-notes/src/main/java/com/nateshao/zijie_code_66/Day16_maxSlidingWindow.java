@@ -5,11 +5,9 @@ import java.util.Stack;
 
 /**
  * @date Created by 邵桐杰 on 2022/3/23 11:39
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitee.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description: https://leetcode-cn.com/problems/sliding-window-maximum/
  * 239. 滑动窗口最大值
  * 给你一个整数数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。

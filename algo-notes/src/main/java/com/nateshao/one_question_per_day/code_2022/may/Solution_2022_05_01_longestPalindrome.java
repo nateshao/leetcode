@@ -2,11 +2,9 @@ package com.nateshao.one_question_per_day.code_2022.may;
 
 /**
  * @date Created by 邵桐杰 on 2022/5/1 10:34
- * @微信公众号 千羽的编程时光
- * @个人网站 www.nateshao.cn
+ * @微信公众号 程序员千羽
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
- * @Gitee https://gitee.com/nateshao
  * Description:
  * 409. 最长回文串
  * 给定一个包含大写字母和小写字母的字符串 s ，返回 通过这些字母构造成的 最长的回文串 。
