@@ -21,17 +21,15 @@ public class Code_05_QuickSortTest2 {
 
     private void quickSort(int[] arr, int leftIndex, int rightIndex) {
         if (leftIndex >= rightIndex) return;
-        ;
+
         int left = leftIndex, right = rightIndex;
         int key = arr[left];
         while (left < right) {
-            while (right > left && arr[right] > key) {
-                right--;
-            }
+            while (right > left && arr[right] > key) right--;
+
             arr[left] = arr[right];
-            while (left < right && arr[left] < key) {
-                left++;
-            }
+            while (left < right && arr[left] < key) left++;
+
             arr[right] = arr[left];
         }
         arr[left] = key;
