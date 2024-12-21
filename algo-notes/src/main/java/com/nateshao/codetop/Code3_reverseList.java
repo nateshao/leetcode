@@ -1,4 +1,4 @@
-package com.nateshao.codetop.code01_reverseList;
+package com.nateshao.codetop;
 
 /**
  * @date Created by 邵桐杰 on 2022/8/11 23:30
@@ -7,7 +7,7 @@ package com.nateshao.codetop.code01_reverseList;
  * @GitHub https://github.com/nateshao
  * Description:
  */
-public class Solution {
+public class Code3_reverseList {
     public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) return head;
         ListNode node = reverseList(head.next);
@@ -18,12 +18,13 @@ public class Solution {
 
     /**
      * 双指针
+     *
      * @param head
      * @return
      */
     public ListNode reverseList2(ListNode head) {
         ListNode cur = head, pre = null;
-        while(cur != null) {
+        while (cur != null) {
             ListNode tmp = cur.next; // 暂存后继节点 cur.next
             cur.next = pre;          // 修改 next 引用指向
             pre = cur;               // pre 暂存 cur

@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  * @GitHub https://github.com/nateshao
  * Description:
  */
-public class SolutionTest {
+public class Code3reverseListTest {
 
     @Test
     public void main() {

@@ -1,8 +1,7 @@
-package com.nateshao.codetop.code02_lengthOfLongestSubstring;
+package com.nateshao.codetop;
 
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -31,7 +30,7 @@ import java.util.Set;
  * 解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
  *      请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
  */
-public class Solution {
+public class Code1_lengthOfLongestSubstring {
     public int lengthOfLongestSubstring(String s) {
         if (s.length() == 0) return 0;
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();
