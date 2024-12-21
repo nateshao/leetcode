@@ -32,25 +32,25 @@ public class Code6_threeSum {
      * @return
      */
     public List<List<Integer>> threeSum(int[] nums) {
-        Arrays.sort(nums);
+        Arrays.sort(nums);// 先排序，形成一个递增的数组
         List<List<Integer>> res = new ArrayList<>();
+        // k < nums.length - 2是为了保证后面还能存在两个数字
         for (int k = 0; k < nums.length - 2; k++) {
-            if (nums[k] > 0) break; // 3 个元素都大于 0 ，在此固定指针 k 之后不可能再找到结果了。
-            if (k > 0 && nums[k] == nums[k - 1]) continue;
-            int left = k + 1;
-            int right = nums.length - 1;
+            if (nums[k] > 0) break;// 若nums[k]大于0，则后面的数字也是大于零（排序后是递增的）
+            if (k > 0 && nums[k] == nums[k - 1]) continue; // nums[k]值重复了，去重
+            // 定义左右指针
+            int left = k + 1, right = nums.length - 1;
             while (left < right) {
                 int sum = nums[k] + nums[left] + nums[right];
                 if (sum < 0) {
-                    while (left < right && nums[left] == nums[++left]) ;
+                    while (left < right && nums[left] == nums[++left]) ; // 左指针前进并去重
                 } else if (sum > 0) {
-                    while (left < right && nums[right] == nums[--right]) ;
+                    while (left < right && nums[right] == nums[--right]) ; // 右指针后退并去重
                 } else {
-                    res.add(new ArrayList<>(Arrays.asList(nums[k], nums[left], nums[right])));
-                    while (left < right && nums[left] == nums[++left]) ;
-                    while (left < right && nums[right] == nums[--right]) ;
+                    res.add(Arrays.asList(nums[k], nums[left], nums[right]));
+                    while (left < right && nums[left] == nums[++left]) ; // 左指针前进并去重
+                    while (left < right && nums[right] == nums[--right]) ; // 右指针后退并去重
                 }
-
             }
         }
         return res;
