@@ -2,6 +2,7 @@ package com.nateshao.codetop;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -32,19 +33,27 @@ import java.util.Set;
  */
 public class Code1_lengthOfLongestSubstring {
     public int lengthOfLongestSubstring(String s) {
-        if (s.length() == 0) return 0;
-        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
-        int max = 0;
-        int left = 0;
-        for (int i = 0; i < s.length(); i++) {
-            if (map.containsKey(s.charAt(i))) {
-                left = Math.max(left, map.get(s.charAt(i)) + 1);
-            }
-            map.put(s.charAt(i), i);
-            max = Math.max(max, i - left + 1);
-        }
-        return max;
+        Map<Character, Integer> window = new HashMap<>();
 
+        int left = 0, right = 0;
+        // 记录结果
+        int res = 0;
+        while (right < s.length()) {
+            char c = s.charAt(right);
+            right++;
+            // 进行窗口内数据的一系列更新
+            window.put(c, window.getOrDefault(c, 0) + 1);
+            // 判断左侧窗口是否要收缩
+            while (window.get(c) > 1) {
+                char d = s.charAt(left);
+                left++;
+                // 进行窗口内数据的一系列更新
+                window.put(d, window.get(d) - 1);
+            }
+            // 在这里更新答案
+            res = Math.max(res, right - left);
+        }
+        return res;
     }
 
     /**
