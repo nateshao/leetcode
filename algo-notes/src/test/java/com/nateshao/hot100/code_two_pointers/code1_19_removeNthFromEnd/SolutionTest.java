@@ -37,7 +37,7 @@ public class SolutionTest {
             this.val = val;
         }
 
-        ListNode(int val, Solution.ListNode next) {
+        ListNode(int val, ListNode next) {
             val = val;
             next = next;
         }

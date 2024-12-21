@@ -1,6 +1,5 @@
 package com.nateshao.hot100.code_two_pointers.code1_15_threeSum;
 
-import com.nateshao.play_with_data_structures.lesson_01_arrays.Demo04_Dynamic_Array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
