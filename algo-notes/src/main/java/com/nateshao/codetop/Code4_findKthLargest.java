@@ -27,4 +27,21 @@ public class Code4_findKthLargest {
         // 堆顶是最小的那个，即第 k 个最大元素
         return pq.peek();
     }
+
+    public static int findKthLargest2(int[] nums, int k) {
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
+        for (int num : nums) {
+            queue.offer(num);
+            if (queue.size() > k) {
+                queue.poll();
+            }
+        }
+        return queue.peek();
+    }
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{3, 2, 1, 5, 6, 4};
+        int k = 2;
+        System.out.println(findKthLargest2(nums, k));
+    }
 }

@@ -33,6 +33,21 @@ public class Code3_reverseList {
         return pre;
     }
 
+    /**
+     * 递归
+     * @param head
+     * @date 2024-12-28 10:28
+     * @return
+     */
+    public ListNode reverseList3(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode pre = reverseList3(head.next);
+        head.next.next = head;
+        head.next = null;
+        return pre;
+    }
+
+
     public class ListNode {
         int val;
         ListNode next;

@@ -52,10 +52,11 @@ public class Code7_maxSubArray {
 
     /**
      * 以 nums[i] 为结尾的「最大子数组和」为 dp[i]。
-     *
+     * <p>
      * dp[i] 有两种「选择」，要么与前面的相邻子数组连接，形成一个和更大的子数组；要么不与前面的子数组连接，自成一派，自己作为一个子数组。
-     *
+     * <p>
      * 在这两种选择中择优，就可以计算出最大子数组，而且空间复杂度还有优化空间，见详细题解。
+     *
      * @param nums
      * @return
      */
@@ -74,6 +75,20 @@ public class Code7_maxSubArray {
         int res = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
             res = Math.max(res, dp[i]);
+        }
+        return res;
+    }
+
+    public int maxSubArray3(int[] nums) {
+        int res = nums[0];
+        int sum = 0;
+        for (int num : nums) {
+            if (num > sum) {
+                sum += num;
+            } else {
+                sum = num;
+            }
+            res = Math.max(res, sum);
         }
         return res;
     }
