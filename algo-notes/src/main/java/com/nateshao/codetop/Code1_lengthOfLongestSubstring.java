@@ -85,4 +85,30 @@ public class Code1_lengthOfLongestSubstring {
         }
         return res;
     }
+
+    /**
+     * 最长不重复字串
+     * @param s
+     * @return
+     */
+    public int lengthOfLongestSubstring2(String s) {
+        if (s == null || s.length() == 0) return 0;
+        // 存放结果
+        Map<Character, Integer> window = new HashMap<>();
+        // 定义左右指针
+        int left = 0, right = 0;
+        int res = 0;
+        while (right < s.length()) {
+            char c = s.charAt(right);
+            right++;
+            window.put(c, window.getOrDefault(c, 0) + 1);
+            while (window.get(c) > 1) {
+                char d = s.charAt(left);
+                left++;
+                window.put(d, window.get(d) - 1);
+            }
+            res = Math.max(res, right - left);
+        }
+        return res;
+    }
 }
