@@ -92,4 +92,24 @@ public class Code7_maxSubArray {
         }
         return res;
     }
+
+    /**
+     * 贪心算法
+     */
+    public int maxSubArray4(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        int res = nums[0];
+        int sum = 0;
+        for (int num : nums) {
+            if (num > sum) {
+                sum += num;
+            } else {
+                sum = num;
+            }
+            res = Math.max(res, sum);
+        }
+        return res;
+    }
 }

@@ -33,11 +33,38 @@ public class Code3_reverseList {
         return pre;
     }
 
+    public ListNode restoreList3(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode cur = head, pre = null;
+        while (cur != null) {
+            ListNode tmp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = tmp;
+        }
+        return pre;
+    }
+
+    public ListNode reverseList4(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode cur = head, pre = null;
+        while (cur != null) {
+            ListNode tmp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = tmp;
+        }
+        return pre;
+    }
+
     /**
      * 递归
+     *
      * @param head
-     * @date 2024-12-28 10:28
      * @return
+     * @date 2024-12-28 10:28
      */
     public ListNode reverseList3(ListNode head) {
         if (head == null || head.next == null) return head;

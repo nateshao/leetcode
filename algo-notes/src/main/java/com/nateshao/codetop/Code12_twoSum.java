@@ -1,6 +1,7 @@
 package com.nateshao.codetop;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Code12_twoSum {
     /**
@@ -21,6 +22,18 @@ public class Code12_twoSum {
                 return new int[]{map.get(need), i};
             }
             // 存入 val -> index 的映射
+            map.put(nums[i], i);
+        }
+        return null;
+    }
+
+    public int[] twoSum2(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int need = target - nums[i];
+            if (map.containsKey(need)) {
+                return new int[]{map.get(need), i};
+            }
             map.put(nums[i], i);
         }
         return null;
