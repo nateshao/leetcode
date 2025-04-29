@@ -149,4 +149,82 @@ public class Code1_lengthOfLongestSubstring {
         }
         return res;
     }
+
+    /**
+     * 无重复字符的最长子串
+     *
+     * @param s
+     * @return
+     */
+    public int lengthOfLongestSubstring5(String s) {
+        if (s == null || s.length() == 0) return 0;
+        Map<Character, Integer> window = new HashMap<>();
+        int left = 0, right = 0;
+        int res = 0;
+        while (right < s.length()) {
+            char c = s.charAt(right);
+            right++;
+            window.put(c, window.getOrDefault(c, 0) + 1);
+            while (window.get(c) > 1) {
+                char d = s.charAt(left);
+                left++;
+                window.put(d, window.get(d) - 1);
+            }
+            res = Math.max(res, right - left);
+        }
+        return res;
+    }
+
+    // hashmap
+
+    /**
+     * 双指针
+     *
+     * @param s
+     * @return
+     */
+    public int lengthOfLongestSubstring6(String s) {
+        if (s == null || s.length() == 0) return 0;
+        HashMap<Character, Integer> window = new HashMap<>();
+        int left = 0, right = 0;
+        int res = 0;
+        while (right < s.length()) {
+            char c = s.charAt(right);
+            right++;// 右指针++
+            window.put(c, window.getOrDefault(c, 0));
+            while (window.get(left) > 1) {
+                left++;
+                char d = s.charAt(left);
+                window.put(d, window.get(d) - 1);
+            }
+            res = Math.max(res, right - left);
+        }
+        return res;
+    }
+
+    /**
+     * hashset
+     */
+    public static int lengthOfLongestSubstring7(String s) {
+        if (s == null || s.length() == 0) return 0;
+        HashSet<Character> set = new HashSet<>();
+        int left = 0, right = 0;
+        int res = 0;
+        while (right < s.length()) {
+            if (!set.contains(s.charAt(right))) {
+                set.add(s.charAt(right));
+                right++;
+            } else {
+                set.remove(s.charAt(left));
+                left++;
+            }
+            res = Math.max(res, set.size());
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        int abcabcbb = lengthOfLongestSubstring7("abcabcbb");
+        System.out.println(abcabcbb);
+    }
 }

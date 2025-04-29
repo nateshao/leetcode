@@ -35,6 +35,7 @@ public class Code9_mergeTwoLists {
 
     /**
      * 合并两个链表
+     *
      * @param list1
      * @param list2
      * @return
@@ -46,12 +47,12 @@ public class Code9_mergeTwoLists {
         if (list2 == null) {
             return list1;
         }
-        ListNode dummy = new ListNode(-1) ,p = dummy;
+        ListNode dummy = new ListNode(-1), p = dummy;
         while (list1 != null && list2 != null) {
             if (list1.val > list2.val) {
                 p.next = list2; // 小的放在前面
                 list2 = list2.next;
-            }else {
+            } else {
                 p.next = list1;
                 list1 = list1.next;
             }
@@ -79,7 +80,7 @@ public class Code9_mergeTwoLists {
             if (list1.val > list2.val) {
                 p.next = list2;
                 list2 = list2.next;
-            }else {
+            } else {
                 p.next = list1;
                 list1 = list1.next;
             }
@@ -94,8 +95,32 @@ public class Code9_mergeTwoLists {
         return dummy.next;
     }
 
-
-
+    public ListNode mergeTwoLists4(ListNode list1, ListNode list2) {
+        if (list1 == null) {
+            return list2;
+        }
+        if (list2 == null) {
+            return list1;
+        }
+        ListNode dummy = new ListNode(-1), p = dummy;
+        while (list1 != null && list2 != null) {
+            if (list1.val > list2.val) {
+                p.next = list2;
+                list2 = list2.next;
+            } else {
+                p.next = list1;
+                list1 = list1.next;
+            }
+            p = p.next;
+            while (list1 != null) {
+                p.next = list1;
+            }
+            while (list2 != null) {
+                p.next = list2;
+            }
+        }
+        return dummy.next;
+    }
 
 
     public class ListNode {
