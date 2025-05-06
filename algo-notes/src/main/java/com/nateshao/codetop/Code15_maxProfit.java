@@ -16,4 +16,14 @@ public class Code15_maxProfit {
         }
         return maxProfit;
     }
+
+    public int maxProfit2(int[] prices) {
+        int maxProfit = 0;
+        int cost = Integer.MAX_VALUE;
+        for (int price : prices) {
+            cost = Math.min(price, cost);
+            maxProfit = Math.max(maxProfit, price - cost);
+        }
+        return maxProfit;
+    }
 }

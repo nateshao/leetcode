@@ -92,6 +92,35 @@ public class Code3_reverseList {
         return pre;
     }
 
+    public ListNode reverseList7(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode pre = reverseList7(head.next);
+        head.next.next = head;
+        head.next = null;
+        return pre;
+    }
+
+    /**
+     * 迭代
+     * @param head
+     * @return
+     */
+    public ListNode reverseList8(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode cur = head, pre = null;
+        while (cur != null) {
+            ListNode tmp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = tmp;
+        }
+        return pre;
+    }
+
 
     public class ListNode {
         int val;

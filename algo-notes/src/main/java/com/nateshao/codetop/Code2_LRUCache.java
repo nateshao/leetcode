@@ -159,11 +159,44 @@ public class Code2_LRUCache {
 //        cache.put(key, val);
 //    }
 
-    LinkedHashMap<Integer, Integer> cache = new LinkedHashMap<>();
-    int cap;
+//    LinkedHashMap<Integer, Integer> cache = new LinkedHashMap<>();
+//    int cap;
+//
+//    public Code2_LRUCache(int capacity) {
+//        this.cap = capacity;
+//    }
+//
+//    public int get(int key) {
+//        if (!cache.containsKey(key)) {
+//            return -1;
+//        }
+//        // 最近最少使用
+//        makeRecently(key);
+//        return cache.get(key);
+//    }
+//
+//    private void makeRecently(int key) {
+//        int val = cache.get(key);
+//        cache.remove(val);
+//        cache.put(key, val);
+//    }
+//
+//    public void put(int key, int value) {
+//        if (cache.containsKey(key)) {
+//            cache.put(key, value);
+//            makeRecently(key);
+//            return;
+//        }
+//        if (cache.size() >= cap) {
+//            cache.remove(cache.keySet().iterator().next());
+//        }
+//        cache.put(key, value);
+//    }
+    LinkedHashMap<Integer, Integer> cache = new LinkedHashMap<Integer, Integer>();
+    int capacity;
 
     public Code2_LRUCache(int capacity) {
-        this.cap = capacity;
+        this.capacity = capacity;
     }
 
     public int get(int key) {
@@ -177,7 +210,7 @@ public class Code2_LRUCache {
 
     private void makeRecently(int key) {
         int val = cache.get(key);
-        cache.remove(val);
+        cache.remove(key);
         cache.put(key, val);
     }
 
@@ -187,7 +220,7 @@ public class Code2_LRUCache {
             makeRecently(key);
             return;
         }
-        if (cache.size() >= cap) {
+        if (cache.size() >= capacity) {
             cache.remove(cache.keySet().iterator().next());
         }
         cache.put(key, value);
