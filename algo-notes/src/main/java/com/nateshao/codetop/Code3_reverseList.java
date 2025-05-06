@@ -82,6 +82,16 @@ public class Code3_reverseList {
         return pre;
     }
 
+    public ListNode reverseList6(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode pre = reverseList6(head.next);
+        head.next.next = head;
+        head.next = null;
+        return pre;
+    }
+
 
     public class ListNode {
         int val;

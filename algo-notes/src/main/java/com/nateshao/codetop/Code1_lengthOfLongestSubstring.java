@@ -223,6 +223,25 @@ public class Code1_lengthOfLongestSubstring {
         return res;
     }
 
+    public static int lengthOfLongestSubstring8(String s) {
+        if (s == null || s.length() == 0) return 0;
+        HashMap<Character, Integer> window = new HashMap<>();
+        int left = 0, right = 0;
+        int res = 0;
+        while (right < s.length()) {
+            char c = s.charAt(right);
+            right++;
+            window.put(c, window.getOrDefault(c, 0));
+            while (window.get(left) > 1) {
+                left++;
+                char d = s.charAt(left);
+                window.put(d, window.get(d) - 1);
+            }
+            res = Math.max(res, right - left);
+        }
+        return res;
+    }
+
     public static void main(String[] args) {
         int abcabcbb = lengthOfLongestSubstring7("abcabcbb");
         System.out.println(abcabcbb);

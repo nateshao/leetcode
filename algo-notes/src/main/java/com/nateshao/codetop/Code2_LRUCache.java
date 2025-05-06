@@ -119,7 +119,47 @@ public class Code2_LRUCache {
 //        cache.put(key, val);
 //    }
 
-    LinkedHashMap<Integer, Integer> cache = new LinkedHashMap<Integer, Integer>();
+//    LinkedHashMap<Integer, Integer> cache = new LinkedHashMap<Integer, Integer>();
+//    int cap;
+//
+//    public Code2_LRUCache(int capacity) {
+//        this.cap = capacity;
+//    }
+//
+//    public int get(int key) {
+//        if (!cache.containsKey(key)) {
+//            return -1;
+//        }
+//        // 最近最少使用
+//        makeRecently(key);
+//        return cache.get(key);
+//    }
+//
+//
+//    public void put(int key, int value) {
+//        if (cache.containsKey(key)) {
+//            cache.put(key, value);
+//            makeRecently(key);
+//            return;
+//        }
+//        if (cache.size() >= this.cap) {
+//            cache.remove(cache.keySet().iterator().next());
+//        }
+//        cache.put(key, value);
+//    }
+//
+//    /**
+//     * 最近最少使用
+//     *
+//     * @param key
+//     */
+//    private void makeRecently(int key) {
+//        int val = cache.get(key);
+//        cache.remove(key);
+//        cache.put(key, val);
+//    }
+
+    LinkedHashMap<Integer, Integer> cache = new LinkedHashMap<>();
     int cap;
 
     public Code2_LRUCache(int capacity) {
@@ -135,6 +175,11 @@ public class Code2_LRUCache {
         return cache.get(key);
     }
 
+    private void makeRecently(int key) {
+        int val = cache.get(key);
+        cache.remove(val);
+        cache.put(key, val);
+    }
 
     public void put(int key, int value) {
         if (cache.containsKey(key)) {
@@ -142,21 +187,10 @@ public class Code2_LRUCache {
             makeRecently(key);
             return;
         }
-        if (cache.size() >= this.cap) {
+        if (cache.size() >= cap) {
             cache.remove(cache.keySet().iterator().next());
         }
         cache.put(key, value);
-    }
-
-    /**
-     * 最近最少使用
-     *
-     * @param key
-     */
-    private void makeRecently(int key) {
-        int val = cache.get(key);
-        cache.remove(key);
-        cache.put(key, val);
     }
 
 }
