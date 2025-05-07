@@ -34,6 +34,16 @@ public class Day19_lowestCommonAncestor_2 {
         return left == null ? right : left;
     }
 
+    public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null) return null;
+        if (root == p || root == q) return root;
+        TreeNode left = lowestCommonAncestor2(root.left, p, q);
+        TreeNode right = lowestCommonAncestor2(root.right, p, q);
+        if (left != null && right != null) return root;
+        if (left == null && right == null) return null;
+        return left == null ? right : left;
+    }
+
     public class TreeNode {
         int val;
         TreeNode left;
