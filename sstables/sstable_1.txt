@@ -1,0 +1,5 @@
+apple,red
+banana,yellow
+grape,purple
+lemon,yellow
+peach,pink

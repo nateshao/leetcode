@@ -1,4 +1,4 @@
-package com.nateshao.distributed;
+package com.nateshao.distributed.hash;
 
 import java.util.*;
 
