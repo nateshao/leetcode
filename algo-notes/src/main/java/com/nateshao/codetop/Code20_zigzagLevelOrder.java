@@ -19,12 +19,10 @@ public class Code20_zigzagLevelOrder {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> res = new LinkedList<>();
         if (root == null) return res;
-
         Queue<TreeNode> q = new LinkedList<>();
         q.offer(root);
         // 为 true 时向右，false 时向左
         boolean flag = true;
-
         // while 循环控制从上向下一层层遍历
         while (!q.isEmpty()) {
             int sz = q.size();
@@ -39,12 +37,35 @@ public class Code20_zigzagLevelOrder {
                 } else {
                     level.addFirst(cur.val);
                 }
-                if (cur.left != null)
-                    q.offer(cur.left);
-                if (cur.right != null)
-                    q.offer(cur.right);
+                if (cur.left != null) q.offer(cur.left);
+                if (cur.right != null) q.offer(cur.right);
             }
             // 切换方向
+            flag = !flag;
+            res.add(level);
+        }
+        return res;
+    }
+
+    public List<List<Integer>> zigzagLevelOrder2(TreeNode root) {
+        List<List<Integer>> res = new LinkedList<>();
+        if (root == null) return res;
+        Queue<TreeNode> q = new LinkedList<>();
+        q.offer(root);
+        boolean flag = true;
+        while (!q.isEmpty()) {
+            int sz = q.size();
+            List<Integer> level = new LinkedList<>();
+            for (int i = 0; i < sz; i++) {
+                TreeNode cur = q.poll();
+                if (flag) {
+                    level.add(cur.val);
+                }else {
+                    level.add(cur.val);
+                }
+                if (cur.left != null) q.offer(cur.left);
+                if (cur.right != null) q.offer(cur.right);
+            }
             flag = !flag;
             res.add(level);
         }

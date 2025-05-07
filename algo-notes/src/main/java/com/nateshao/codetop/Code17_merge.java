@@ -56,4 +56,26 @@ public class Code17_merge {
             p--;
         }
     }
+    public void merge2(int[] nums1, int m, int[] nums2, int n) {
+        int i = m - 1, j = n - 1;
+        int res = nums1.length - 1;
+        while (i >= 0 && j >= 0) {
+            if (nums1[i] > nums2[j]) {
+                nums1[res] = nums1[i];
+                i--;
+            }else {
+                nums1[res] = nums2[j];
+                j--;
+            }
+            res--;
+        }
+        while (j >= 0) {
+            nums1[res] = nums2[j];
+            j--;
+            res--;
+        }
+    }
+
+    public static void main(String[] args) {
+    }
 }

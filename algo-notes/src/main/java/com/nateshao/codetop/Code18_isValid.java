@@ -37,6 +37,23 @@ public class Code18_isValid {
         return stack.isEmpty();
     }
 
+    public boolean isValid1(String s) {
+        Stack<Character> stack = new Stack<>();
+        for (char c : s.toCharArray()) {
+            if (c == '(' || c == '{' || c == '[') {
+                stack.push(c);
+            }else if (stack.isEmpty()) {
+                return false;
+            }else {
+                char target = stack.pop();
+                if (c == ')' && target != '(') return false;
+                if (c == '}' && target != '{') return false;
+                if (c == ']' && target != '[') return false;
+            }
+        }
+        return stack.isEmpty();
+    }
+
 
     /**
      * 法二：有效的括号（辅助栈法，极简+图解）
